@@ -22,6 +22,7 @@ const files = await glob( "*", {
     "ignoreFile": ".gitignore",
 } );
 
+// copy build dir to the tmp
 for ( const file of files ) {
     await fs.promises.cp( rootDir + "/" + file, tmpDir + "/" + file, {
         "recursive": true,
@@ -32,6 +33,7 @@ const npm = new Npm( {
     "cwd": tmpDir.path,
 } );
 
+// install npm dependencies
 res = await npm.exec( [ "install" ] );
 if ( !res.ok ) {
     console.log( res.data.error.detail );
@@ -145,17 +147,15 @@ fs.rmSync( extDir + "/resources/images/pictos", { "recursive": true, "force": tr
 }
 
 // ewc
-{
-    const { "version": ewcVersion } = await readConfig( `${ tmpDir.path }/node_modules/@sencha/ext-web-components-modern/package.json` ),
-        ewcDir = path.join( dataDir, `ewc-${ ewcVersion }` );
+const { "version": ewcVersion } = await readConfig( `${ tmpDir.path }/node_modules/@sencha/ext-web-components-modern/package.json` ),
+    ewcDir = path.join( dataDir, `ewc-${ ewcVersion }` );
 
-    fs.rmSync( ewcDir, { "recursive": true, "force": true } );
-    fs.mkdirSync( ewcDir, { "recursive": true } );
+fs.rmSync( ewcDir, { "recursive": true, "force": true } );
+fs.mkdirSync( ewcDir, { "recursive": true } );
 
-    await fs.promises.cp( `${ tmpDir.path }/node_modules/@sencha/ext-web-components-modern/src`, ewcDir, {
-        "recursive": true,
-    } );
-}
+await fs.promises.cp( `${ tmpDir.path }/node_modules/@sencha/ext-web-components-modern/src`, ewcDir, {
+    "recursive": true,
+} );
 
 // lint
 {
@@ -177,3 +177,14 @@ fs.rmSync( extDir + "/resources/images/pictos", { "recursive": true, "force": tr
         } );
     }
 }
+
+// move to resources
+const resourcesDir = "../resources",
+    resourcesExtDir = path.join( resourcesDir, path.basename( extDir ) ),
+    resourcesEwcDir = path.join( resourcesDir, path.basename( ewcDir ) );
+
+await fs.promises.rm( resourcesExtDir, { "recursive": true, "force": true } );
+await fs.promises.rename( extDir, resourcesExtDir );
+
+await fs.promises.rm( resourcesEwcDir, { "recursive": true, "force": true } );
+await fs.promises.rename( ewcDir, resourcesEwcDir );
