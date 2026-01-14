@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.20.17 (2026-01-14)
+
+**Bug fixes:**
+
+- \[PATCH] fix: fix build package name (● [ef90452](https://github.com/c0rejs/ext/commit/ef90452); 👬 zdm)
+
+Compare with the previous release: [v5.20.16](https://github.com/c0rejs/ext/compare/v5.20.16...v5.20.17)
+
 ### v5.20.16 (2026-01-05)
 
 **Other changes:**
