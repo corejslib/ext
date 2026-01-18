@@ -170,7 +170,7 @@ Ext.define( "Ext.draw.sprite.AnimationParser", function () {
                     toStripe,
                     length,
                     lastStripe = toStripes[ toLength - 1 ],
-                    endPoint = [ lastStripe.at( -2 ), lastStripe.at( -1 ) ];
+                    endPoint = [ lastStripe[ lastStripe.length - 2 ], lastStripe[ lastStripe.length - 1 ] ];
                 for ( i = fromLength; i < toLength; i++ ) {
                     fromStripes.push( fromStripes[ fromLength - 1 ].slice( 0 ) );
                 }
@@ -189,8 +189,8 @@ Ext.define( "Ext.draw.sprite.AnimationParser", function () {
                     for ( j = toLength; j < fromLength; j += 6 ) {
                         toStripe.push( endPoint[ 0 ], endPoint[ 1 ], endPoint[ 0 ], endPoint[ 1 ], endPoint[ 0 ], endPoint[ 1 ] );
                     }
-                    lastStripe = toStripes.at( -1 );
-                    endPoint = [ lastStripe.at( -2 ), lastStripe.at( -1 ) ];
+                    lastStripe = toStripes[ toStripes.length - 1 ];
+                    endPoint = [ lastStripe[ lastStripe.length - 2 ], lastStripe[ lastStripe.length - 1 ] ];
                     for ( j = fromLength; j < toLength; j += 6 ) {
                         fromStripe.push( endPoint[ 0 ], endPoint[ 1 ], endPoint[ 0 ], endPoint[ 1 ], endPoint[ 0 ], endPoint[ 1 ] );
                     }
@@ -5598,12 +5598,12 @@ Ext.define( "Ext.draw.Path", {
             }
         }
         if ( !me.cursor ) {
-            me.cursor = [ params.at( -2 ), params.at( -1 ) ];
+            me.cursor = [ params[ params.length - 2 ], params[ params.length - 1 ] ];
             me.commands.push( "M" );
         }
         else {
-            me.cursor[ 0 ] = params.at( -2 );
-            me.cursor[ 1 ] = params.at( -1 );
+            me.cursor[ 0 ] = params[ params.length - 2 ];
+            me.cursor[ 1 ] = params[ params.length - 1 ];
             me.commands.push( "L" );
         }
         for ( i = 2; i < count; i += 6 ) {
@@ -6283,8 +6283,8 @@ Ext.define( "Ext.draw.Path", {
         if ( !me.cursor ) {
             me.cursor = [];
         }
-        me.cursor[ 0 ] = me.params.at( -2 );
-        me.cursor[ 1 ] = me.params.at( -1 );
+        me.cursor[ 0 ] = me.params[ me.params.length - 2 ];
+        me.cursor[ 1 ] = me.params[ me.params.length - 1 ];
         me.dirt();
     },
 
@@ -11336,7 +11336,7 @@ Ext.define( "Ext.draw.engine.SvgContext.Gradient", {
 
         // Removing surplus stops in case existing gradient element with more stops was reused.
         while ( children.length > this.position ) {
-            Ext.fly( children.at( -1 ) ).destroy();
+            Ext.fly( children[ children.length - 1 ] ).destroy();
         }
         return "url(#" + this.element.getId() + ")";
     },

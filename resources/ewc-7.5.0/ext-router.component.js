@@ -22,7 +22,9 @@ export class ExtRouter extends WebComponentsBaseComponent {
     }
 
     static get observedAttributes () {
-        var attrs = [ "hidden", "onready" ];
+        var attrs = [];
+        attrs.push( "hidden" );
+        attrs.push( "onready" );
         return attrs;
     }
 

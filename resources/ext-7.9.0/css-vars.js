@@ -454,7 +454,7 @@ function _defineProperty ( obj, key, value ) {
                     }
 
                     function _last ( array ) {
-                        return array.length && array.at( -1 );
+                        return array.length && array[ array.length - 1 ];
                     }
 
                     function _tail ( array ) {
