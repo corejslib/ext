@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.20.18 (2026-01-18)
+
+**Bug fixes:**
+
+- \[PATCH] fix: fix extjs build (● [14d040c](https://github.com/c0rejs/ext/commit/14d040c), [7afd455](https://github.com/c0rejs/ext/commit/7afd455), [e6f6758](https://github.com/c0rejs/ext/commit/e6f6758); 👬 zdm)
+
+Compare with the previous release: [v5.20.17](https://github.com/c0rejs/ext/compare/v5.20.17...v5.20.18)
+
 ### v5.20.17 (2026-01-14)
 
 **Bug fixes:**
