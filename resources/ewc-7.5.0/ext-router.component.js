@@ -1,5 +1,6 @@
 import ElementParser from "./common/ElementParser.js";
 import {
+
     // doProp,
     // filterProp,
     isMenu,
@@ -22,9 +23,7 @@ export class ExtRouter extends WebComponentsBaseComponent {
     }
 
     static get observedAttributes () {
-        var attrs = [];
-        attrs.push( "hidden" );
-        attrs.push( "onready" );
+        var attrs = [ "hidden", "onready" ];
         return attrs;
     }
 

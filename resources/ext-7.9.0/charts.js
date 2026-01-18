@@ -646,6 +646,7 @@ Ext.define( "Ext.draw.gradient.Gradient", {
                 color = Ext.util.Color.fly( color || Ext.util.Color.NONE );
             }
             stops.push( {
+
                 "offset": Math.min( 1, Math.max( 0, "offset" in stop
                     ? stop.offset
                     : stop.position || 0 ) ),
@@ -1869,6 +1870,7 @@ Ext.define(
          * @return {Object} Object with b,c,d=devicePixelRatio,xx,yy,dx,dy
          */
         "precisionCompensate": function ( devicePixelRatio, comp ) {
+
             var elements = this.elements,
                 x2x = elements[ 0 ],
                 x2y = elements[ 1 ],
@@ -6415,6 +6417,7 @@ Ext.define( "Ext.draw.overrides.hittest.Path", {
             switch ( commands[ i ] ) {
             case "M":
                 if ( firstX !== null ) {
+
                     if ( solver.linesIntersection( firstX, firstY, lastX, lastY, origin.x, origin.y, x, y ) ) {
                         count += 1;
                     }
@@ -6424,6 +6427,7 @@ Ext.define( "Ext.draw.overrides.hittest.Path", {
                 j += 2;
                 break;
             case "L":
+
                 if ( solver.linesIntersection( lastX, lastY, params[ j ], params[ j + 1 ], origin.x, origin.y, x, y ) ) {
                     count += 1;
                 }
@@ -6439,6 +6443,7 @@ Ext.define( "Ext.draw.overrides.hittest.Path", {
                 break;
             case "Z":
                 if ( firstX !== null ) {
+
                     if ( solver.linesIntersection( firstX, firstY, lastX, lastY, origin.x, origin.y, x, y ) ) {
                         count += 1;
                     }
@@ -17108,6 +17113,7 @@ Ext.define("Ext.chart.series.Series", {
             // 'showMarkers' updater calls 'series.getSprites()',
             // which we don't want to call here.
             showMarkers = me.getConfig("showMarkers", true),
+
             style,
             sprite,
             marker,
@@ -21025,6 +21031,7 @@ Ext.define("Ext.chart.axis.Axis", {
 Ext.define("Ext.chart.legend.LegendBase", {
     extend: Ext.dataview.DataView,
     config: {
+
         itemTpl: ['<span class="', Ext.baseCSSPrefix, "legend-item-marker {[ values.disabled ? Ext.baseCSSPrefix + 'legend-item-inactive' : '' ]}\" style=\"background:{mark};\"></span>{name}"],
         /* eslint-enable max-len, no-useless-escape */
         inline: true,
@@ -21670,6 +21677,7 @@ Ext.define("Ext.draw.PathUtil", function () {
          *                  is itself a two-item array [x,y].
          */
         cubicsIntersections: function (ax1, ax2, ax3, ax4, ay1, ay2, ay3, ay4, bx1, bx2, bx3, bx4, by1, by2, by3, by4) {
+
             var me = this,
                 axDim = me.cubicDimension(ax1, ax2, ax3, ax4),
                 ayDim = me.cubicDimension(ay1, ay2, ay3, ay4),
@@ -26027,6 +26035,7 @@ Ext.define("Ext.chart.axis.sprite.Axis3D", {
             attr = me.attr,
             halfLineWidth = attr.lineWidth * 0.5,
             layout = me.getLayout(),
+
             depth = layout.isDiscrete ? 0 : attr.depth,
             docked = attr.position,
             position,
@@ -26953,6 +26962,7 @@ Ext.define("Ext.chart.interactions.CrossZoom", {
             return;
         }
         if (me.getLocks()[me.gestureEvent] === me) {
+
             var chart = me.getChart(),
                 surface = me.getSurface(),
                 rect = chart.getInnerRect(),
@@ -26997,6 +27007,7 @@ Ext.define("Ext.chart.interactions.CrossZoom", {
             return;
         }
         if (me.getLocks()[me.gestureEvent] === me) {
+
             var chart = me.getChart(),
                 surface = me.getSurface(),
                 rect = chart.getInnerRect(),
@@ -28573,6 +28584,7 @@ Ext.define("Ext.chart.interactions.PanZoom", {
     },
     onZoomGestureStart: function (e) {
         if (e.touches && e.touches.length === 2) {
+
             var me = this,
                 chart = me.getChart(),
                 xy = chart.element.getXY(),
@@ -28596,6 +28608,7 @@ Ext.define("Ext.chart.interactions.PanZoom", {
     onZoomGestureMove: function (e) {
         var me = this;
         if (me.getLocks()[me.getZoomGesture()] === me) {
+
             var chart = me.getChart(),
                 rect = chart.getInnerRect(),
                 xy = chart.element.getXY(),
@@ -28777,6 +28790,7 @@ Ext.define("Ext.chart.interactions.PanZoom", {
         this.callParent();
     },
 });
+
 
 /**
  * @class Ext.chart.interactions.Rotate
@@ -35156,6 +35170,7 @@ Ext.define("Ext.chart.series.sprite.PieSlice", {
             attr = me.attr,
             hasGradients = (attr.fillStyle && attr.fillStyle.isGradient) || (attr.strokeStyle && attr.strokeStyle.isGradient);
         if (hasGradients && !attr.constrainGradients) {
+
             var midAngle = me.getMidAngle(),
                 margin = attr.margin,
                 cx = attr.centerX,
@@ -35279,6 +35294,7 @@ Ext.define("Ext.chart.series.sprite.PieSlice", {
         // If a slice is empty, don't display the label.
         // This behavior can be overridden by a renderer.
         if (labelTpl.display !== "none") {
+
             labelCfg.hidden = attr.startAngle == attr.endAngle;
         }
         if (labelTpl.attr.renderer) {
@@ -36475,6 +36491,7 @@ Ext.define("Ext.chart.series.sprite.Pie3DPart", {
             baseRotation = attr.baseRotation,
             startAngle = attr.startAngle + baseRotation,
             endAngle = attr.endAngle + baseRotation,
+
             isFullPie = !attr.startAngle && Ext.Number.isEqual(Math.PI * 2, attr.endAngle, 1.0e-7),
             thickness = attr.thickness,
             startRho = attr.startRho,
@@ -36865,6 +36882,7 @@ Ext.define(
                 renderer = me.getRenderer(),
                 rendererData = me.getRendererData(),
                 highlight = me.getHighlight(),
+
                 lastAngle = 0,
                 twoPi = Math.PI * 2,
                 // To avoid adjacent start/end part blinking (z-index jitter)

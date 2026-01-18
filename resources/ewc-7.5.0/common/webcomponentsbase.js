@@ -128,8 +128,7 @@ export default class WebComponentsBaseComponent extends HTMLElement {
 
     newCreateProps ( properties ) {
         let listenersProvided = false;
-        var o = {};
-        o.xtype = this.xtype;
+        var o = { "xtype": this.xtype };
 
         if ( o.xtype == "grid" && this.getAttribute( "columns" ) == null ) {
             o.rowHeight = null;
@@ -310,9 +309,7 @@ export default class WebComponentsBaseComponent extends HTMLElement {
                 this.A.ITEMS.push( w );
             }
             else {
-                var g = {};
-                g.type = "ext";
-                g.child = child;
+                var g = { "type": "ext", "child": child };
                 this.A.ITEMS.push( g );
             }
         }
@@ -413,11 +410,10 @@ export default class WebComponentsBaseComponent extends HTMLElement {
                     }
                 }
                 if ( element.getAttribute( "extname" ) != undefined ) {
-                    var o = {};
+                    var o = { "cmp": element.A.ext };
 
                     // o.extname = element.getAttribute('extname');
                     // o.ext = element.A.ext;
-                    o.cmp = element.A.ext;
 
                     // allExt.push(o);
                     cmpObj[ element.getAttribute( "extname" ) ] = element.A.ext;
@@ -585,9 +581,7 @@ export default class WebComponentsBaseComponent extends HTMLElement {
                                 else {
                                     cellxtype = "reactcell";
                                 }
-                                var o = {};
-                                o.xtype = cellxtype;
-                                o.encodeHtml = false;
+                                var o = { "xtype": cellxtype, "encodeHtml": false };
                                 if ( this.attributeObjects[ "renderer" ] != undefined ) {
                                     propertyVal = this.attributeObjects[ "renderer" ];
                                 }
