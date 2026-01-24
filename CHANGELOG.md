@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.20.19 (2026-01-24)
+
+**Bug fixes:**
+
+- \[PATCH] fix: fix lint errors (● [67ddb78](https://github.com/c0rejs/ext/commit/67ddb78); 👬 zdm)
+
+Compare with the previous release: [v5.20.18](https://github.com/c0rejs/ext/compare/v5.20.18...v5.20.19)
+
 ### v5.20.18 (2026-01-18)
 
 **Bug fixes:**
