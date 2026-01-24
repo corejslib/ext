@@ -451,64 +451,64 @@ export default class WebComponentsBaseComponent extends HTMLElement {
             }
         }
         switch ( true ) {
-        case isClassicDock( childxtype ):
-            parentCmp.addDocked( childCmp );
-            break;
-        case isMenu( childxtype ):
-            parentCmp.setMenu( childCmp );
-            break;
-        case isRenderercell( childxtype ):
-            parentCmp.setCell( childCmp );
-            break;
-        case isParentGridAndChildToolbar( parentxtype, childxtype ):
-            if ( parentCmp.items.items[ 0 ].xtype == "titlebar" ) {
-                parentCmp.insert( 1, childCmp );
-            }
-            else {
-                parentCmp.insert( 0, childCmp );
-            }
-            break;
-        case isParentGridAndChildColumn( parentxtype, childxtype ):
-            if ( location == null ) {
-                if ( Ext.isModern ) {
-                    parentCmp.rowHeight = null;
-                    parentCmp.addColumn( childCmp );
+            case isClassicDock( childxtype ):
+                parentCmp.addDocked( childCmp );
+                break;
+            case isMenu( childxtype ):
+                parentCmp.setMenu( childCmp );
+                break;
+            case isRenderercell( childxtype ):
+                parentCmp.setCell( childCmp );
+                break;
+            case isParentGridAndChildToolbar( parentxtype, childxtype ):
+                if ( parentCmp.items.items[ 0 ].xtype == "titlebar" ) {
+                    parentCmp.insert( 1, childCmp );
                 }
                 else {
-                    parentCmp.add( childCmp );
+                    parentCmp.insert( 0, childCmp );
                 }
-            }
-            else {
-                var regCols = 0;
-                if ( parentCmp.registeredColumns != undefined ) {
-                    regCols = parentCmp.registeredColumns.length;
-                }
-                if ( parentxtype == "grid" ) {
+                break;
+            case isParentGridAndChildColumn( parentxtype, childxtype ):
+                if ( location == null ) {
                     if ( Ext.isModern ) {
-                        parentCmp.insertColumn( location + regCols, childCmp );
+                        parentCmp.rowHeight = null;
+                        parentCmp.addColumn( childCmp );
+                    }
+                    else {
+                        parentCmp.add( childCmp );
+                    }
+                }
+                else {
+                    var regCols = 0;
+                    if ( parentCmp.registeredColumns != undefined ) {
+                        regCols = parentCmp.registeredColumns.length;
+                    }
+                    if ( parentxtype == "grid" ) {
+                        if ( Ext.isModern ) {
+                            parentCmp.insertColumn( location + regCols, childCmp );
+                        }
+                        else {
+                            parentCmp.insert( location + regCols, childCmp );
+                        }
                     }
                     else {
                         parentCmp.insert( location + regCols, childCmp );
                     }
                 }
-                else {
-                    parentCmp.insert( location + regCols, childCmp );
+                break;
+            case isTooltip( childxtype ):
+                parentCmp.setTooltip( childCmp );
+                break;
+            case isPlugin( childxtype ):
+                parentCmp.setPlugin( childCmp );
+                break;
+            default:
+                if ( location == null ) {
+                    parentCmp.add( childCmp );
                 }
-            }
-            break;
-        case isTooltip( childxtype ):
-            parentCmp.setTooltip( childCmp );
-            break;
-        case isPlugin( childxtype ):
-            parentCmp.setPlugin( childCmp );
-            break;
-        default:
-            if ( location == null ) {
-                parentCmp.add( childCmp );
-            }
-            else {
-                parentCmp.insert( location, childCmp );
-            }
+                else {
+                    parentCmp.insert( location, childCmp );
+                }
         }
     }
 

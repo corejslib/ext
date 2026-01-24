@@ -2856,12 +2856,12 @@ function _defineProperty ( obj, key, value ) {
                                 unit = right.unit;
 
                             switch ( unit ) {
-                            case "%":
-                                return this.getHSLA().adjustLightness( value ).getRGBA();
-                            case "deg":
-                                return this.getHSLA().adjustHue( value ).getRGBA();
-                            default:
-                                return this.add( value, value, value, 1 );
+                                case "%":
+                                    return this.getHSLA().adjustLightness( value ).getRGBA();
+                                case "deg":
+                                    return this.getHSLA().adjustHue( value ).getRGBA();
+                                default:
+                                    return this.add( value, value, value, 1 );
                             }
                         },
 
@@ -2877,12 +2877,12 @@ function _defineProperty ( obj, key, value ) {
                             var value = right.value,
                                 unit = right.unit;
                             switch ( unit ) {
-                            case "%":
-                                return this.getHSLA().adjustLightness( -value ).getRGBA();
-                            case "deg":
-                                return this.getHSLA().adjustHue( -value ).getRGBA();
-                            default:
-                                return this.subtract( value, value, value );
+                                case "%":
+                                    return this.getHSLA().adjustLightness( -value ).getRGBA();
+                                case "deg":
+                                    return this.getHSLA().adjustHue( -value ).getRGBA();
+                                default:
+                                    return this.subtract( value, value, value );
                             }
                         },
 
@@ -3189,14 +3189,14 @@ function _defineProperty ( obj, key, value ) {
                                 "key": "operate",
                                 "value": function operate ( operation, right ) {
                                     switch ( operation ) {
-                                    case "!=":
-                                        if ( right.type == "literal" && ( right.value == "null" || right.value == "none" ) ) {
-                                            return true;
-                                        }
-                                    case "==":
-                                        if ( right.type == "literal" && ( right.value == "null" || right.value == "none" ) ) {
-                                            return false;
-                                        }
+                                        case "!=":
+                                            if ( right.type == "literal" && ( right.value == "null" || right.value == "none" ) ) {
+                                                return true;
+                                            }
+                                        case "==":
+                                            if ( right.type == "literal" && ( right.value == "null" || right.value == "none" ) ) {
+                                                return false;
+                                            }
                                     }
                                     return _get( LinearGradient.prototype.__proto__ || Object.getPrototypeOf( LinearGradient.prototype ), "operate", this ).call( this, operation, right );
                                 },
@@ -3375,21 +3375,21 @@ function _defineProperty ( obj, key, value ) {
                                 "key": "operate",
                                 "value": function operate ( operation, right ) {
                                     switch ( operation ) {
-                                    case "!=":
-                                        if ( right.$isFashionLiteral ) {
-                                            if ( right.value === "null" || right.value === "none" ) {
-                                                return true;
+                                        case "!=":
+                                            if ( right.$isFashionLiteral ) {
+                                                if ( right.value === "null" || right.value === "none" ) {
+                                                    return true;
+                                                }
                                             }
-                                        }
-                                        break;
+                                            break;
 
-                                    case "==":
-                                        if ( right.$isFashionLiteral ) {
-                                            if ( right.value === "null" || right.value === "none" ) {
-                                                return false;
+                                        case "==":
+                                            if ( right.$isFashionLiteral ) {
+                                                if ( right.value === "null" || right.value === "none" ) {
+                                                    return false;
+                                                }
                                             }
-                                        }
-                                        break;
+                                            break;
                                     }
 
                                     return _get( List.prototype.__proto__ || Object.getPrototypeOf( List.prototype ), "operate", this ).call( this, operation, right );
@@ -4170,67 +4170,67 @@ function _defineProperty ( obj, key, value ) {
 
                                         if ( other.$isFashionNumber ) {
                                             switch ( this.unit ) {
-                                            case "mm":
-                                                switch ( unit ) {
-                                                case "in":
-                                                    return new Numeric( value * 25.4, "mm" );
-                                                case "cm":
-                                                    return new Numeric( value * 2.54, "mm" );
-                                                }
-                                                break;
-
-                                            case "cm":
-                                                switch ( unit ) {
-                                                case "in":
-                                                    return new Numeric( value * 2.54, "cm" );
                                                 case "mm":
-                                                    return new Numeric( value / 10, "cm" );
-                                                }
-                                                break;
+                                                    switch ( unit ) {
+                                                        case "in":
+                                                            return new Numeric( value * 25.4, "mm" );
+                                                        case "cm":
+                                                            return new Numeric( value * 2.54, "mm" );
+                                                    }
+                                                    break;
 
-                                            case "in":
-                                                switch ( unit ) {
-                                                case "mm":
-                                                    return new Numeric( value / 25.4, "in" );
                                                 case "cm":
-                                                    return new Numeric( value / 2.54, "in" );
-                                                }
-                                                break;
+                                                    switch ( unit ) {
+                                                        case "in":
+                                                            return new Numeric( value * 2.54, "cm" );
+                                                        case "mm":
+                                                            return new Numeric( value / 10, "cm" );
+                                                    }
+                                                    break;
 
-                                            case "ms":
-                                                switch ( unit ) {
-                                                case "s":
-                                                    return new Numeric( value * 1000, "ms" );
-                                                }
-                                                break;
+                                                case "in":
+                                                    switch ( unit ) {
+                                                        case "mm":
+                                                            return new Numeric( value / 25.4, "in" );
+                                                        case "cm":
+                                                            return new Numeric( value / 2.54, "in" );
+                                                    }
+                                                    break;
 
-                                            case "s":
-                                                switch ( unit ) {
                                                 case "ms":
-                                                    return new Numeric( value / 1000, "s" );
-                                                }
-                                                break;
+                                                    switch ( unit ) {
+                                                        case "s":
+                                                            return new Numeric( value * 1000, "ms" );
+                                                    }
+                                                    break;
 
-                                            case "Hz":
-                                                switch ( unit ) {
-                                                case "kHz":
-                                                    return new Numeric( value * 1000, "Hz" );
-                                                }
-                                                break;
+                                                case "s":
+                                                    switch ( unit ) {
+                                                        case "ms":
+                                                            return new Numeric( value / 1000, "s" );
+                                                    }
+                                                    break;
 
-                                            case "kHz":
-                                                switch ( unit ) {
                                                 case "Hz":
-                                                    return new Numeric( value / 1000, "kHz" );
-                                                }
-                                                break;
-                                            case "%":
-                                                switch ( unit ) {
+                                                    switch ( unit ) {
+                                                        case "kHz":
+                                                            return new Numeric( value * 1000, "Hz" );
+                                                    }
+                                                    break;
+
+                                                case "kHz":
+                                                    switch ( unit ) {
+                                                        case "Hz":
+                                                            return new Numeric( value / 1000, "kHz" );
+                                                    }
+                                                    break;
+                                                case "%":
+                                                    switch ( unit ) {
+                                                        default:
+                                                            return new Numeric( value );
+                                                    }
                                                 default:
-                                                    return new Numeric( value );
-                                                }
-                                            default:
-                                                break;
+                                                    break;
                                             }
                                         }
 
@@ -4367,21 +4367,21 @@ function _defineProperty ( obj, key, value ) {
                                     "key": "computeUnits",
                                     "value": function computeUnits ( left, right, op ) {
                                         switch ( op ) {
-                                        case "*":
-                                            return {
-                                                "num": left.numeratorUnits.slice().concat( right.numeratorUnits ),
-                                                "den": left.denominatorUnits.slice().concat( right.denominatorUnits ),
-                                            };
-                                        case "/":
-                                            return {
-                                                "num": left.numeratorUnits.slice().concat( right.denominatorUnits ),
-                                                "den": left.denominatorUnits.slice().concat( right.numeratorUnits ),
-                                            };
-                                        default:
-                                            return {
-                                                "num": left.numeratorUnits,
-                                                "den": left.denominatorUnits,
-                                            };
+                                            case "*":
+                                                return {
+                                                    "num": left.numeratorUnits.slice().concat( right.numeratorUnits ),
+                                                    "den": left.denominatorUnits.slice().concat( right.denominatorUnits ),
+                                                };
+                                            case "/":
+                                                return {
+                                                    "num": left.numeratorUnits.slice().concat( right.denominatorUnits ),
+                                                    "den": left.denominatorUnits.slice().concat( right.numeratorUnits ),
+                                                };
+                                            default:
+                                                return {
+                                                    "num": left.numeratorUnits,
+                                                    "den": left.denominatorUnits,
+                                                };
                                         }
                                     },
                                 },
@@ -5077,12 +5077,12 @@ function _defineProperty ( obj, key, value ) {
                                 ? "undefined"
                                 : _typeof( expression );
                             switch ( typeOf ) {
-                            case "string":
-                                return new Text( expression );
-                            case "number":
-                                return new Numeric( expression );
-                            default:
-                                break;
+                                case "string":
+                                    return new Text( expression );
+                                case "number":
+                                    return new Numeric( expression );
+                                default:
+                                    break;
                             }
 
                             return expression;

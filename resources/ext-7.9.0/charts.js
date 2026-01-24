@@ -5838,144 +5838,144 @@ Ext.define( "Ext.draw.Path", {
             part = parts[ i ];
             i++;
             switch ( part ) {
-            case "M":
-                me.moveTo( ( lastX = +parts[ i ] ), ( lastY = +parts[ i + 1 ] ) );
-                i += 2;
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                case "M":
+                    me.moveTo( ( lastX = +parts[ i ] ), ( lastY = +parts[ i + 1 ] ) );
+                    i += 2;
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.lineTo( ( lastX = +parts[ i ] ), ( lastY = +parts[ i + 1 ] ) );
+                        i += 2;
+                    }
+                    break;
+                case "L":
                     me.lineTo( ( lastX = +parts[ i ] ), ( lastY = +parts[ i + 1 ] ) );
                     i += 2;
-                }
-                break;
-            case "L":
-                me.lineTo( ( lastX = +parts[ i ] ), ( lastY = +parts[ i + 1 ] ) );
-                i += 2;
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.lineTo( ( lastX = +parts[ i ] ), ( lastY = +parts[ i + 1 ] ) );
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.lineTo( ( lastX = +parts[ i ] ), ( lastY = +parts[ i + 1 ] ) );
+                        i += 2;
+                    }
+                    break;
+                case "A":
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.arcSvg( +parts[ i ], +parts[ i + 1 ], ( +parts[ i + 2 ] * Math.PI ) / 180, +parts[ i + 3 ], +parts[ i + 4 ], ( lastX = +parts[ i + 5 ] ), ( lastY = +parts[ i + 6 ] ) );
+                        i += 7;
+                    }
+                    break;
+                case "C":
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.bezierCurveTo( +parts[ i ], +parts[ i + 1 ], ( lastControlX = +parts[ i + 2 ] ), ( lastControlY = +parts[ i + 3 ] ), ( lastX = +parts[ i + 4 ] ), ( lastY = +parts[ i + 5 ] ) );
+                        i += 6;
+                    }
+                    break;
+                case "Z":
+                    me.closePath();
+                    break;
+                case "m":
+                    me.moveTo( ( lastX += +parts[ i ] ), ( lastY += +parts[ i + 1 ] ) );
                     i += 2;
-                }
-                break;
-            case "A":
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.arcSvg( +parts[ i ], +parts[ i + 1 ], ( +parts[ i + 2 ] * Math.PI ) / 180, +parts[ i + 3 ], +parts[ i + 4 ], ( lastX = +parts[ i + 5 ] ), ( lastY = +parts[ i + 6 ] ) );
-                    i += 7;
-                }
-                break;
-            case "C":
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.bezierCurveTo( +parts[ i ], +parts[ i + 1 ], ( lastControlX = +parts[ i + 2 ] ), ( lastControlY = +parts[ i + 3 ] ), ( lastX = +parts[ i + 4 ] ), ( lastY = +parts[ i + 5 ] ) );
-                    i += 6;
-                }
-                break;
-            case "Z":
-                me.closePath();
-                break;
-            case "m":
-                me.moveTo( ( lastX += +parts[ i ] ), ( lastY += +parts[ i + 1 ] ) );
-                i += 2;
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.lineTo( ( lastX += +parts[ i ] ), ( lastY += +parts[ i + 1 ] ) );
+                        i += 2;
+                    }
+                    break;
+                case "l":
                     me.lineTo( ( lastX += +parts[ i ] ), ( lastY += +parts[ i + 1 ] ) );
                     i += 2;
-                }
-                break;
-            case "l":
-                me.lineTo( ( lastX += +parts[ i ] ), ( lastY += +parts[ i + 1 ] ) );
-                i += 2;
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.lineTo( ( lastX += +parts[ i ] ), ( lastY += +parts[ i + 1 ] ) );
-                    i += 2;
-                }
-                break;
-            case "a":
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.arcSvg( +parts[ i ], +parts[ i + 1 ], ( +parts[ i + 2 ] * Math.PI ) / 180, +parts[ i + 3 ], +parts[ i + 4 ], ( lastX += +parts[ i + 5 ] ), ( lastY += +parts[ i + 6 ] ) );
-                    i += 7;
-                }
-                break;
-            case "c":
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.bezierCurveTo( lastX + +parts[ i ], lastY + +parts[ i + 1 ], ( lastControlX = lastX + +parts[ i + 2 ] ), ( lastControlY = lastY + +parts[ i + 3 ] ), ( lastX += +parts[ i + 4 ] ), ( lastY += +parts[ i + 5 ] ) );
-                    i += 6;
-                }
-                break;
-            case "z":
-                me.closePath();
-                break;
-            case "s":
-                if ( !( lastCommand === "c" || lastCommand === "C" || lastCommand === "s" || lastCommand === "S" ) ) {
-                    lastControlX = lastX;
-                    lastControlY = lastY;
-                }
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.bezierCurveTo( lastX + lastX - lastControlX, lastY + lastY - lastControlY, ( lastControlX = lastX + +parts[ i ] ), ( lastControlY = lastY + +parts[ i + 1 ] ), ( lastX += +parts[ i + 2 ] ), ( lastY += +parts[ i + 3 ] ) );
-                    i += 4;
-                }
-                break;
-            case "S":
-                if ( !( lastCommand === "c" || lastCommand === "C" || lastCommand === "s" || lastCommand === "S" ) ) {
-                    lastControlX = lastX;
-                    lastControlY = lastY;
-                }
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.bezierCurveTo( lastX + lastX - lastControlX, lastY + lastY - lastControlY, ( lastControlX = +parts[ i ] ), ( lastControlY = +parts[ i + 1 ] ), ( lastX = +parts[ i + 2 ] ), ( lastY = +parts[ i + 3 ] ) );
-                    i += 4;
-                }
-                break;
-            case "q":
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.quadraticCurveTo( ( lastControlX = lastX + +parts[ i ] ), ( lastControlY = lastY + +parts[ i + 1 ] ), ( lastX += +parts[ i + 2 ] ), ( lastY += +parts[ i + 3 ] ) );
-                    i += 4;
-                }
-                break;
-            case "Q":
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.quadraticCurveTo( ( lastControlX = +parts[ i ] ), ( lastControlY = +parts[ i + 1 ] ), ( lastX = +parts[ i + 2 ] ), ( lastY = +parts[ i + 3 ] ) );
-                    i += 4;
-                }
-                break;
-            case "t":
-                if ( !( lastCommand === "q" || lastCommand === "Q" || lastCommand === "t" || lastCommand === "T" ) ) {
-                    lastControlX = lastX;
-                    lastControlY = lastY;
-                }
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.quadraticCurveTo( ( lastControlX = lastX + lastX - lastControlX ), ( lastControlY = lastY + lastY - lastControlY ), ( lastX += +parts[ i + 1 ] ), ( lastY += +parts[ i + 2 ] ) );
-                    i += 2;
-                }
-                break;
-            case "T":
-                if ( !( lastCommand === "q" || lastCommand === "Q" || lastCommand === "t" || lastCommand === "T" ) ) {
-                    lastControlX = lastX;
-                    lastControlY = lastY;
-                }
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.quadraticCurveTo( ( lastControlX = lastX + lastX - lastControlX ), ( lastControlY = lastY + lastY - lastControlY ), ( lastX = +parts[ i + 1 ] ), ( lastY = +parts[ i + 2 ] ) );
-                    i += 2;
-                }
-                break;
-            case "h":
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.lineTo( ( lastX += +parts[ i ] ), lastY );
-                    i++;
-                }
-                break;
-            case "H":
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.lineTo( ( lastX = +parts[ i ] ), lastY );
-                    i++;
-                }
-                break;
-            case "v":
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.lineTo( lastX, ( lastY += +parts[ i ] ) );
-                    i++;
-                }
-                break;
-            case "V":
-                while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
-                    me.lineTo( lastX, ( lastY = +parts[ i ] ) );
-                    i++;
-                }
-                break;
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.lineTo( ( lastX += +parts[ i ] ), ( lastY += +parts[ i + 1 ] ) );
+                        i += 2;
+                    }
+                    break;
+                case "a":
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.arcSvg( +parts[ i ], +parts[ i + 1 ], ( +parts[ i + 2 ] * Math.PI ) / 180, +parts[ i + 3 ], +parts[ i + 4 ], ( lastX += +parts[ i + 5 ] ), ( lastY += +parts[ i + 6 ] ) );
+                        i += 7;
+                    }
+                    break;
+                case "c":
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.bezierCurveTo( lastX + +parts[ i ], lastY + +parts[ i + 1 ], ( lastControlX = lastX + +parts[ i + 2 ] ), ( lastControlY = lastY + +parts[ i + 3 ] ), ( lastX += +parts[ i + 4 ] ), ( lastY += +parts[ i + 5 ] ) );
+                        i += 6;
+                    }
+                    break;
+                case "z":
+                    me.closePath();
+                    break;
+                case "s":
+                    if ( !( lastCommand === "c" || lastCommand === "C" || lastCommand === "s" || lastCommand === "S" ) ) {
+                        lastControlX = lastX;
+                        lastControlY = lastY;
+                    }
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.bezierCurveTo( lastX + lastX - lastControlX, lastY + lastY - lastControlY, ( lastControlX = lastX + +parts[ i ] ), ( lastControlY = lastY + +parts[ i + 1 ] ), ( lastX += +parts[ i + 2 ] ), ( lastY += +parts[ i + 3 ] ) );
+                        i += 4;
+                    }
+                    break;
+                case "S":
+                    if ( !( lastCommand === "c" || lastCommand === "C" || lastCommand === "s" || lastCommand === "S" ) ) {
+                        lastControlX = lastX;
+                        lastControlY = lastY;
+                    }
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.bezierCurveTo( lastX + lastX - lastControlX, lastY + lastY - lastControlY, ( lastControlX = +parts[ i ] ), ( lastControlY = +parts[ i + 1 ] ), ( lastX = +parts[ i + 2 ] ), ( lastY = +parts[ i + 3 ] ) );
+                        i += 4;
+                    }
+                    break;
+                case "q":
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.quadraticCurveTo( ( lastControlX = lastX + +parts[ i ] ), ( lastControlY = lastY + +parts[ i + 1 ] ), ( lastX += +parts[ i + 2 ] ), ( lastY += +parts[ i + 3 ] ) );
+                        i += 4;
+                    }
+                    break;
+                case "Q":
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.quadraticCurveTo( ( lastControlX = +parts[ i ] ), ( lastControlY = +parts[ i + 1 ] ), ( lastX = +parts[ i + 2 ] ), ( lastY = +parts[ i + 3 ] ) );
+                        i += 4;
+                    }
+                    break;
+                case "t":
+                    if ( !( lastCommand === "q" || lastCommand === "Q" || lastCommand === "t" || lastCommand === "T" ) ) {
+                        lastControlX = lastX;
+                        lastControlY = lastY;
+                    }
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.quadraticCurveTo( ( lastControlX = lastX + lastX - lastControlX ), ( lastControlY = lastY + lastY - lastControlY ), ( lastX += +parts[ i + 1 ] ), ( lastY += +parts[ i + 2 ] ) );
+                        i += 2;
+                    }
+                    break;
+                case "T":
+                    if ( !( lastCommand === "q" || lastCommand === "Q" || lastCommand === "t" || lastCommand === "T" ) ) {
+                        lastControlX = lastX;
+                        lastControlY = lastY;
+                    }
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.quadraticCurveTo( ( lastControlX = lastX + lastX - lastControlX ), ( lastControlY = lastY + lastY - lastControlY ), ( lastX = +parts[ i + 1 ] ), ( lastY = +parts[ i + 2 ] ) );
+                        i += 2;
+                    }
+                    break;
+                case "h":
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.lineTo( ( lastX += +parts[ i ] ), lastY );
+                        i++;
+                    }
+                    break;
+                case "H":
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.lineTo( ( lastX = +parts[ i ] ), lastY );
+                        i++;
+                    }
+                    break;
+                case "v":
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.lineTo( lastX, ( lastY += +parts[ i ] ) );
+                        i++;
+                    }
+                    break;
+                case "V":
+                    while ( i < partLength && !paramCounts.hasOwnProperty( parts[ i ] ) ) {
+                        me.lineTo( lastX, ( lastY = +parts[ i ] ) );
+                        i++;
+                    }
+                    break;
             }
         }
     },
@@ -6058,20 +6058,20 @@ Ext.define( "Ext.draw.Path", {
             y;
         for ( ; i < ln; i++ ) {
             switch ( commands[ i ] ) {
-            case "M":
-            case "L":
-                x = params[ j ];
-                y = params[ j + 1 ];
-                target.left = Math.min( x, target.left );
-                target.top = Math.min( y, target.top );
-                target.right = Math.max( x, target.right );
-                target.bottom = Math.max( y, target.bottom );
-                j += 2;
-                break;
-            case "C":
-                this.expandDimension( target, x, y, params[ j ], params[ j + 1 ], params[ j + 2 ], params[ j + 3 ], ( x = params[ j + 4 ] ), ( y = params[ j + 5 ] ) );
-                j += 6;
-                break;
+                case "M":
+                case "L":
+                    x = params[ j ];
+                    y = params[ j + 1 ];
+                    target.left = Math.min( x, target.left );
+                    target.top = Math.min( y, target.top );
+                    target.right = Math.max( x, target.right );
+                    target.bottom = Math.max( y, target.bottom );
+                    j += 2;
+                    break;
+                case "C":
+                    this.expandDimension( target, x, y, params[ j ], params[ j + 1 ], params[ j + 2 ], params[ j + 3 ], ( x = params[ j + 4 ] ), ( y = params[ j + 5 ] ) );
+                    j += 6;
+                    break;
             }
         }
         target.x = target.left;
@@ -6120,20 +6120,20 @@ Ext.define( "Ext.draw.Path", {
             y;
         for ( ; i < ln; i++ ) {
             switch ( commands[ i ] ) {
-            case "M":
-            case "L":
-                x = params[ j ] * xx + params[ j + 1 ] * yx + dx;
-                y = params[ j ] * xy + params[ j + 1 ] * yy + dy;
-                target.left = Math.min( x, target.left );
-                target.top = Math.min( y, target.top );
-                target.right = Math.max( x, target.right );
-                target.bottom = Math.max( y, target.bottom );
-                j += 2;
-                break;
-            case "C":
-                this.expandDimension( target, x, y, params[ j ] * xx + params[ j + 1 ] * yx + dx, params[ j ] * xy + params[ j + 1 ] * yy + dy, params[ j + 2 ] * xx + params[ j + 3 ] * yx + dx, params[ j + 2 ] * xy + params[ j + 3 ] * yy + dy, ( x = params[ j + 4 ] * xx + params[ j + 5 ] * yx + dx ), ( y = params[ j + 4 ] * xy + params[ j + 5 ] * yy + dy ) );
-                j += 6;
-                break;
+                case "M":
+                case "L":
+                    x = params[ j ] * xx + params[ j + 1 ] * yx + dx;
+                    y = params[ j ] * xy + params[ j + 1 ] * yy + dy;
+                    target.left = Math.min( x, target.left );
+                    target.top = Math.min( y, target.top );
+                    target.right = Math.max( x, target.right );
+                    target.bottom = Math.max( y, target.bottom );
+                    j += 2;
+                    break;
+                case "C":
+                    this.expandDimension( target, x, y, params[ j ] * xx + params[ j + 1 ] * yx + dx, params[ j ] * xy + params[ j + 1 ] * yy + dy, params[ j + 2 ] * xx + params[ j + 3 ] * yx + dx, params[ j + 2 ] * xy + params[ j + 3 ] * yy + dy, ( x = params[ j + 4 ] * xx + params[ j + 5 ] * yx + dx ), ( y = params[ j + 4 ] * xy + params[ j + 5 ] * yy + dy ) );
+                    j += 6;
+                    break;
             }
         }
         if ( !target ) {
@@ -6309,23 +6309,23 @@ Ext.define( "Ext.draw.Path", {
             ln = commands.length;
         for ( i = 0, j = 0; i < ln; i++ ) {
             switch ( commands[ i ] ) {
-            case "M":
-                curr = [ ( startX = lastX = params[ j++ ] ), ( startY = lastY = params[ j++ ] ) ];
-                stripes.push( curr );
-                break;
-            case "L":
-                x = params[ j++ ];
-                y = params[ j++ ];
-                curr.push( ( lastX + lastX + x ) / 3, ( lastY + lastY + y ) / 3, ( lastX + x + x ) / 3, ( lastY + y + y ) / 3, ( lastX = x ), ( lastY = y ) );
-                break;
-            case "C":
-                curr.push( params[ j++ ], params[ j++ ], params[ j++ ], params[ j++ ], ( lastX = params[ j++ ] ), ( lastY = params[ j++ ] ) );
-                break;
-            case "Z":
-                x = startX;
-                y = startY;
-                curr.push( ( lastX + lastX + x ) / 3, ( lastY + lastY + y ) / 3, ( lastX + x + x ) / 3, ( lastY + y + y ) / 3, ( lastX = x ), ( lastY = y ) );
-                break;
+                case "M":
+                    curr = [ ( startX = lastX = params[ j++ ] ), ( startY = lastY = params[ j++ ] ) ];
+                    stripes.push( curr );
+                    break;
+                case "L":
+                    x = params[ j++ ];
+                    y = params[ j++ ];
+                    curr.push( ( lastX + lastX + x ) / 3, ( lastY + lastY + y ) / 3, ( lastX + x + x ) / 3, ( lastY + y + y ) / 3, ( lastX = x ), ( lastY = y ) );
+                    break;
+                case "C":
+                    curr.push( params[ j++ ], params[ j++ ], params[ j++ ], params[ j++ ], ( lastX = params[ j++ ] ), ( lastY = params[ j++ ] ) );
+                    break;
+                case "Z":
+                    x = startX;
+                    y = startY;
+                    curr.push( ( lastX + lastX + x ) / 3, ( lastY + lastY + y ) / 3, ( lastX + x + x ) / 3, ( lastY + y + y ) / 3, ( lastX = x ), ( lastY = y ) );
+                    break;
             }
         }
         return stripes;
@@ -6344,21 +6344,21 @@ Ext.define( "Ext.draw.Path", {
             j = 0;
         for ( ; i < ln; i++ ) {
             switch ( commands[ i ] ) {
-            case "M":
-                result.push( "M" + params[ j ] + "," + params[ j + 1 ] );
-                j += 2;
-                break;
-            case "L":
-                result.push( "L" + params[ j ] + "," + params[ j + 1 ] );
-                j += 2;
-                break;
-            case "C":
-                result.push( "C" + params[ j ] + "," + params[ j + 1 ] + " " + params[ j + 2 ] + "," + params[ j + 3 ] + " " + params[ j + 4 ] + "," + params[ j + 5 ] );
-                j += 6;
-                break;
-            case "Z":
-                result.push( "Z" );
-                break;
+                case "M":
+                    result.push( "M" + params[ j ] + "," + params[ j + 1 ] );
+                    j += 2;
+                    break;
+                case "L":
+                    result.push( "L" + params[ j ] + "," + params[ j + 1 ] );
+                    j += 2;
+                    break;
+                case "C":
+                    result.push( "C" + params[ j ] + "," + params[ j + 1 ] + " " + params[ j + 2 ] + "," + params[ j + 3 ] + " " + params[ j + 4 ] + "," + params[ j + 5 ] );
+                    j += 6;
+                    break;
+                case "Z":
+                    result.push( "Z" );
+                    break;
             }
         }
         this.svgString = result.join( "" );
@@ -6413,37 +6413,37 @@ Ext.define( "Ext.draw.overrides.hittest.Path", {
             j;
         for ( i = 0, j = 0; i < ln; i++ ) {
             switch ( commands[ i ] ) {
-            case "M":
-                if ( firstX !== null ) {
-                    if ( solver.linesIntersection( firstX, firstY, lastX, lastY, origin.x, origin.y, x, y ) ) {
+                case "M":
+                    if ( firstX !== null ) {
+                        if ( solver.linesIntersection( firstX, firstY, lastX, lastY, origin.x, origin.y, x, y ) ) {
+                            count += 1;
+                        }
+                    }
+                    firstX = lastX = params[ j ];
+                    firstY = lastY = params[ j + 1 ];
+                    j += 2;
+                    break;
+                case "L":
+                    if ( solver.linesIntersection( lastX, lastY, params[ j ], params[ j + 1 ], origin.x, origin.y, x, y ) ) {
                         count += 1;
                     }
-                }
-                firstX = lastX = params[ j ];
-                firstY = lastY = params[ j + 1 ];
-                j += 2;
-                break;
-            case "L":
-                if ( solver.linesIntersection( lastX, lastY, params[ j ], params[ j + 1 ], origin.x, origin.y, x, y ) ) {
-                    count += 1;
-                }
-                lastX = params[ j ];
-                lastY = params[ j + 1 ];
-                j += 2;
-                break;
-            case "C":
-                count += solver.cubicLineIntersections( lastX, params[ j ], params[ j + 2 ], params[ j + 4 ], lastY, params[ j + 1 ], params[ j + 3 ], params[ j + 5 ], origin.x, origin.y, x, y ).length;
-                lastX = params[ j + 4 ];
-                lastY = params[ j + 5 ];
-                j += 6;
-                break;
-            case "Z":
-                if ( firstX !== null ) {
-                    if ( solver.linesIntersection( firstX, firstY, lastX, lastY, origin.x, origin.y, x, y ) ) {
-                        count += 1;
+                    lastX = params[ j ];
+                    lastY = params[ j + 1 ];
+                    j += 2;
+                    break;
+                case "C":
+                    count += solver.cubicLineIntersections( lastX, params[ j ], params[ j + 2 ], params[ j + 4 ], lastY, params[ j + 1 ], params[ j + 3 ], params[ j + 5 ], origin.x, origin.y, x, y ).length;
+                    lastX = params[ j + 4 ];
+                    lastY = params[ j + 5 ];
+                    j += 6;
+                    break;
+                case "Z":
+                    if ( firstX !== null ) {
+                        if ( solver.linesIntersection( firstX, firstY, lastX, lastY, origin.x, origin.y, x, y ) ) {
+                            count += 1;
+                        }
                     }
-                }
-                break;
+                    break;
             }
         }
         return count % 2 === 1;
@@ -6470,39 +6470,39 @@ Ext.define( "Ext.draw.overrides.hittest.Path", {
             j;
         for ( i = 0, j = 0; i < ln; i++ ) {
             switch ( commands[ i ] ) {
-            case "M":
-                if ( firstX !== null ) {
-                    if ( solver.pointOnLine( firstX, firstY, lastX, lastY, x, y ) ) {
+                case "M":
+                    if ( firstX !== null ) {
+                        if ( solver.pointOnLine( firstX, firstY, lastX, lastY, x, y ) ) {
+                            return true;
+                        }
+                    }
+                    firstX = lastX = params[ j ];
+                    firstY = lastY = params[ j + 1 ];
+                    j += 2;
+                    break;
+                case "L":
+                    if ( solver.pointOnLine( lastX, lastY, params[ j ], params[ j + 1 ], x, y ) ) {
                         return true;
                     }
-                }
-                firstX = lastX = params[ j ];
-                firstY = lastY = params[ j + 1 ];
-                j += 2;
-                break;
-            case "L":
-                if ( solver.pointOnLine( lastX, lastY, params[ j ], params[ j + 1 ], x, y ) ) {
-                    return true;
-                }
-                lastX = params[ j ];
-                lastY = params[ j + 1 ];
-                j += 2;
-                break;
-            case "C":
-                if ( solver.pointOnCubic( lastX, params[ j ], params[ j + 2 ], params[ j + 4 ], lastY, params[ j + 1 ], params[ j + 3 ], params[ j + 5 ], x, y ) ) {
-                    return true;
-                }
-                lastX = params[ j + 4 ];
-                lastY = params[ j + 5 ];
-                j += 6;
-                break;
-            case "Z":
-                if ( firstX !== null ) {
-                    if ( solver.pointOnLine( firstX, firstY, lastX, lastY, x, y ) ) {
+                    lastX = params[ j ];
+                    lastY = params[ j + 1 ];
+                    j += 2;
+                    break;
+                case "C":
+                    if ( solver.pointOnCubic( lastX, params[ j ], params[ j + 2 ], params[ j + 4 ], lastY, params[ j + 1 ], params[ j + 3 ], params[ j + 5 ], x, y ) ) {
                         return true;
                     }
-                }
-                break;
+                    lastX = params[ j + 4 ];
+                    lastY = params[ j + 5 ];
+                    j += 6;
+                    break;
+                case "Z":
+                    if ( firstX !== null ) {
+                        if ( solver.pointOnLine( firstX, firstY, lastX, lastY, x, y ) ) {
+                            return true;
+                        }
+                    }
+                    break;
             }
         }
         return false;
@@ -6543,73 +6543,73 @@ Ext.define( "Ext.draw.overrides.hittest.Path", {
             points;
         for ( i = 0, j = 0; i < ln; i++ ) {
             switch ( commands[ i ] ) {
-            case "M":
-                if ( firstX !== null ) {
-                    switch ( count ) {
-                    case 4:
-                        points = solver.linesIntersection( firstX, firstY, lastX, lastY, x1, y1, x2, y2 );
-                        if ( points ) {
-                            intersections.push( points );
+                case "M":
+                    if ( firstX !== null ) {
+                        switch ( count ) {
+                            case 4:
+                                points = solver.linesIntersection( firstX, firstY, lastX, lastY, x1, y1, x2, y2 );
+                                if ( points ) {
+                                    intersections.push( points );
+                                }
+                                break;
+                            case 8:
+                                points = solver.cubicLineIntersections( x1, x2, x3, x4, y1, y2, y3, y4, firstX, firstY, lastX, lastY );
+                                intersections.push.apply( intersections, points );
+                                break;
                         }
-                        break;
-                    case 8:
-                        points = solver.cubicLineIntersections( x1, x2, x3, x4, y1, y2, y3, y4, firstX, firstY, lastX, lastY );
-                        intersections.push.apply( intersections, points );
-                        break;
                     }
-                }
-                firstX = lastX = params[ j ];
-                firstY = lastY = params[ j + 1 ];
-                j += 2;
-                break;
-            case "L":
-                switch ( count ) {
-                case 4:
-                    points = solver.linesIntersection( lastX, lastY, params[ j ], params[ j + 1 ], x1, y1, x2, y2 );
-                    if ( points ) {
-                        intersections.push( points );
-                    }
+                    firstX = lastX = params[ j ];
+                    firstY = lastY = params[ j + 1 ];
+                    j += 2;
                     break;
-                case 8:
-                    points = solver.cubicLineIntersections( x1, x2, x3, x4, y1, y2, y3, y4, lastX, lastY, params[ j ], params[ j + 1 ] );
-                    intersections.push.apply( intersections, points );
-                    break;
-                }
-                lastX = params[ j ];
-                lastY = params[ j + 1 ];
-                j += 2;
-                break;
-            case "C":
-                switch ( count ) {
-                case 4:
-                    points = solver.cubicLineIntersections( lastX, params[ j ], params[ j + 2 ], params[ j + 4 ], lastY, params[ j + 1 ], params[ j + 3 ], params[ j + 5 ], x1, y1, x2, y2 );
-                    intersections.push.apply( intersections, points );
-                    break;
-                case 8:
-                    points = solver.cubicsIntersections( lastX, params[ j ], params[ j + 2 ], params[ j + 4 ], lastY, params[ j + 1 ], params[ j + 3 ], params[ j + 5 ], x1, x2, x3, x4, y1, y2, y3, y4 );
-                    intersections.push.apply( intersections, points );
-                    break;
-                }
-                lastX = params[ j + 4 ];
-                lastY = params[ j + 5 ];
-                j += 6;
-                break;
-            case "Z":
-                if ( firstX !== null ) {
+                case "L":
                     switch ( count ) {
-                    case 4:
-                        points = solver.linesIntersection( firstX, firstY, lastX, lastY, x1, y1, x2, y2 );
-                        if ( points ) {
-                            intersections.push( points );
-                        }
-                        break;
-                    case 8:
-                        points = solver.cubicLineIntersections( x1, x2, x3, x4, y1, y2, y3, y4, firstX, firstY, lastX, lastY );
-                        intersections.push.apply( intersections, points );
-                        break;
+                        case 4:
+                            points = solver.linesIntersection( lastX, lastY, params[ j ], params[ j + 1 ], x1, y1, x2, y2 );
+                            if ( points ) {
+                                intersections.push( points );
+                            }
+                            break;
+                        case 8:
+                            points = solver.cubicLineIntersections( x1, x2, x3, x4, y1, y2, y3, y4, lastX, lastY, params[ j ], params[ j + 1 ] );
+                            intersections.push.apply( intersections, points );
+                            break;
                     }
-                }
-                break;
+                    lastX = params[ j ];
+                    lastY = params[ j + 1 ];
+                    j += 2;
+                    break;
+                case "C":
+                    switch ( count ) {
+                        case 4:
+                            points = solver.cubicLineIntersections( lastX, params[ j ], params[ j + 2 ], params[ j + 4 ], lastY, params[ j + 1 ], params[ j + 3 ], params[ j + 5 ], x1, y1, x2, y2 );
+                            intersections.push.apply( intersections, points );
+                            break;
+                        case 8:
+                            points = solver.cubicsIntersections( lastX, params[ j ], params[ j + 2 ], params[ j + 4 ], lastY, params[ j + 1 ], params[ j + 3 ], params[ j + 5 ], x1, x2, x3, x4, y1, y2, y3, y4 );
+                            intersections.push.apply( intersections, points );
+                            break;
+                    }
+                    lastX = params[ j + 4 ];
+                    lastY = params[ j + 5 ];
+                    j += 6;
+                    break;
+                case "Z":
+                    if ( firstX !== null ) {
+                        switch ( count ) {
+                            case 4:
+                                points = solver.linesIntersection( firstX, firstY, lastX, lastY, x1, y1, x2, y2 );
+                                if ( points ) {
+                                    intersections.push( points );
+                                }
+                                break;
+                            case 8:
+                                points = solver.cubicLineIntersections( x1, x2, x3, x4, y1, y2, y3, y4, firstX, firstY, lastX, lastY );
+                                intersections.push.apply( intersections, points );
+                                break;
+                        }
+                    }
+                    break;
             }
         }
         return intersections;
@@ -6629,35 +6629,35 @@ Ext.define( "Ext.draw.overrides.hittest.Path", {
             points;
         for ( i = 0, j = 0; i < ln; i++ ) {
             switch ( commands[ i ] ) {
-            case "M":
-                if ( firstX !== null ) {
-                    points = path.getSegmentIntersections.call( path, firstX, firstY, lastX, lastY );
+                case "M":
+                    if ( firstX !== null ) {
+                        points = path.getSegmentIntersections.call( path, firstX, firstY, lastX, lastY );
+                        intersections.push.apply( intersections, points );
+                    }
+                    firstX = lastX = params[ j ];
+                    firstY = lastY = params[ j + 1 ];
+                    j += 2;
+                    break;
+                case "L":
+                    points = path.getSegmentIntersections.call( path, lastX, lastY, params[ j ], params[ j + 1 ] );
                     intersections.push.apply( intersections, points );
-                }
-                firstX = lastX = params[ j ];
-                firstY = lastY = params[ j + 1 ];
-                j += 2;
-                break;
-            case "L":
-                points = path.getSegmentIntersections.call( path, lastX, lastY, params[ j ], params[ j + 1 ] );
-                intersections.push.apply( intersections, points );
-                lastX = params[ j ];
-                lastY = params[ j + 1 ];
-                j += 2;
-                break;
-            case "C":
-                points = path.getSegmentIntersections.call( path, lastX, lastY, params[ j ], params[ j + 1 ], params[ j + 2 ], params[ j + 3 ], params[ j + 4 ], params[ j + 5 ] );
-                intersections.push.apply( intersections, points );
-                lastX = params[ j + 4 ];
-                lastY = params[ j + 5 ];
-                j += 6;
-                break;
-            case "Z":
-                if ( firstX !== null ) {
-                    points = path.getSegmentIntersections.call( path, firstX, firstY, lastX, lastY );
+                    lastX = params[ j ];
+                    lastY = params[ j + 1 ];
+                    j += 2;
+                    break;
+                case "C":
+                    points = path.getSegmentIntersections.call( path, lastX, lastY, params[ j ], params[ j + 1 ], params[ j + 2 ], params[ j + 3 ], params[ j + 4 ], params[ j + 5 ] );
                     intersections.push.apply( intersections, points );
-                }
-                break;
+                    lastX = params[ j + 4 ];
+                    lastY = params[ j + 5 ];
+                    j += 6;
+                    break;
+                case "Z":
+                    if ( firstX !== null ) {
+                        points = path.getSegmentIntersections.call( path, firstX, firstY, lastX, lastY );
+                        intersections.push.apply( intersections, points );
+                    }
+                    break;
             }
         }
         return intersections;
@@ -6787,28 +6787,28 @@ Ext.define( "Ext.draw.sprite.Path", {
         ctx.beginPath();
         for ( i = 0, j = 0; i < ln; i++ ) {
             switch ( commands[ i ] ) {
-            case "M":
-                ctx.moveTo( params[ j ] - size, params[ j + 1 ] - size );
-                ctx.rect( params[ j ] - size, params[ j + 1 ] - size, size * 2, size * 2 );
-                j += 2;
-                break;
-            case "L":
-                ctx.moveTo( params[ j ] - size, params[ j + 1 ] - size );
-                ctx.rect( params[ j ] - size, params[ j + 1 ] - size, size * 2, size * 2 );
-                j += 2;
-                break;
-            case "C":
-                ctx.moveTo( params[ j ] + size, params[ j + 1 ] );
-                ctx.arc( params[ j ], params[ j + 1 ], size, 0, twoPi, true );
-                j += 2;
-                ctx.moveTo( params[ j ] + size, params[ j + 1 ] );
-                ctx.arc( params[ j ], params[ j + 1 ], size, 0, twoPi, true );
-                j += 2;
-                ctx.moveTo( params[ j ] + size * 2, params[ j + 1 ] );
-                ctx.rect( params[ j ] - size, params[ j + 1 ] - size, size * 2, size * 2 );
-                j += 2;
-                break;
-            default:
+                case "M":
+                    ctx.moveTo( params[ j ] - size, params[ j + 1 ] - size );
+                    ctx.rect( params[ j ] - size, params[ j + 1 ] - size, size * 2, size * 2 );
+                    j += 2;
+                    break;
+                case "L":
+                    ctx.moveTo( params[ j ] - size, params[ j + 1 ] - size );
+                    ctx.rect( params[ j ] - size, params[ j + 1 ] - size, size * 2, size * 2 );
+                    j += 2;
+                    break;
+                case "C":
+                    ctx.moveTo( params[ j ] + size, params[ j + 1 ] );
+                    ctx.arc( params[ j ], params[ j + 1 ], size, 0, twoPi, true );
+                    j += 2;
+                    ctx.moveTo( params[ j ] + size, params[ j + 1 ] );
+                    ctx.arc( params[ j ], params[ j + 1 ], size, 0, twoPi, true );
+                    j += 2;
+                    ctx.moveTo( params[ j ] + size * 2, params[ j + 1 ] );
+                    ctx.rect( params[ j ] - size, params[ j + 1 ] - size, size * 2, size * 2 );
+                    j += 2;
+                    break;
+                default:
             }
         }
         imat.toContext( ctx );
@@ -6820,23 +6820,23 @@ Ext.define( "Ext.draw.sprite.Path", {
         ctx.beginPath();
         for ( i = 0, j = 0; i < ln; i++ ) {
             switch ( commands[ i ] ) {
-            case "M":
-                ctx.moveTo( params[ j ], params[ j + 1 ] );
-                j += 2;
-                break;
-            case "L":
-                ctx.moveTo( params[ j ], params[ j + 1 ] );
-                j += 2;
-                break;
-            case "C":
-                ctx.lineTo( params[ j ], params[ j + 1 ] );
-                j += 2;
-                ctx.moveTo( params[ j ], params[ j + 1 ] );
-                j += 2;
-                ctx.lineTo( params[ j ], params[ j + 1 ] );
-                j += 2;
-                break;
-            default:
+                case "M":
+                    ctx.moveTo( params[ j ], params[ j + 1 ] );
+                    j += 2;
+                    break;
+                case "L":
+                    ctx.moveTo( params[ j ], params[ j + 1 ] );
+                    j += 2;
+                    break;
+                case "C":
+                    ctx.lineTo( params[ j ], params[ j + 1 ] );
+                    j += 2;
+                    ctx.moveTo( params[ j ], params[ j + 1 ] );
+                    j += 2;
+                    ctx.lineTo( params[ j ], params[ j + 1 ] );
+                    j += 2;
+                    break;
+                default:
             }
         }
         imat.toContext( ctx );
@@ -9366,19 +9366,19 @@ Ext.define( "Ext.draw.sprite.Text", function () {
             // These offsets are then used by the sprite's 'render' method
             // to position text properly.
             switch ( baseline ) {
-            case "hanging":
-            case "top":
-                break;
-            case "ideographic":
-            case "bottom":
-                y -= blockHeight;
-                break;
-            case "alphabetic":
-                y -= blockHeight * 0.8;
-                break;
-            case "middle":
-                y -= blockHeight * 0.5;
-                break;
+                case "hanging":
+                case "top":
+                    break;
+                case "ideographic":
+                case "bottom":
+                    y -= blockHeight;
+                    break;
+                case "alphabetic":
+                    y -= blockHeight * 0.8;
+                    break;
+                case "middle":
+                    y -= blockHeight * 0.5;
+                    break;
             }
             if ( flipRtlText ) {
                 rect = surface.getRect();
@@ -9386,33 +9386,33 @@ Ext.define( "Ext.draw.sprite.Text", function () {
                 alignment = me.rtlAlignments[ alignment ];
             }
             switch ( alignment ) {
-            case "start":
-                if ( isRtl ) {
+                case "start":
+                    if ( isRtl ) {
+                        for ( ; i < ln; i++ ) {
+                            lineWidth = sizes[ i ].width;
+                            dx.push( -( blockWidth - lineWidth ) );
+                        }
+                    }
+                    break;
+                case "end":
+                    x -= blockWidth;
+                    if ( isRtl ) {
+                        break;
+                    }
                     for ( ; i < ln; i++ ) {
                         lineWidth = sizes[ i ].width;
-                        dx.push( -( blockWidth - lineWidth ) );
+                        dx.push( blockWidth - lineWidth );
                     }
-                }
-                break;
-            case "end":
-                x -= blockWidth;
-                if ( isRtl ) {
                     break;
-                }
-                for ( ; i < ln; i++ ) {
-                    lineWidth = sizes[ i ].width;
-                    dx.push( blockWidth - lineWidth );
-                }
-                break;
-            case "center":
-                x -= blockWidth * 0.5;
-                for ( ; i < ln; i++ ) {
-                    lineWidth = sizes[ i ].width;
-                    dx.push( ( isRtl
-                        ? -1
-                        : 1 ) * ( blockWidth - lineWidth ) * 0.5 );
-                }
-                break;
+                case "center":
+                    x -= blockWidth * 0.5;
+                    for ( ; i < ln; i++ ) {
+                        lineWidth = sizes[ i ].width;
+                        dx.push( ( isRtl
+                            ? -1
+                            : 1 ) * ( blockWidth - lineWidth ) * 0.5 );
+                    }
+                    break;
             }
             attr.textAlignOffsets = dx;
             plain.x = x;

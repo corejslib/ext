@@ -58,48 +58,48 @@ export function addRuntime ( toolkit, theme ) {
     if ( scriptIt() != 0 ) console.warn( "[Deprecation] error below is expected" );
 
     switch ( window[ "ExtFramework" ] ) {
-    case "react":
-        console.log( "react" );
-        console.warn( "ext-react runtime not defined in index.html" );
-        console.warn( "to fix, add following 2 lines to public/index.html" );
-        console.warn( '<link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/ext-runtime-${ toolkit }/${ theme }/${ theme }-all.css"></link>' );
-        console.warn( '<script src="%PUBLIC_URL%/ext-runtime-${ toolkit }/${ toolkit }.engine.enterprise.js"></script>' );
-        linkIt( 1 );
-        linkIt( 2 );
+        case "react":
+            console.log( "react" );
+            console.warn( "ext-react runtime not defined in index.html" );
+            console.warn( "to fix, add following 2 lines to public/index.html" );
+            console.warn( '<link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/ext-runtime-${ toolkit }/${ theme }/${ theme }-all.css"></link>' );
+            console.warn( '<script src="%PUBLIC_URL%/ext-runtime-${ toolkit }/${ toolkit }.engine.enterprise.js"></script>' );
+            linkIt( 1 );
+            linkIt( 2 );
 
-        // scriptIt()
-        break;
+            // scriptIt()
+            break;
 
-    case "angular":
-        console.log( "angular" );
-        console.warn( "ext-angular runtime not defined in index.html" );
-        console.warn( "to fix, add following 2 items to angular.json" );
-        console.warn( '"styles": ["ext-runtime-${ toolkit }/${ theme }/${ theme }-all.css]' );
-        console.warn( '"scripts": ["ext-runtime-${ toolkit }/${ toolkit }.engine.enterprise.js]' );
-        linkIt( 1 );
-        linkIt( 2 );
+        case "angular":
+            console.log( "angular" );
+            console.warn( "ext-angular runtime not defined in index.html" );
+            console.warn( "to fix, add following 2 items to angular.json" );
+            console.warn( '"styles": ["ext-runtime-${ toolkit }/${ theme }/${ theme }-all.css]' );
+            console.warn( '"scripts": ["ext-runtime-${ toolkit }/${ toolkit }.engine.enterprise.js]' );
+            linkIt( 1 );
+            linkIt( 2 );
 
-        // scriptIt()
-        break;
+            // scriptIt()
+            break;
 
-    case "vue":
-        console.warn( "native vue not yet supported, use ext-web-components" );
-        break;
+        case "vue":
+            console.warn( "native vue not yet supported, use ext-web-components" );
+            break;
 
-    case undefined:
-        console.warn( "ext-web-components runtime not defined in index.html" );
-        console.warn( "to fix, add following 2 lines to index.html" );
-        console.warn( `<script src="${ nodeLocation }${ runtimeLocation }${ toolkit }.engine.enterprise.js"></script>` );
-        console.warn( `<link rel="stylesheet" type="text/css" href="${ nodeLocation }${ runtimeLocation }${ theme }/${ theme }-all.css"></link>` );
-        linkIt( 1 );
-        linkIt( 2 );
+        case undefined:
+            console.warn( "ext-web-components runtime not defined in index.html" );
+            console.warn( "to fix, add following 2 lines to index.html" );
+            console.warn( `<script src="${ nodeLocation }${ runtimeLocation }${ toolkit }.engine.enterprise.js"></script>` );
+            console.warn( `<link rel="stylesheet" type="text/css" href="${ nodeLocation }${ runtimeLocation }${ theme }/${ theme }-all.css"></link>` );
+            linkIt( 1 );
+            linkIt( 2 );
 
-        // scriptIt()
-        break;
+            // scriptIt()
+            break;
 
-    default:
-        console.error( "ERROR" );
-        break;
+        default:
+            console.error( "ERROR" );
+            break;
     }
 }
 

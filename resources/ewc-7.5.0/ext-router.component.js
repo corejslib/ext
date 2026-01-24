@@ -106,42 +106,42 @@ export class ExtRouter extends WebComponentsBaseComponent {
         }
 
         switch ( true ) {
-        case isMenu( childxtype ):
-            parentCmp.setMenu( childCmp );
-            break;
-        case isRenderercell( childxtype ):
-            parentCmp.setCell( childCmp );
-            break;
-        case isParentGridAndChildColumn( parentxtype, childxtype ):
-            if ( location == null ) {
-                parentCmp.addColumn( childCmp );
-            }
-            else {
-                var regCols = 0;
-                if ( parentCmp.registeredColumns != undefined ) {
-                    regCols = parentCmp.registeredColumns.length;
-                }
-                if ( parentxtype == "grid" ) {
-                    parentCmp.insertColumn( location + regCols, childCmp );
+            case isMenu( childxtype ):
+                parentCmp.setMenu( childCmp );
+                break;
+            case isRenderercell( childxtype ):
+                parentCmp.setCell( childCmp );
+                break;
+            case isParentGridAndChildColumn( parentxtype, childxtype ):
+                if ( location == null ) {
+                    parentCmp.addColumn( childCmp );
                 }
                 else {
-                    parentCmp.insert( location + regCols, childCmp );
+                    var regCols = 0;
+                    if ( parentCmp.registeredColumns != undefined ) {
+                        regCols = parentCmp.registeredColumns.length;
+                    }
+                    if ( parentxtype == "grid" ) {
+                        parentCmp.insertColumn( location + regCols, childCmp );
+                    }
+                    else {
+                        parentCmp.insert( location + regCols, childCmp );
+                    }
                 }
-            }
-            break;
-        case isTooltip( childxtype ):
-            parentCmp.setTooltip( childCmp );
-            break;
-        case isPlugin( childxtype ):
-            parentCmp.setPlugin( childCmp );
-            break;
-        default:
-            if ( location == null ) {
-                parentCmp.add( childCmp );
-            }
-            else {
-                parentCmp.insert( location, childCmp );
-            }
+                break;
+            case isTooltip( childxtype ):
+                parentCmp.setTooltip( childCmp );
+                break;
+            case isPlugin( childxtype ):
+                parentCmp.setPlugin( childCmp );
+                break;
+            default:
+                if ( location == null ) {
+                    parentCmp.add( childCmp );
+                }
+                else {
+                    parentCmp.insert( location, childCmp );
+                }
         }
     }
 
