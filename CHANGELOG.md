@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.20.20 (2026-01-27)
+
+**Other changes:**
+
+- chore(metadata): update package metadata (● [1a825f0](https://github.com/c0rejs/ext/commit/1a825f0); 👬 zdm)
+
+Compare with the previous release: [v5.20.19](https://github.com/c0rejs/ext/compare/v5.20.19...v5.20.20)
+
 ### v5.20.19 (2026-01-24)
 
 **Bug fixes:**
