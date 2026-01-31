@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.20.23 (2026-01-31)
+
+**Other changes:**
+
+- chore: rename package (● [ef912a7](https://github.com/corejslib/ext/commit/ef912a7), [e0f9910](https://github.com/corejslib/ext/commit/e0f9910); 👬 zdm)
+
+Compare with the previous release: [v5.20.22](https://github.com/corejslib/ext/compare/v5.20.22...v5.20.23)
+
 ### v5.20.22 (2026-01-29)
 
 No changes since the previous release.
