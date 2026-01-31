@@ -1,15 +1,15 @@
 {
-    "name": "@c0rejs/ext-build",
+    "name": "@corejslib/ext-build",
     "version": "5.20.22",
     "private": true,
-    "homepage": "https://c0rejs.github.io/ext/",
+    "homepage": "https://corejslib.github.io/ext/",
     "bugs": {
-        "url": "https://github.com/c0rejs/ext/issues",
+        "url": "https://github.com/corejslib/ext/issues",
         "email": "root <root@softvisio.net>"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/c0rejs/ext.git",
+        "url": "git+https://github.com/corejslib/ext.git",
         "directory": "build"
     },
     "license": "Proprietary Software",
@@ -17,13 +17,13 @@
     "type": "module",
     "imports": {
         "#root/*": "./*",
-        "#core/*": "@c0rejs/core/*"
+        "#core/*": "@corejslib/core/*"
     },
     "scripts": {
         "build": "node bin/build.js"
     },
     "devDependencies": {
-        "@c0rejs/core": "^7.192.0",
+        "@corejslib/core": "^7.192.0",
         "@sencha/cmd": "^7.9.0",
         "@sencha/ext": "^7.9.0",
         "@sencha/ext-charts": "^7.9.0",
