@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.20.24 (2026-02-05)
+
+**Other changes:**
+
+- chore: remove @zdm npm registry (● [1f34cb0](https://github.com/corejslib/ext/commit/1f34cb0); 👬 zdm)
+
+Compare with the previous release: [v5.20.23](https://github.com/corejslib/ext/compare/v5.20.23...v5.20.24)
+
 ### v5.20.23 (2026-01-31)
 
 **Other changes:**
