@@ -41,6 +41,4 @@ Ext.Date.getShortDayName = day => Ext.Date.dayNamesShort[ day ];
 
 Ext.Date.formatExt = Ext.Date.format;
 
-Ext.Date.format = function ( value, format ) {
-    return Ext.util.Format.date( value, format );
-};
+Ext.Date.format = Ext.util.Format.date;
