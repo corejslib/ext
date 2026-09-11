@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.27 (2026-09-11)
+
+**Bug fixes:**
+
+- \[PATCH] fix: update locales po (● [7bcf0b1](https://github.com/corejslib/ext/commit/7bcf0b1); 👬 zdm)
+
+Compare with the previous release: [v5.21.26...v5.21.27](https://github.com/corejslib/ext/compare/v5.21.26...v5.21.27)
+
 ### v5.21.26 (2026-08-28)
 
 **Bug fixes:**
