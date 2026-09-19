@@ -1,5 +1,19 @@
 # Changelog
 
+### v5.21.29 (2026-09-19)
+
+**Code refactoring:**
+
+- \[PATCH] refactor: revert to original build (● [344f778](https://github.com/corejslib/ext/commit/344f778); 👬 zdm)
+
+**Other changes:**
+
+- build: update lint command (● [1a23c46](https://github.com/corejslib/ext/commit/1a23c461); 👬 zdm)
+
+- style: lint (● [4d568df](https://github.com/corejslib/ext/commit/4d568df), [c627322](https://github.com/corejslib/ext/commit/c627322); 👬 zdm)
+
+Compare with the previous release: [v5.21.28...v5.21.29](https://github.com/corejslib/ext/compare/v5.21.28...v5.21.29)
+
 ### v5.21.28 (2026-09-19)
 
 **Bug fixes:**
