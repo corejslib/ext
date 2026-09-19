@@ -1,19 +1,18 @@
-import ElementParser from "./common/ElementParser.js";
 import Ext_Chip from "./Ext/Chip.js";
+import ElementParser from "./common/ElementParser.js";
 
 export default class EWCChip extends Ext_Chip {
-    constructor () {
-        super( [], [] );
+    constructor() {
+        super([], []);
         this.xtype = "chip";
     }
 }
 try {
-    if ( window.customElements.get( "ext-chip" ) == undefined ) {
-        window.customElements.define( "ext-chip", ElementParser.withParsedCallback( EWCChip ) );
+    if (window.customElements.get("ext-chip") == undefined) {
+        window.customElements.define("ext-chip", ElementParser.withParsedCallback(EWCChip));
     }
-}
-catch ( e ) {
-    if ( window.customElements.get( "ext-chip" ) == undefined ) {
-        window.customElements.define( "ext-chip", EWCChip );
+} catch (e) {
+    if (window.customElements.get("ext-chip") == undefined) {
+        window.customElements.define("ext-chip", EWCChip);
     }
 }
