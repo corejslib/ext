@@ -174,7 +174,7 @@ await fs.promises.cp( `${ tmpDir.path }/node_modules/@sencha/ext-web-components-
 {
     console.log( "Compress css files" );
 
-    childProcess.spawnSync( "npx zcli lint --action=compress --no-lintignore **/*.css", {
+    childProcess.spawnSync( "npx zcli lint --action=compress **/*.css", {
         "cwd": dataDir,
         "shell": true,
         "stdio": "inherit",
@@ -183,7 +183,7 @@ await fs.promises.cp( `${ tmpDir.path }/node_modules/@sencha/ext-web-components-
     console.log();
     console.log( "Lint files" );
 
-    childProcess.spawnSync( "npx zcli lint --no-lintignore --no-log --no-eslint", {
+    childProcess.spawnSync( "npx zcli lint --no-lintignore --no-log --no-eslint-code", {
         "cwd": dataDir,
         "shell": true,
         "stdio": "inherit",
