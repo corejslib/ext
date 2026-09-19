@@ -1,18 +1,19 @@
-import Ext_grid_cell_Widget from "./Ext/grid/cell/Widget.js";
 import ElementParser from "./common/ElementParser.js";
+import Ext_grid_cell_Widget from "./Ext/grid/cell/Widget.js";
 
 export default class EWCWidgetcell extends Ext_grid_cell_Widget {
-    constructor() {
-        super([], []);
+    constructor () {
+        super( [], [] );
         this.xtype = "widgetcell";
     }
 }
 try {
-    if (window.customElements.get("ext-widgetcell") == undefined) {
-        window.customElements.define("ext-widgetcell", ElementParser.withParsedCallback(EWCWidgetcell));
+    if ( window.customElements.get( "ext-widgetcell" ) == undefined ) {
+        window.customElements.define( "ext-widgetcell", ElementParser.withParsedCallback( EWCWidgetcell ) );
     }
-} catch (e) {
-    if (window.customElements.get("ext-widgetcell") == undefined) {
-        window.customElements.define("ext-widgetcell", EWCWidgetcell);
+}
+catch ( e ) {
+    if ( window.customElements.get( "ext-widgetcell" ) == undefined ) {
+        window.customElements.define( "ext-widgetcell", EWCWidgetcell );
     }
 }

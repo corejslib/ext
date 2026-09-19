@@ -1,18 +1,19 @@
-import Ext_grid_RowBody from "./Ext/grid/RowBody.js";
 import ElementParser from "./common/ElementParser.js";
+import Ext_grid_RowBody from "./Ext/grid/RowBody.js";
 
 export default class EWCRowbody extends Ext_grid_RowBody {
-    constructor() {
-        super([], []);
+    constructor () {
+        super( [], [] );
         this.xtype = "rowbody";
     }
 }
 try {
-    if (window.customElements.get("ext-rowbody") == undefined) {
-        window.customElements.define("ext-rowbody", ElementParser.withParsedCallback(EWCRowbody));
+    if ( window.customElements.get( "ext-rowbody" ) == undefined ) {
+        window.customElements.define( "ext-rowbody", ElementParser.withParsedCallback( EWCRowbody ) );
     }
-} catch (e) {
-    if (window.customElements.get("ext-rowbody") == undefined) {
-        window.customElements.define("ext-rowbody", EWCRowbody);
+}
+catch ( e ) {
+    if ( window.customElements.get( "ext-rowbody" ) == undefined ) {
+        window.customElements.define( "ext-rowbody", EWCRowbody );
     }
 }

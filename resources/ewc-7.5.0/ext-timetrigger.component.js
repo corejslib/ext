@@ -1,18 +1,19 @@
-import Ext_field_trigger_Time from "./Ext/field/trigger/Time.js";
 import ElementParser from "./common/ElementParser.js";
+import Ext_field_trigger_Time from "./Ext/field/trigger/Time.js";
 
 export default class EWCTimetrigger extends Ext_field_trigger_Time {
-    constructor() {
-        super([], []);
+    constructor () {
+        super( [], [] );
         this.xtype = "timetrigger";
     }
 }
 try {
-    if (window.customElements.get("ext-timetrigger") == undefined) {
-        window.customElements.define("ext-timetrigger", ElementParser.withParsedCallback(EWCTimetrigger));
+    if ( window.customElements.get( "ext-timetrigger" ) == undefined ) {
+        window.customElements.define( "ext-timetrigger", ElementParser.withParsedCallback( EWCTimetrigger ) );
     }
-} catch (e) {
-    if (window.customElements.get("ext-timetrigger") == undefined) {
-        window.customElements.define("ext-timetrigger", EWCTimetrigger);
+}
+catch ( e ) {
+    if ( window.customElements.get( "ext-timetrigger" ) == undefined ) {
+        window.customElements.define( "ext-timetrigger", EWCTimetrigger );
     }
 }
