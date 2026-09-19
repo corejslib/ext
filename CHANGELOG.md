@@ -1,5 +1,21 @@
 # Changelog
 
+### v5.21.28 (2026-09-19)
+
+**Bug fixes:**
+
+- \[PATCH] fix: update lint options (● [76d3747](https://github.com/corejslib/ext/commit/76d3747); 👬 zdm)
+
+**Code refactoring:**
+
+- \[PATCH] refactor: refactor eslint config (● [2d39d2a](https://github.com/corejslib/ext/commit/2d39d2a); 👬 zdm)
+
+**Other changes:**
+
+- style: lint (● [9e2017c](https://github.com/corejslib/ext/commit/9e2017c); 👬 zdm)
+
+Compare with the previous release: [v5.21.27...v5.21.28](https://github.com/corejslib/ext/compare/v5.21.27...v5.21.28)
+
 ### v5.21.27 (2026-09-11)
 
 **Bug fixes:**
