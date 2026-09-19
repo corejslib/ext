@@ -6,9 +6,7 @@ export default class WebComponentsBaseComponent extends HTMLElement {
     constructor ( properties, events ) {
         super();
 
-        const distinct = ( value, index, self ) => {
-            return self.indexOf( value ) === index;
-        };
+        const distinct = ( value, index, self ) => self.indexOf( value ) === index;
         this.properties = properties.filter( distinct );
 
         var unique = [];

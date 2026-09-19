@@ -6386,8 +6386,8 @@ Ext.define( "Ext.draw.overrides.hittest.Path", {
 
     // An arbitrary point outside the path used for hit testing with ray casting method.
     "rayOrigin": {
-        "x": -10000,
-        "y": -10000,
+        "x": -10_000,
+        "y": -10_000,
     },
 
     /**
@@ -8580,7 +8580,7 @@ Ext.define( "Ext.draw.sprite.Sector", {
         var startAngle = Math.min( attr.startAngle, attr.endAngle ),
             endAngle = Math.max( attr.startAngle, attr.endAngle ),
             midAngle = ( this.midAngle = ( startAngle + endAngle ) * 0.5 ),
-            fullPie = Ext.Number.isEqual( Math.abs( endAngle - startAngle ), Ext.draw.Draw.pi2, 1.0e-10 ),
+            fullPie = Ext.Number.isEqual( Math.abs( endAngle - startAngle ), Ext.draw.Draw.pi2, 1e-10 ),
             margin = attr.margin,
             centerX = attr.centerX,
             centerY = attr.centerY,
@@ -8694,11 +8694,11 @@ Ext.define( "Ext.draw.TextMeasurer", {
             "style": {
                 "display": "block",
                 "position": "absolute",
-                "x": -100000,
-                "y": -100000,
+                "x": -100_000,
+                "y": -100_000,
                 "padding": 0,
                 "margin": 0,
-                "z-index": -100000,
+                "z-index": -100_000,
                 "white-space": "nowrap",
             },
         },
@@ -8717,7 +8717,7 @@ Ext.define( "Ext.draw.TextMeasurer", {
     "actualMeasureText": function ( text, font ) {
         var me = Ext.draw.TextMeasurer,
             measureDiv = me.measureDiv,
-            FARAWAY = 100000,
+            FARAWAY = 100_000,
             size,
             parent;
         if ( !measureDiv ) {

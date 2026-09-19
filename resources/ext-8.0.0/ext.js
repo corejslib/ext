@@ -6897,7 +6897,7 @@ Ext.String = ( function () {
     // @require Ext
     // @require Ext.lang.Array
 
-    var trimRegex = /^[\t\n\v\f\r\x20\xa0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u202f\u205f\u3000]+|[\t\n\v\f\r\x20\xa0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u2028\u2029\u202f\u205f\u3000]+$/gv,
+    var trimRegex = /^[\t\n\v\f\r\u{20}\u{A0}\u{1680}\u{180E}\u{2000}\u{2001}\u{2002}\u{2003}\u{2004}\u{2005}\u{2006}\u{2007}\u{2008}\u{2009}\u{200A}\u{2028}\u{2029}\u{202F}\u{205F}\u{3000}]+|[\t\n\v\f\r\u{20}\u{A0}\u{1680}\u{180E}\u{2000}\u{2001}\u{2002}\u{2003}\u{2004}\u{2005}\u{2006}\u{2007}\u{2008}\u{2009}\u{200A}\u{2028}\u{2029}\u{202F}\u{205F}\u{3000}]+$/gv,
         escapeRe = /('|\\)/gv,
         escapeRegexRe = /([-.*+?^${}()|[\]/\\])/gu,
         basicTrimRe = /^\s+|\s+$/gv,
@@ -6944,13 +6944,13 @@ Ext.String = ( function () {
                     if (
                         !isFinite( codePoint ) || // `NaN`, `+Infinity`, or `-Infinity`
                         codePoint < 0 || // not a valid Unicode code point
-                        codePoint > 1114111 || // not a valid Unicode code point
+                        codePoint > 1_114_111 || // not a valid Unicode code point
                         Math.floor( codePoint ) !== codePoint
                     ) // not an integer
                     {
                         Ext.raise( "Invalid code point: " + codePoint );
                     }
-                    if ( codePoint <= 65535 ) {
+                    if ( codePoint <= 65_535 ) {
 
                         // BMP code point
                         codeUnits.push( codePoint );
@@ -6959,8 +6959,8 @@ Ext.String = ( function () {
 
                         // Astral code point; split in surrogate halves
                         // http://mathiasbynens.be/notes/javascript-encoding#surrogate-formulae
-                        codePoint -= 65536;
-                        codeUnits.push( ( codePoint >> 10 ) + 55296, ( codePoint % 1024 ) + 56320 );
+                        codePoint -= 65_536;
+                        codeUnits.push( ( codePoint >> 10 ) + 55_296, ( codePoint % 1024 ) + 56_320 );
                     }
                     if ( index + 1 === length ) {
                         result += fromCharCode( codeUnits );
@@ -7742,7 +7742,9 @@ Ext.Date = ( function () {
 
     utilDate = {
 
-        /** @ignore */
+        /**
+        @ignore
+        */
         "now": nativeDate.now,
 
         // always available due to polyfill in Ext.js
@@ -9060,7 +9062,7 @@ Ext.Date = ( function () {
         "getWeekOfYear": ( function () {
 
             // adapted from http://www.merlyn.demon.co.uk/weekcalc.htm
-            var ms1d = 86400000,
+            var ms1d = 86_400_000,
 
                 // milliseconds in a day
                 ms7d = 7 * ms1d;
@@ -9566,7 +9568,7 @@ Ext.Date = ( function () {
             var diff = +max - min,
 
                 // Calculate timezone differences, including daylight savings adjustments
-                timezoneOffsetAdjustment = ( min.getTimezoneOffset() - max.getTimezoneOffset() ) * 60000,
+                timezoneOffsetAdjustment = ( min.getTimezoneOffset() - max.getTimezoneOffset() ) * 60_000,
 
                 // Apply the timezone adjustment to the date difference
                 adjustedDiff = diff + timezoneOffsetAdjustment,
@@ -9577,13 +9579,13 @@ Ext.Date = ( function () {
                 case utilDate.SECOND:
                     return Math.floor( diff / 1000 );
                 case utilDate.MINUTE:
-                    return Math.floor( diff / 60000 );
+                    return Math.floor( diff / 60_000 );
                 case utilDate.HOUR:
-                    return Math.floor( diff / 3600000 );
+                    return Math.floor( diff / 3_600_000 );
                 case utilDate.DAY:
-                    return Math.floor( adjustedDiff / 86400000 );
+                    return Math.floor( adjustedDiff / 86_400_000 );
                 case utilDate.WEEK:
-                    return Math.floor( adjustedDiff / 604800000 );
+                    return Math.floor( adjustedDiff / 604_800_000 );
                 case utilDate.MONTH:
                     est = max.getFullYear() * 12 + max.getMonth() - ( min.getFullYear() * 12 + min.getMonth() );
                     if ( utilDate.add( min, unit, est ) > max ) {
@@ -16667,7 +16669,9 @@ Ext.Base = ( function ( flexSetter ) {
     // lazily create now so as not capture in $staticMembers
     Base.addMembers( {
 
-        /** @private */
+        /**
+        @private
+        */
         "$className": "Ext.Base",
 
         /**
@@ -19351,7 +19355,9 @@ Ext.ClassManager = ( function ( Class, alias, arraySlice, arrayFrom, global ) {
              */
             "existCache": {},
 
-            /** @private */
+            /**
+            @private
+            */
             "instantiators": [],
 
             /**
@@ -25037,7 +25043,9 @@ Ext.Loader = new function () {
          */
         "requiresMap": _requiresMap,
 
-        /** @private */
+        /**
+        @private
+        */
         "hasFileLoadError": false,
 
         /**
@@ -27592,7 +27600,9 @@ Ext.define(
                 },
             },
 
-            /* End Definitions */
+            /*
+            End Definitions
+            */
             /**
              * @cfg {Object} listeners
              *
@@ -30122,7 +30132,7 @@ Ext.define(
                  *
                  * @private
                  */
-                "queue": new Array( 10000 ),
+                "queue": new Array( 10_000 ),
 
                 /**
                  * @property {Number} queueSize The number of callbacks in the `queue`.
@@ -32707,12 +32717,12 @@ Ext.define( "Ext.data.request.Ajax", {
             success = ( status >= 200 && status < 300 ) || status === 304 || ( status === 0 && Ext.isNumber( len ) );
             if ( !success ) {
                 switch ( status ) {
-                    case 12002:
-                    case 12029:
-                    case 12030:
-                    case 12031:
-                    case 12152:
-                    case 13030:
+                    case 12_002:
+                    case 12_029:
+                    case 12_030:
+                    case 12_031:
+                    case 12_152:
+                    case 13_030:
                         isException = true;
                         break;
                 }
@@ -33683,7 +33693,7 @@ Ext.define( "Ext.data.Connection", {
          *
          *     timedout: true
          */
-        "timeout": 30000,
+        "timeout": 30_000,
 
         /**
          * @cfg {Object} [extraParams] Any parameters to be appended to the request.
@@ -34657,7 +34667,7 @@ Ext.define(
                 "font-style": "normal",
                 "line-height": "20px",
                 "-webkit-font-smoothing": "antialiased",
-                "zIndex": 100000,
+                "zIndex": 100_000,
                 "position": "absolute",
             };
             Ext.getBody().append( [
@@ -38339,28 +38349,28 @@ Ext.define( "Ext.util.Positionable", {
                 clipped = true;
             }
             else {
-                clipValues[ 0 ] = -10000;
+                clipValues[ 0 ] = -10_000;
             }
             if ( sides & 2 && ( overflow = floaterRegion.right - clippingRegion.right ) > 0 ) {
                 clipValues[ 1 ] = Math.max( 0, el.getWidth() - overflow );
                 clipped = true;
             }
             else {
-                clipValues[ 1 ] = 10000;
+                clipValues[ 1 ] = 10_000;
             }
             if ( sides & 4 && ( overflow = floaterRegion.bottom - clippingRegion.bottom ) > 0 ) {
                 clipValues[ 2 ] = Math.max( 0, el.getHeight() - overflow );
                 clipped = true;
             }
             else {
-                clipValues[ 2 ] = 10000;
+                clipValues[ 2 ] = 10_000;
             }
             if ( sides & 8 && ( overflow = clippingRegion.left - floaterRegion.left ) > 0 ) {
                 clipValues[ 3 ] = overflow;
                 clipped = true;
             }
             else {
-                clipValues[ 3 ] = -10000;
+                clipValues[ 3 ] = -10_000;
             }
             clipStyle = "rect(";
             for ( i = 0; i < 4; ++i ) {
@@ -39179,7 +39189,9 @@ Ext.define( "Ext.event.publisher.Publisher", {
  */
 Ext.define( "Ext.util.Offset", {
 
-    /* Begin Definitions */
+    /*
+    Begin Definitions
+    */
     "statics": {
         "fromObject": function ( obj ) {
             if ( obj instanceof this ) {
@@ -39195,7 +39207,9 @@ Ext.define( "Ext.util.Offset", {
         },
     },
 
-    /* End Definitions */
+    /*
+    End Definitions
+    */
     "constructor": function ( x, y ) {
         this.x = x != null && !isNaN( x )
             ? x
@@ -39665,7 +39679,9 @@ Ext.define(
                 },
             },
 
-            /* End Definitions */
+            /*
+            End Definitions
+            */
             /**
              * Creates a region from the bounding sides.
              * @param {Number} top The topmost pixel of the Region.
@@ -41957,269 +41973,445 @@ Ext.define(
     function ( Event ) {
         var constants = {
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "BACKSPACE": 8,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "TAB": 9,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_CENTER": 12,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "ENTER": 13,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "RETURN": 13,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "SHIFT": 16,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "CTRL": 17,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "ALT": 18,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "PAUSE": 19,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "CAPS_LOCK": 20,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "ESC": 27,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "SPACE": 32,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "PAGE_UP": 33,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "PAGE_DOWN": 34,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "END": 35,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "HOME": 36,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "LEFT": 37,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "UP": 38,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "RIGHT": 39,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "DOWN": 40,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "PRINT_SCREEN": 44,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "INSERT": 45,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "DELETE": 46,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "ZERO": 48,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "ONE": 49,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "TWO": 50,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "THREE": 51,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "FOUR": 52,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "FIVE": 53,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "SIX": 54,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "SEVEN": 55,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "EIGHT": 56,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NINE": 57,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "A": 65,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "B": 66,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "C": 67,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "D": 68,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "E": 69,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F": 70,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "G": 71,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "H": 72,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "I": 73,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "J": 74,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "K": 75,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "L": 76,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "M": 77,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "N": 78,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "O": 79,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "P": 80,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "Q": 81,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "R": 82,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "S": 83,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "T": 84,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "U": 85,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "V": 86,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "W": 87,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "X": 88,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "Y": 89,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "Z": 90,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "META": 91,
 
                 // Command key on mac, left window key on Windows
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "CONTEXT_MENU": 93,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_ZERO": 96,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_ONE": 97,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_TWO": 98,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_THREE": 99,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_FOUR": 100,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_FIVE": 101,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_SIX": 102,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_SEVEN": 103,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_EIGHT": 104,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_NINE": 105,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_MULTIPLY": 106,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_PLUS": 107,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_MINUS": 109,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_PERIOD": 110,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "NUM_DIVISION": 111,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F1": 112,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F2": 113,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F3": 114,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F4": 115,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F5": 116,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F6": 117,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F7": 118,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F8": 119,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F9": 120,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F10": 121,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F11": 122,
 
-                /** Key constant @type Number */
+                /**
+                Key constant @type Number
+                */
                 "F12": 123,
 
                 /**
@@ -42546,7 +42738,7 @@ Ext.define(
             // to remove any element listeners which is typically part
             // of the unload destroy process.
             Ext.getWin().on( "unload", me.destroy, me, {
-                "priority": -10000,
+                "priority": -10_000,
             } );
         },
         "initHandlers": function () {
@@ -44275,7 +44467,7 @@ Ext.define( "Ext.util.sizemonitor.Scroll", {
     "refreshMonitors": function () {
         var expandMonitor = this.expandMonitor,
             shrinkMonitor = this.shrinkMonitor,
-            end = 1000000;
+            end = 1_000_000;
         if ( expandMonitor && !expandMonitor.destroyed ) {
 
             // the performance improvement will only be appliable for IOS device
@@ -52634,7 +52826,7 @@ Ext.JSON = new function () {
 
         // ie doesn't handle \v
 
-        charToReplace = /[\\"\x00-\x1f\x7f-\uffff]/g,
+        charToReplace = /[\\"\x00-\x1F\x7F-\uFFFF]/g,
         encodeString = function ( s ) {
             return (
                 '"' +
@@ -62104,7 +62296,9 @@ Ext.define( "Ext.state.Stateful", function ( Stateful ) {
                 if ( state ) {
                     state.getData();
 
-                    /* create = false */
+                    /*
+                    create = false
+                    */
                     ret = me.loadState( state, me.getStateful() );
                 }
                 return ret || null;
@@ -62340,7 +62534,7 @@ Ext.define( "Ext.util.Format", function () {
             if ( strict
                 ? value === "" || value == null
                 : !value ) {
-                value = "\xa0";
+                value = "\u{A0}";
             }
             return value;
         },
@@ -62662,8 +62856,8 @@ Ext.define( "Ext.util.Format", function () {
          */
         "fileSize": ( function () {
             var byteLimit = 1024,
-                kbLimit = 1048576,
-                mbLimit = 1073741824;
+                kbLimit = 1_048_576,
+                mbLimit = 1_073_741_824;
             return function ( size ) {
                 var out;
                 if ( size < byteLimit ) {
@@ -63231,7 +63425,9 @@ Ext.define(
         // IE and Opera are also fine with the "new Function" technique.
         "useEval": Ext.isGecko,
 
-        /* End Definitions */
+        /*
+        End Definitions
+        */
         /**
          * Creates new template.
          *
@@ -81916,7 +82112,7 @@ Ext.define( "Ext.data.Range", {
      * A timeout to wait for promises to complete returned from `goto`. `null` for
      * the timeout to be infinite.
      */
-    "waitTimeout": 10000,
+    "waitTimeout": 10_000,
 
     // private
     "activeWait": null,
@@ -84371,10 +84567,14 @@ Ext.define(
     "Ext.util.Inflector",
     {
 
-        /* Begin Definitions */
+        /*
+        Begin Definitions
+        */
         "singleton": true,
 
-        /* End Definitions */
+        /*
+        End Definitions
+        */
 
         /**
          * @private
@@ -88587,7 +88787,7 @@ Ext.define( "Ext.data.SortTypes", function () {
             // If allowNull, return the Unicode null character.
             return s != null
                 ? String( s ).replace( me.stripTagsRE, "" )
-                : "\x00";
+                : "\u{0}";
         },
 
         /**
@@ -88600,7 +88800,7 @@ Ext.define( "Ext.data.SortTypes", function () {
             // If allowNull, return the Unicode null character.
             return s != null
                 ? String( s ).toUpperCase().replace( me.stripTagsRE, "" )
-                : "\x00";
+                : "\u{0}";
         },
 
         /**
@@ -88613,7 +88813,7 @@ Ext.define( "Ext.data.SortTypes", function () {
             // If allowNull, return the Unicode null character.
             return s != null
                 ? String( s ).toUpperCase()
-                : "\x00";
+                : "\u{0}";
         },
 
         /**
@@ -99501,7 +99701,7 @@ Ext.define( "Ext.data.proxy.Server", {
          * The number of milliseconds to wait for a response. Defaults to 30000 milliseconds
          * (30 seconds).
          */
-        "timeout": 30000,
+        "timeout": 30_000,
 
         /**
          * @cfg {Object} api
@@ -101736,7 +101936,7 @@ Ext.define( "Ext.util.GroupCollection", {
         "itemRoot": null,
     },
     "observerPriority": -100,
-    "emptyGroupRetainTime": 300000,
+    "emptyGroupRetainTime": 300_000,
 
     // Private timer to hang on to emptied groups. Milliseconds.
     "rootProperty": "_data",
@@ -101873,7 +102073,7 @@ Ext.define( "Ext.util.GroupCollection", {
                 entry = entries[ i ];
 
                 // Will add or replace
-                entry.group.splice( 0, 1.0e99, entry.items );
+                entry.group.splice( 0, 1e99, entry.items );
 
                 // Add item key -> group mapping for every entry
                 for ( j = 0; j < entry.items.length; j++ ) {
@@ -126882,12 +127082,16 @@ Ext.define( "Ext.data.ClientStore", {
  */
 Ext.define( "Ext.data.proxy.Direct", {
 
-    /* Begin Definitions */
+    /*
+    Begin Definitions
+    */
     "extend": Ext.data.proxy.Server,
     "alternateClassName": "Ext.data.DirectProxy",
     "alias": "proxy.direct",
 
-    /* End Definitions */
+    /*
+    End Definitions
+    */
     /**
      * @cfg url
      * @hide
@@ -127165,11 +127369,15 @@ Ext.define( "Ext.data.proxy.Direct", {
  */
 Ext.define( "Ext.data.DirectStore", {
 
-    /* Begin Definitions */
+    /*
+    Begin Definitions
+    */
     "extend": Ext.data.Store,
     "alias": "store.direct",
 
-    /* End Definitions */
+    /*
+    End Definitions
+    */
     "constructor": function ( config ) {
         var proxy;
         config = Ext.apply( {}, config );
@@ -127250,7 +127458,7 @@ Ext.define( "Ext.data.JsonP", {
      * A default timeout for any JsonP requests. If the request has not completed in this time the
      * failure callback will be fired. The timeout is in ms. Defaults to <tt>30000</tt>.
      */
-    "timeout": 30000,
+    "timeout": 30_000,
 
     /**
      * @property disableCaching
@@ -131512,7 +131720,7 @@ Ext.define( "Ext.data.query.Stringifier", {
             var symbols = this.symbols,
                 operatorTypeMap = this.operatorTypeMap,
                 type = node.type,
-                ret = 1000000000,
+                ret = 1_000_000_000,
                 op;
             if ( type === "between" ) {
                 ret = 0;
@@ -132552,7 +132760,7 @@ Ext.define( "Ext.data.Request", {
         "binary": false,
         "callback": null,
         "scope": null,
-        "timeout": 30000,
+        "timeout": 30_000,
         "records": null,
 
         // The following two configurations are only used by Ext.data.proxy.Direct and are just
@@ -136090,7 +136298,7 @@ Ext.define(
             // IE runs the same speed using setAttribute, however FF slows way down
             // and Safari completely fails so they need to continue to use expandos.
             isIE = !!window.ActiveXObject,
-            key = 30803,
+            key = 30_803,
             longHex = /\\([0-9a-f]{6})/giv,
             shortHex = /\\([0-9a-f]{1,6})\s?/giv,
             nonHex = /\\([^0-9a-f])/gi,
@@ -138199,7 +138407,7 @@ Ext.define(
             */
                 return function () {
                     parts[ 0 ] = toHex( timeLo, 8 );
-                    parts[ 1 ] = toHex( timeHi & 65535, 4 );
+                    parts[ 1 ] = toHex( timeHi & 65_535, 4 );
                     parts[ 2 ] = toHex( ( ( timeHi >>> 16 ) & 4095 ) | ( 1 << 12 ), 4 );
 
                     // sequentially increment the timestamp...
@@ -142458,7 +142666,7 @@ Ext.define(
 
         // -------------------------------------------------------------------------
         "firing": false,
-        "nextExpires": 1.0e99,
+        "nextExpires": 1e99,
 
         /**
          * @private
@@ -142470,7 +142678,7 @@ Ext.define(
 
                 // null by default
                 now = Ext.Date.now(),
-                nextExpires = 1.0e99,
+                nextExpires = 1e99,
                 len = tasks.length,
                 expires,
                 newTasks,
@@ -144661,7 +144869,7 @@ Ext.define( "Ext.dom.GarbageCollector", {
      *
      *     Ext.dom.GarbageCollector.interval = 60000; // run garbage collection every one minute
      */
-    "interval": 30000,
+    "interval": 30_000,
     "constructor": function () {
         var me = this;
         me.lastTime = Ext.now();
@@ -162077,7 +162285,7 @@ Ext.define( "Ext.util.ClickRepeater", {
             var me = this;
             me.fireClick( e );
             me.timer = Ext.defer( me.click, me.accelerate
-                ? me.easeOutExpo( Ext.now() - me.mousedownTime, 400, -390, 12000 )
+                ? me.easeOutExpo( Ext.now() - me.mousedownTime, 400, -390, 12_000 )
                 : me.interval, me, [ e ] );
         },
         "easeOutExpo": function ( t, b, c, d ) {
@@ -163210,7 +163418,7 @@ Ext.define(
              * @member Ext.dom.Element
              */
             "getTextWidth": function ( text, min, max ) {
-                return Ext.Number.constrain( Ext.util.TextMetrics.measure( this.dom, Ext.valueFrom( text, this.dom.innerHTML, true ) ).width, min || 0, max || 1000000 );
+                return Ext.Number.constrain( Ext.util.TextMetrics.measure( this.dom, Ext.valueFrom( text, this.dom.innerHTML, true ) ).width, min || 0, max || 1_000_000 );
             },
         } );
     }
@@ -170431,7 +170639,7 @@ Ext.define( "Ext.menu.Item", {
                     ],
                 },
                 {
-                    "html": "\xa0",
+                    "html": "\u{A0}",
                     "reference": "textElement",
                     "cls": Ext.baseCSSPrefix + "text-el",
                 },
@@ -170566,7 +170774,7 @@ Ext.define( "Ext.menu.Item", {
     },
     "updateText": function ( text ) {
         if ( text == null || text === "" ) {
-            text = "\xa0";
+            text = "\u{A0}";
         }
         this.textElement.dom.firstChild.data = text;
     },
@@ -186339,7 +186547,7 @@ Ext.define( "Ext.dataview.Abstract", {
          * The text to render when the rendering of the item via `itemTpl` produces no
          * text.
          */
-        "emptyItemText": "\xa0",
+        "emptyItemText": "\u{A0}",
 
         /**
          * @cfg {Boolean} itemsFocusable
@@ -187751,7 +187959,7 @@ Ext.define( "Ext.dataview.Abstract", {
         if ( emptyTextCmp ) {
             if ( !emptyText || typeof emptyText === "string" ) {
                 config = {};
-                config[ me.emptyTextProperty ] = emptyText || "\xa0";
+                config[ me.emptyTextProperty ] = emptyText || "\u{A0}";
             }
             emptyTextCmp.setConfig( config );
         }
@@ -189082,7 +189290,7 @@ Ext.define( "Ext.dataview.DataItem", function ( DataItem ) {
                 "$value": null,
             },
         },
-        "html": "\xa0",
+        "html": "\u{A0}",
         "classCls": Ext.baseCSSPrefix + "dataitem",
         "inheritUi": true,
         "autoSize": null,
@@ -190405,7 +190613,7 @@ Ext.define( "Ext.dataview.ItemHeader", {
      *
      * @since 6.5.0
      */
-    "html": "\xa0",
+    "html": "\u{A0}",
     "classCls": Ext.baseCSSPrefix + "itemheader",
     "inheritUi": true,
     "toolDefaults": {
@@ -190451,7 +190659,7 @@ Ext.define( "Ext.dataview.ItemHeader", {
                 html = tpl.apply( data );
             }
         }
-        me.setHtml( html || "\xa0" );
+        me.setHtml( html || "\u{A0}" );
     },
     "getScrollerTarget": function () {
         return this.el;
@@ -190886,7 +191094,7 @@ Ext.define( "Ext.dataview.SimpleListItem", {
     "mixins": [ Ext.dataview.Disclosable, Ext.mixin.Toolable, Ext.dataview.GenericItem, Ext.dataview.Pinnable ],
     "classCls": Ext.baseCSSPrefix + "listitem",
     "inheritUi": true,
-    "html": "\xa0",
+    "html": "\u{A0}",
     "template": [
         {
             "reference": "bodyElement",
@@ -194697,7 +194905,7 @@ Ext.define(
                 else if ( !item.$hidden ) {
                     item.$hidden = true;
                     item.$position = null;
-                    item.translate( 0, -10000 );
+                    item.translate( 0, -10_000 );
                 }
             },
 
@@ -202307,7 +202515,7 @@ Ext.define( "Ext.dataview.pullrefresh.Bar", {
          * The text to be shown in front of the last updated time.
          * @locale
          */
-        "lastUpdatedText": "Last Updated:\xa0",
+        "lastUpdatedText": "Last Updated:\u{A0}",
 
         /**
          * @cfg {String} loadedText
@@ -208163,7 +208371,7 @@ Ext.define( "Ext.field.Select", {
 
             // Cut back our value collection to the last one added.
             if ( selection ) {
-                valueCollection.splice( 0, 1.0e99, [ selection ] );
+                valueCollection.splice( 0, 1e99, [ selection ] );
             }
         }
 
@@ -223834,7 +224042,7 @@ Ext.define( "Ext.grid.cell.Base", {
         if ( !( template.children = this.innerTemplate ) ) {
 
             // Otherwise ensure that cells have content and achieve a proper height
-            template.html = "\xa0";
+            template.html = "\u{A0}";
         }
         return [ template ];
     },
@@ -226541,7 +226749,7 @@ Ext.define( "Ext.grid.column.Column", {
         "depends": null,
         "emptyText": {
             "cached": true,
-            "$value": "\xa0",
+            "$value": "\u{A0}",
         },
 
         /**
@@ -226552,7 +226760,7 @@ Ext.define( "Ext.grid.column.Column", {
          * **Note**: to have a clickable header with no text displayed you can use the default
          * non-breaking space (`&nbsp;`).
          */
-        "text": "\xa0",
+        "text": "\u{A0}",
 
         /**
          * @cfg {Boolean} sortable
@@ -228111,7 +228319,7 @@ Ext.define( "Ext.grid.column.Column", {
         me.toggleCls( me.resizableCls, !!( me.getResizable() && ( widthed || flexed || me.isLeafHeader ) ) );
     },
     "updateText": function ( text ) {
-        this.setHtml( text || "\xa0" );
+        this.setHtml( text || "\u{A0}" );
     },
     "onResize": function () {
         if ( !this.isHidden( true ) ) {
@@ -232291,7 +232499,7 @@ Ext.define( "Ext.grid.cell.RowNumberer", {
         var row = context.row,
             ret;
         if ( context.summary ) {
-            ret = "\xa0";
+            ret = "\u{A0}";
         }
         else {
             ret = row
@@ -234869,7 +235077,9 @@ Ext.define( "Ext.grid.RowHeader", {
         "getGroupHeaderTplData": function () {
             var data = this.callParent( [
 
-                    /* skipHtml= */
+                    /*
+                    skipHtml=
+                    */
                     true,
                 ] ),
                 grid = this.parent,
@@ -236466,7 +236676,7 @@ Ext.define(
                 }
             },
             "renderEmpty": function () {
-                return "\xa0";
+                return "\u{A0}";
             },
 
             // columnsMenuItem
@@ -239375,7 +239585,7 @@ Ext.define( "Ext.grid.cell.Boolean", {
          * The string to display when the column value is `undefined`.
          * @locale
          */
-        "undefinedText": "\xa0",
+        "undefinedText": "\u{A0}",
     },
     "updateColumn": function ( column, oldColumn ) {
         var text;
@@ -248743,7 +248953,7 @@ Ext.define( "Ext.grid.plugin.ViewOptions", {
         dataIndex = column.getDataIndex();
         data = {
             "id": column.getId(),
-            "text": column.getText() || "\xa0",
+            "text": column.getText() || "\u{A0}",
             "groupable": isGridGrouped && column.canGroup(),
             "hidden": column.isHidden(),
             "hideable": column.getHideable(),
@@ -254780,7 +254990,7 @@ Ext.define( "Ext.panel.Accordion", {
                 // item added will have a priority of -0.00001, followed by -0.00002 and
                 // decreasing for each new item. This gives implicit expand priority to
                 // the first item added.
-                priority = ++me.prioritySeed / -100000;
+                priority = ++me.prioritySeed / -100_000;
                 if ( me.isConfiguring ) {
 
                     // During initialization, explicitly collapsed and expanded items are
@@ -254839,7 +255049,7 @@ Ext.define( "Ext.panel.Accordion", {
             var me = this,
                 panels = me.getAccordionPanels(),
                 expanded = panels.$expanded,
-                openable = me.getOpenable() || 9.0e9,
+                openable = me.getOpenable() || 9e9,
                 vertical = me.getLayout().getVertical(),
                 prop = vertical
                     ? "height"
@@ -255625,7 +255835,7 @@ Ext.define( "Ext.panel.Resizer", {
          *
          * @private
          */
-        "defaultMaxSize": 100000,
+        "defaultMaxSize": 100_000,
 
         /**
          * @property {Number} defaultMaxSize
@@ -256652,7 +256862,7 @@ Ext.define(
                 // use the virtual scroller
                 // Only do the expensive search for the browser limit if they
                 // want more than a million pixels.
-                if ( scrollRange < 1000000 ) {
+                if ( scrollRange < 1_000_000 ) {
                     return scrollRange;
                 }
                 if ( !this.maxSpacerTranslate ) {
@@ -256974,7 +257184,7 @@ Ext.define(
                 sStyle.lineHeight = Number( !parseInt( sStyle.lineHeight, 10 ) ) + "px";
 
                 // See if we can get any more scrollHeight from a margin-top
-                if ( scrollHeight > 1000000 ) {
+                if ( scrollHeight > 1_000_000 ) {
                     shortfall = scrollHeight - me.getScrollingElement().dom.scrollHeight;
                     if ( shortfall > 0 ) {
                         sStyle.marginTop = Math.min( shortfall, me.maxSpacerMargin || 0 ) + "px";
@@ -257132,7 +257342,7 @@ Ext.define( "Ext.scroll.indicator.Bar", {
     "enabledCls": Ext.baseCSSPrefix + "enabled",
     "scrollCls": Ext.baseCSSPrefix + "overflow-scroll",
     "cornerCls": Ext.baseCSSPrefix + "scrollbar-corner",
-    "maxScrollSize": 100000,
+    "maxScrollSize": 100_000,
     "scale": 1,
     "position": 0,
     "template": [
@@ -257820,8 +258030,8 @@ Ext.define( "Ext.scroll.VirtualScroller", {
 
             // These numbers ought to be less than 1 million since that's the point at
             // which CSS transforms lose precision.
-            "x": 500000,
-            "y": 500000,
+            "x": 500_000,
+            "y": 500_000,
         },
 
         /**
@@ -259349,7 +259559,9 @@ Ext.define( "Ext.state.Builder", {
     "get": function ( name ) {
         var data = this.getData(),
 
-            /* create = false */
+            /*
+            create = false
+            */
             ret;
         if ( data && data.$ ) {
             ret = data.$[ name ];
@@ -259364,7 +259576,9 @@ Ext.define( "Ext.state.Builder", {
     "remove": function ( name ) {
         var data = this.getData();
 
-        /* create = false */
+        /*
+        create = false
+        */
         if ( data && data.$ ) {
             delete data.$[ name ];
         }
@@ -259495,7 +259709,9 @@ Ext.define( "Ext.state.Builder", {
                 parent = me.parent,
                 data = parent && parent.getData();
 
-            /* create = false */
+            /*
+            create = false
+            */
             if ( data ) {
                 delete data[ me.name ];
             }
@@ -261667,7 +261883,7 @@ Ext.define( "Ext.util.Geolocation", {
          * @cfg {Number} frequency
          * The frequency of each update if {@link #autoUpdate} is set to `true`.
          */
-        "frequency": 10000,
+        "frequency": 10_000,
 
         /**
          * @cfg {Number} latitude

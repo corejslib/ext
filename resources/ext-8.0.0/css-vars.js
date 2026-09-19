@@ -664,7 +664,7 @@ function _defineProperty ( obj, key, value ) {
                         "output": "",
                         "isCompressed": false,
                         "indentstr": "    ",
-                        "splitThreshold": 1000000,
+                        "splitThreshold": 1_000_000,
                         "selectorCount": 0,
                     } );
 
@@ -2636,11 +2636,11 @@ function _defineProperty ( obj, key, value ) {
 
                             var _this6 = _possibleConstructorReturn( this, ( ColorRGBA.__proto__ || Object.getPrototypeOf( ColorRGBA ) ).call( this ) );
 
-                            _this6.r = Math.min( 0xff, Math.max( 0, r ) );
-                            _this6.g = Math.min( 0xff, Math.max( 0, g ) );
-                            _this6.b = Math.min( 0xff, Math.max( 0, b ) );
+                            _this6.r = Math.min( 0xFF, Math.max( 0, r ) );
+                            _this6.g = Math.min( 0xFF, Math.max( 0, g ) );
+                            _this6.b = Math.min( 0xFF, Math.max( 0, b ) );
                             if ( a !== undefined ) {
-                                _this6.a = Math.min( 1.0, Math.max( 0.0, a ) );
+                                _this6.a = Math.min( 1, Math.max( 0, a ) );
                             }
                             return _this6;
                         }
@@ -2729,7 +2729,7 @@ function _defineProperty ( obj, key, value ) {
                                             r = round( me.r ),
                                             g = round( me.g ),
                                             b = round( me.b ),
-                                            a = round( 0xff * me.a );
+                                            a = round( 0xFF * me.a );
 
                                         return "#" + hex2( a ) + hex2( r ) + hex2( g ) + hex2( b );
                                     },
@@ -2818,9 +2818,9 @@ function _defineProperty ( obj, key, value ) {
                                             return m1;
                                         }
 
-                                        var r = Color.constrainChannel( hue( h + 1 / 3 ) * 0xff ),
-                                            g = Color.constrainChannel( hue( h ) * 0xff ),
-                                            b = Color.constrainChannel( hue( h - 1 / 3 ) * 0xff );
+                                        var r = Color.constrainChannel( hue( h + 1 / 3 ) * 0xFF ),
+                                            g = Color.constrainChannel( hue( h ) * 0xFF ),
+                                            b = Color.constrainChannel( hue( h - 1 / 3 ) * 0xFF );
 
                                         return new ColorRGBA( r, g, b, a );
                                     },
@@ -4034,7 +4034,7 @@ function _defineProperty ( obj, key, value ) {
                                             valStr;
 
                                         // prevent 0.020000000000000004 type numbers in output
-                                        valStr = Math.round( value * 100000 ) / 100000 + "";
+                                        valStr = Math.round( value * 100_000 ) / 100_000 + "";
 
                                         // unitStr = valStr === '0' ? '' : this.getUnitStr();
                                         return valStr + this.getUnitStr();
@@ -4436,7 +4436,7 @@ function _defineProperty ( obj, key, value ) {
 
                                         if ( factor === null && cUnits[ toUnit ] ) {
                                             if ( cUnits[ fromUnit ] ) {
-                                                factor = 1.0 / cTable[ cUnits[ toUnit ] ][ cUnits[ fromUnit ] ];
+                                                factor = 1 / cTable[ cUnits[ toUnit ] ][ cUnits[ fromUnit ] ];
                                             }
                                         }
 
