@@ -1,18 +1,19 @@
-import Ext_grid_PagingToolbar from "./Ext/grid/PagingToolbar.js";
 import ElementParser from "./common/ElementParser.js";
+import Ext_grid_PagingToolbar from "./Ext/grid/PagingToolbar.js";
 
 export default class EWCPagingtoolbar extends Ext_grid_PagingToolbar {
-    constructor() {
-        super([], []);
+    constructor () {
+        super( [], [] );
         this.xtype = "pagingtoolbar";
     }
 }
 try {
-    if (window.customElements.get("ext-pagingtoolbar") == undefined) {
-        window.customElements.define("ext-pagingtoolbar", ElementParser.withParsedCallback(EWCPagingtoolbar));
+    if ( window.customElements.get( "ext-pagingtoolbar" ) == undefined ) {
+        window.customElements.define( "ext-pagingtoolbar", ElementParser.withParsedCallback( EWCPagingtoolbar ) );
     }
-} catch (e) {
-    if (window.customElements.get("ext-pagingtoolbar") == undefined) {
-        window.customElements.define("ext-pagingtoolbar", EWCPagingtoolbar);
+}
+catch ( e ) {
+    if ( window.customElements.get( "ext-pagingtoolbar" ) == undefined ) {
+        window.customElements.define( "ext-pagingtoolbar", EWCPagingtoolbar );
     }
 }

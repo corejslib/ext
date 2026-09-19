@@ -1,18 +1,19 @@
-import Ext_ProgressBarWidget from "./Ext/ProgressBarWidget.js";
 import ElementParser from "./common/ElementParser.js";
+import Ext_ProgressBarWidget from "./Ext/ProgressBarWidget.js";
 
 export default class EWCProgressbarwidget extends Ext_ProgressBarWidget {
-    constructor() {
-        super([], []);
+    constructor () {
+        super( [], [] );
         this.xtype = "progressbarwidget";
     }
 }
 try {
-    if (window.customElements.get("ext-progressbarwidget") == undefined) {
-        window.customElements.define("ext-progressbarwidget", ElementParser.withParsedCallback(EWCProgressbarwidget));
+    if ( window.customElements.get( "ext-progressbarwidget" ) == undefined ) {
+        window.customElements.define( "ext-progressbarwidget", ElementParser.withParsedCallback( EWCProgressbarwidget ) );
     }
-} catch (e) {
-    if (window.customElements.get("ext-progressbarwidget") == undefined) {
-        window.customElements.define("ext-progressbarwidget", EWCProgressbarwidget);
+}
+catch ( e ) {
+    if ( window.customElements.get( "ext-progressbarwidget" ) == undefined ) {
+        window.customElements.define( "ext-progressbarwidget", EWCProgressbarwidget );
     }
 }

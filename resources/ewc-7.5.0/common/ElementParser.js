@@ -1,41 +1,41 @@
-//import { doIt } from '../../runtime/modern.enterprise.SDK_EMPTY.js';
-//import '../../runtime/modern.enterprise.SDK_FULL.js';
-//import '../../runtime/modern.material.fewest.SDK_FULL.js';
-//import '@sencha/ext-web-components-modern-enterprise';
-//import '@sencha/ext-web-components-modern-material';
-//import { addRuntime} from './util.js';
+// import { doIt } from '../../runtime/modern.enterprise.SDK_EMPTY.js';
+// import '../../runtime/modern.enterprise.SDK_FULL.js';
+// import '../../runtime/modern.material.fewest.SDK_FULL.js';
+// import '@sencha/ext-web-components-modern-enterprise';
+// import '@sencha/ext-web-components-modern-material';
+// import { addRuntime} from './util.js';
 
-const ElementParser = (() => {
+const ElementParser = ( () => {
     var toolkit = "modern";
 
-    //var theme = 'material';
+    // var theme = 'material';
 
-    //var themedefined = false
-    //for (var i = 0; i < document.styleSheets.length; i++) {
+    // var themedefined = false
+    // for (var i = 0; i < document.styleSheets.length; i++) {
     //  if (document.styleSheets[i].href.includes('material-all.css') == true) {
     //    themedefined = true;
     //  }
     //  if (document.styleSheets[i].href.includes('material-all.css') == true) {
     //    themedefined = true;
     //  }
-    //}
-    //if (!themedefined) {
+    // }
+    // if (!themedefined) {
     //  import('./engine/modern/themes/modern.material.fewest.js')
     //  .then((something) => {
     //     console.log('importing theme');
     //  });
-    //}
+    // }
 
-    //if (window['Ext'] == undefined) {
+    // if (window['Ext'] == undefined) {
     //  doIt()
     //  //addRuntime(toolkit, theme);
-    //}
+    // }
 
-    if (Ext.isModern == true) {
-        const ElementCell = Ext.define("Ext.ElementCell", {
-            extend: "Ext.grid.cell.Cell",
-            xtype: "elementcell",
-        });
+    if ( Ext.isModern == true ) {
+        const ElementCell = Ext.define( "Ext.ElementCell", {
+            "extend": "Ext.grid.cell.Cell",
+            "xtype": "elementcell",
+        } );
     }
 
     const DCL = "DOMContentLoaded";
@@ -43,82 +43,85 @@ const ElementParser = (() => {
     const queue = [];
     const isParsed = el => {
         do {
-            if (el.nextSibling) return true;
-        } while ((el = el.parentNode));
+            if ( el.nextSibling ) return true;
+        } while ( ( el = el.parentNode ) );
         return false;
     };
     const upgrade = () => {
-        queue.splice(0).forEach(info => {
-            if (init.get(info[0]) !== true) {
-                init.set(info[0], true);
-                info[0][info[1]]();
+        queue.splice( 0 ).forEach( info => {
+            if ( init.get( info[ 0 ] ) !== true ) {
+                init.set( info[ 0 ], true );
+                info[ 0 ][ info[ 1 ] ]();
             }
-        });
+        } );
     };
-    document.addEventListener(DCL, upgrade);
+    document.addEventListener( DCL, upgrade );
     class ElementParser extends HTMLElement {
-        static withParsedCallback(Class, name = "parsed") {
+        static withParsedCallback ( Class, name = "parsed" ) {
             const { prototype } = Class;
             const { connectedCallback } = prototype;
             const method = name + "Callback";
-            const cleanUp = (el, observer, ownerDocument, onDCL) => {
+            const cleanUp = ( el, observer, ownerDocument, onDCL ) => {
                 observer.disconnect();
-                ownerDocument.removeEventListener(DCL, onDCL);
-                parsedCallback(el);
+                ownerDocument.removeEventListener( DCL, onDCL );
+                parsedCallback( el );
             };
             const parsedCallback = el => {
-                if (!queue.length) requestAnimationFrame(upgrade);
-                queue.push([el, method]);
+                if ( !queue.length ) requestAnimationFrame( upgrade );
+                queue.push( [ el, method ] );
             };
-            Object.defineProperties(prototype, {
-                connectedCallback: {
-                    configurable: true,
-                    value() {
-                        if (connectedCallback) {
-                            connectedCallback.apply(this, arguments);
+            Object.defineProperties( prototype, {
+                "connectedCallback": {
+                    "configurable": true,
+                    value () {
+                        if ( connectedCallback ) {
+                            connectedCallback.apply( this, arguments );
                         }
                         const self = this;
-                        if (method in this && !init.has(this)) {
+                        if ( method in this && !init.has( this ) ) {
                             const { ownerDocument } = self;
-                            init.set(self, false);
-                            if (ownerDocument.readyState === "interactive" || ownerDocument.readyState === "complete" || isParsed(self)) {
-                                parsedCallback(self);
-                            } else {
-                                const onDCL = () => cleanUp(self, observer, ownerDocument, onDCL);
-                                ownerDocument.addEventListener(DCL, onDCL);
-                                const observer = new MutationObserver(() => {
-                                    /* istanbul ignore else */
-                                    if (isParsed(self)) cleanUp(self, observer, ownerDocument, onDCL);
-                                });
-                                observer.observe(self.parentNode, { childList: true, subtree: true });
+                            init.set( self, false );
+                            if ( ownerDocument.readyState === "interactive" || ownerDocument.readyState === "complete" || isParsed( self ) ) {
+                                parsedCallback( self );
                             }
-                        } else {
-                            requestAnimationFrame(function () {
-                                self["parsedCallback"]();
-                            });
-                            //setTimeout(function(){
+                            else {
+                                const onDCL = () => cleanUp( self, observer, ownerDocument, onDCL );
+                                ownerDocument.addEventListener( DCL, onDCL );
+                                const observer = new MutationObserver( () => {
+                                    /* istanbul ignore else */
+                                    if ( isParsed( self ) ) cleanUp( self, observer, ownerDocument, onDCL );
+                                } );
+                                observer.observe( self.parentNode, { "childList": true, "subtree": true } );
+                            }
+                        }
+                        else {
+                            requestAnimationFrame( function () {
+                                self[ "parsedCallback" ]();
+                            } );
+
+                            // setTimeout(function(){
                             //  self['parsedCallback']();
-                            //}, 0);
+                            // }, 0);
                         }
                     },
                 },
-                [name]: {
-                    configurable: true,
-                    get() {
-                        return init.get(this) === true;
+                [ name ]: {
+                    "configurable": true,
+                    get () {
+                        return init.get( this ) === true;
                     },
                 },
-            });
+            } );
             return Class;
         }
     }
-    return ElementParser.withParsedCallback(ElementParser);
-})();
+    return ElementParser.withParsedCallback( ElementParser );
+} )();
 export default ElementParser;
 
-//var framework = 'modern'
-//var list= document.all;
-//for (var i = 0; i < list.length; i++) {
+// var framework = 'modern'
+// var list= document.all;
+// for (var i = 0; i < list.length; i++) {
 //  if (list[i].tagName == 'SCRIPT') {
 //    if (list[i].type == 'module') {
 //      var s = list[i].getAttribute('src');
@@ -128,9 +131,9 @@ export default ElementParser;
 //      if (classic) { framework = 'classic' }
 //    }
 //  }
-//}
+// }
 
-//function getIndicesOf(searchStr, str, caseSensitive) {
+// function getIndicesOf(searchStr, str, caseSensitive) {
 //  var searchStrLen = searchStr.length;
 //  if (searchStrLen == 0) {return [];}
 //  var startIndex = 0, index, indices = [];
@@ -143,7 +146,7 @@ export default ElementParser;
 //    startIndex = index + searchStrLen;
 //  }
 //  return indices;
-//}
-//var indices = getIndicesOf("/", import.meta.url);
-//var rootPath = import.meta.url.substring(0,indices[indices.length-2])
-//var baseFolder = rootPath + "/ext-runtime-" + toolkit;
+// }
+// var indices = getIndicesOf("/", import.meta.url);
+// var rootPath = import.meta.url.substring(0,indices[indices.length-2])
+// var baseFolder = rootPath + "/ext-runtime-" + toolkit;

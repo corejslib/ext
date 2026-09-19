@@ -1,18 +1,19 @@
-import Ext_TabBar from "./Ext/TabBar.js";
 import ElementParser from "./common/ElementParser.js";
+import Ext_TabBar from "./Ext/TabBar.js";
 
 export default class EWCTabbar extends Ext_TabBar {
-    constructor() {
-        super([], []);
+    constructor () {
+        super( [], [] );
         this.xtype = "tabbar";
     }
 }
 try {
-    if (window.customElements.get("ext-tabbar") == undefined) {
-        window.customElements.define("ext-tabbar", ElementParser.withParsedCallback(EWCTabbar));
+    if ( window.customElements.get( "ext-tabbar" ) == undefined ) {
+        window.customElements.define( "ext-tabbar", ElementParser.withParsedCallback( EWCTabbar ) );
     }
-} catch (e) {
-    if (window.customElements.get("ext-tabbar") == undefined) {
-        window.customElements.define("ext-tabbar", EWCTabbar);
+}
+catch ( e ) {
+    if ( window.customElements.get( "ext-tabbar" ) == undefined ) {
+        window.customElements.define( "ext-tabbar", EWCTabbar );
     }
 }

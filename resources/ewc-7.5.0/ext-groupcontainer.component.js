@@ -1,18 +1,19 @@
-import Ext_field_FieldGroupContainer from "./Ext/field/FieldGroupContainer.js";
 import ElementParser from "./common/ElementParser.js";
+import Ext_field_FieldGroupContainer from "./Ext/field/FieldGroupContainer.js";
 
 export default class EWCGroupcontainer extends Ext_field_FieldGroupContainer {
-    constructor() {
-        super([], []);
+    constructor () {
+        super( [], [] );
         this.xtype = "groupcontainer";
     }
 }
 try {
-    if (window.customElements.get("ext-groupcontainer") == undefined) {
-        window.customElements.define("ext-groupcontainer", ElementParser.withParsedCallback(EWCGroupcontainer));
+    if ( window.customElements.get( "ext-groupcontainer" ) == undefined ) {
+        window.customElements.define( "ext-groupcontainer", ElementParser.withParsedCallback( EWCGroupcontainer ) );
     }
-} catch (e) {
-    if (window.customElements.get("ext-groupcontainer") == undefined) {
-        window.customElements.define("ext-groupcontainer", EWCGroupcontainer);
+}
+catch ( e ) {
+    if ( window.customElements.get( "ext-groupcontainer" ) == undefined ) {
+        window.customElements.define( "ext-groupcontainer", EWCGroupcontainer );
     }
 }
