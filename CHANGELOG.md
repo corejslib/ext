@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.31 (2026-09-21)
+
+**Other changes:**
+
+- chore: update Russian locale strings (● [6270232](https://github.com/corejslib/ext/commit/6270232); 👬 zdm)
+
+Compare with the previous release: [v5.21.30...v5.21.31](https://github.com/corejslib/ext/compare/v5.21.30...v5.21.31)
+
 ### v5.21.30 (2026-09-20)
 
 **Other changes:**
