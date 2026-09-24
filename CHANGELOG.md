@@ -1,5 +1,25 @@
 # Changelog
 
+### v5.21.32 (2026-09-24)
+
+**Bug fixes:**
+
+- \[PATCH] fix: correct validator text and locale strings (● [8e2e420](https://github.com/corejslib/ext/commit/8e2e420); 👬 zdm)
+
+**Other changes:**
+
+- build: update patch (● [878f44f](https://github.com/corejslib/ext/commit/878f44f), [7246ea1](https://github.com/corejslib/ext/commit/7246ea1), [51d3846](https://github.com/corejslib/ext/commit/51d3846); 👬 zdm)
+
+- build: update resources (● [89a5b36](https://github.com/corejslib/ext/commit/89a5b36); 👬 zdm)
+
+- build: update translations (● [e21353c](https://github.com/corejslib/ext/commit/e21353c), [dcf052a](https://github.com/corejslib/ext/commit/dcf052a); 👬 zdm)
+
+- build(deps): add @softvisio/zcli to build package (● [fd998af](https://github.com/corejslib/ext/commit/fd998af); 👬 zdm)
+
+- build(deps): add zcli to build dependencies (● [51a4e1f](https://github.com/corejslib/ext/commit/51a4e1f); 👬 zdm)
+
+Compare with the previous release: [v5.21.31...v5.21.32](https://github.com/corejslib/ext/compare/v5.21.31...v5.21.32)
+
 ### v5.21.31 (2026-09-21)
 
 **Other changes:**
