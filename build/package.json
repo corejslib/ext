@@ -49,6 +49,7 @@
         "@sencha/ext-modern-theme-material": true,
         "@sencha/ext-modern-theme-neptune": true,
         "@sencha/ext-modern-treegrid": true,
-        "@sencha/ext-ux": true
+        "@sencha/ext-ux": true,
+        "@softvisio/zcli": true
     }
 }
