@@ -3,7 +3,7 @@ import Ext_panel_DateTitle from "./Ext/panel/DateTitle.js";
 
 export default class EWCDatetitle extends Ext_panel_DateTitle {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "datetitle";
     }
 }

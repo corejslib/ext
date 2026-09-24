@@ -2,7 +2,16 @@ import Ext_container_Container from "../../../Ext/container/Container.js";
 
 export default class Ext_calendar_view_Multi extends Ext_container_Container {
     static PROPERTIES () {
-        return [ "compact", "compactOptions", "defaultView", "layout", "store", "timezoneOffset", "value", "views" ];
+        return [
+            "compact",
+            "compactOptions",
+            "defaultView",
+            "layout",
+            "store",
+            "timezoneOffset",
+            "value",
+            "views",
+        ];
     }
 
     static EVENTS () {
@@ -34,7 +43,10 @@ export default class Ext_calendar_view_Multi extends Ext_container_Container {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_calendar_view_Multi.PROPERTIES() ), events.concat( Ext_calendar_view_Multi.EVENTS() ) );
+        super (
+            properties.concat( Ext_calendar_view_Multi.PROPERTIES() ),
+            events.concat( Ext_calendar_view_Multi.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -44,4 +56,5 @@ export default class Ext_calendar_view_Multi extends Ext_container_Container {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

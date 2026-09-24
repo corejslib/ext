@@ -3,7 +3,7 @@ import Ext_dataview_component_SimpleListItem from "./Ext/dataview/component/Simp
 
 export default class EWCSimplelistitem extends Ext_dataview_component_SimpleListItem {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "simplelistitem";
     }
 }

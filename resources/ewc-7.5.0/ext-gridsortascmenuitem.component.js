@@ -3,7 +3,7 @@ import Ext_grid_menu_SortAsc from "./Ext/grid/menu/SortAsc.js";
 
 export default class EWCGridsortascmenuitem extends Ext_grid_menu_SortAsc {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "gridsortascmenuitem";
     }
 }

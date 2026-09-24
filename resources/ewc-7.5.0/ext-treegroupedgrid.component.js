@@ -3,7 +3,7 @@ import Ext_grid_TreeGrouped from "./Ext/grid/TreeGrouped.js";
 
 export default class EWCTreegroupedgrid extends Ext_grid_TreeGrouped {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "treegroupedgrid";
     }
 }

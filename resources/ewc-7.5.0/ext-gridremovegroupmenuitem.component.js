@@ -3,7 +3,7 @@ import Ext_grid_menu_RemoveGroup from "./Ext/grid/menu/RemoveGroup.js";
 
 export default class EWCGridremovegroupmenuitem extends Ext_grid_menu_RemoveGroup {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "gridremovegroupmenuitem";
     }
 }

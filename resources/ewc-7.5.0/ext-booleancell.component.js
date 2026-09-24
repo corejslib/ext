@@ -3,7 +3,7 @@ import Ext_grid_cell_Boolean from "./Ext/grid/cell/Boolean.js";
 
 export default class EWCBooleancell extends Ext_grid_cell_Boolean {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "booleancell";
     }
 }

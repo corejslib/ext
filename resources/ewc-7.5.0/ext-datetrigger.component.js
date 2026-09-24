@@ -3,7 +3,7 @@ import Ext_field_trigger_Date from "./Ext/field/trigger/Date.js";
 
 export default class EWCDatetrigger extends Ext_field_trigger_Date {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "datetrigger";
     }
 }

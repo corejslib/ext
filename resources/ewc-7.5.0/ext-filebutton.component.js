@@ -3,7 +3,7 @@ import Ext_field_FileButton from "./Ext/field/FileButton.js";
 
 export default class EWCFilebutton extends Ext_field_FileButton {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "filebutton";
     }
 }

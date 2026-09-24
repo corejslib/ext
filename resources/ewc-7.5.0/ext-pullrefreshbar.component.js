@@ -3,7 +3,7 @@ import Ext_dataview_pullrefresh_Bar from "./Ext/dataview/pullrefresh/Bar.js";
 
 export default class EWCPullrefreshbar extends Ext_dataview_pullrefresh_Bar {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pullrefreshbar";
     }
 }

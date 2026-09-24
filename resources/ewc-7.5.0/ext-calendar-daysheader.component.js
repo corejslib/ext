@@ -3,7 +3,7 @@ import Ext_calendar_header_Days from "./Ext/calendar/header/Days.js";
 
 export default class EWCCalendar_daysheader extends Ext_calendar_header_Days {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-daysheader";
     }
 }

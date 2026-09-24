@@ -3,7 +3,7 @@ import Ext_grid_CellEditor from "./Ext/grid/CellEditor.js";
 
 export default class EWCCelleditor extends Ext_grid_CellEditor {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "celleditor";
     }
 }

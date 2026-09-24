@@ -3,7 +3,7 @@ import Ext_grid_HeaderContainer from "./Ext/grid/HeaderContainer.js";
 
 export default class EWCHeadercontainer extends Ext_grid_HeaderContainer {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "headercontainer";
     }
 }

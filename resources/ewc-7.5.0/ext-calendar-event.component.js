@@ -3,7 +3,7 @@ import Ext_calendar_Event from "./Ext/calendar/Event.js";
 
 export default class EWCCalendar_event extends Ext_calendar_Event {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-event";
     }
 }

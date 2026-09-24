@@ -3,7 +3,7 @@ import Ext_form_Text from "./Ext/form/Text.js";
 
 export default class EWCTextfield extends Ext_form_Text {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "textfield";
     }
 }

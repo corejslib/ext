@@ -3,7 +3,7 @@ import Ext_Mask from "./Ext/Mask.js";
 
 export default class EWCMask extends Ext_Mask {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "mask";
     }
 }

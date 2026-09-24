@@ -3,7 +3,7 @@ import Ext_ux_colorpick_Button from "./Ext/ux/colorpick/Button.js";
 
 export default class EWCColorbutton extends Ext_ux_colorpick_Button {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "colorbutton";
     }
 }

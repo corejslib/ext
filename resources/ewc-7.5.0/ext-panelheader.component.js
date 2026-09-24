@@ -3,7 +3,7 @@ import Ext_panel_Header from "./Ext/panel/Header.js";
 
 export default class EWCPanelheader extends Ext_panel_Header {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "panelheader";
     }
 }

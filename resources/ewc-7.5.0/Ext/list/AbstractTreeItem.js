@@ -2,7 +2,72 @@ import Ext_Widget from "../../Ext/Widget.js";
 
 export default class Ext_list_AbstractTreeItem extends Ext_Widget {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "bind", "border", "cls", "constrainAlign", "controller", "defaultListenerScope", "disabled", "expandable", "expanded", "flex", "floated", "focusCls", "height", "hidden", "hideMode", "iconCls", "iconClsProperty", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "leaf", "listeners", "loading", "margin", "name", "nameable", "node", "over", "owner", "parentItem", "plugins", "publishes", "reference", "relative", "renderTo", "ripple", "selected", "selectedParent", "session", "shadow", "shareableName", "shim", "style", "text", "textProperty", "toFrontOnShow", "touchAction", "translatable", "twoWayBindable", "ui", "userCls", "viewModel", "width", "x", "y" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "bind",
+            "border",
+            "cls",
+            "constrainAlign",
+            "controller",
+            "defaultListenerScope",
+            "disabled",
+            "expandable",
+            "expanded",
+            "flex",
+            "floated",
+            "focusCls",
+            "height",
+            "hidden",
+            "hideMode",
+            "iconCls",
+            "iconClsProperty",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "leaf",
+            "listeners",
+            "loading",
+            "margin",
+            "name",
+            "nameable",
+            "node",
+            "over",
+            "owner",
+            "parentItem",
+            "plugins",
+            "publishes",
+            "reference",
+            "relative",
+            "renderTo",
+            "ripple",
+            "selected",
+            "selectedParent",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "style",
+            "text",
+            "textProperty",
+            "toFrontOnShow",
+            "touchAction",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "viewModel",
+            "width",
+            "x",
+            "y",
+        ];
     }
 
     static EVENTS () {
@@ -48,7 +113,10 @@ export default class Ext_list_AbstractTreeItem extends Ext_Widget {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_list_AbstractTreeItem.PROPERTIES() ), events.concat( Ext_list_AbstractTreeItem.EVENTS() ) );
+        super (
+            properties.concat( Ext_list_AbstractTreeItem.PROPERTIES() ),
+            events.concat( Ext_list_AbstractTreeItem.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -58,4 +126,5 @@ export default class Ext_list_AbstractTreeItem extends Ext_Widget {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

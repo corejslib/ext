@@ -2,7 +2,67 @@ import Ext_field_trigger_Expand from "../../../Ext/field/trigger/Expand.js";
 
 export default class Ext_field_trigger_Date extends Ext_field_trigger_Expand {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "bind", "border", "cls", "constrainAlign", "controller", "defaultListenerScope", "disabled", "field", "flex", "floated", "focusCls", "focusOnTap", "group", "handler", "height", "hidden", "hideMode", "iconCls", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "listeners", "margin", "name", "nameable", "plugins", "publishes", "reference", "relative", "renderTo", "repeat", "ripple", "scope", "session", "shadow", "shareableName", "shim", "side", "style", "toFrontOnShow", "touchAction", "translatable", "triggers", "twoWayBindable", "ui", "userCls", "viewModel", "width", "x", "y" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "bind",
+            "border",
+            "cls",
+            "constrainAlign",
+            "controller",
+            "defaultListenerScope",
+            "disabled",
+            "field",
+            "flex",
+            "floated",
+            "focusCls",
+            "focusOnTap",
+            "group",
+            "handler",
+            "height",
+            "hidden",
+            "hideMode",
+            "iconCls",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "listeners",
+            "margin",
+            "name",
+            "nameable",
+            "plugins",
+            "publishes",
+            "reference",
+            "relative",
+            "renderTo",
+            "repeat",
+            "ripple",
+            "scope",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "side",
+            "style",
+            "toFrontOnShow",
+            "touchAction",
+            "translatable",
+            "triggers",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "viewModel",
+            "width",
+            "x",
+            "y",
+        ];
     }
 
     static EVENTS () {
@@ -48,7 +108,10 @@ export default class Ext_field_trigger_Date extends Ext_field_trigger_Expand {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_field_trigger_Date.PROPERTIES() ), events.concat( Ext_field_trigger_Date.EVENTS() ) );
+        super (
+            properties.concat( Ext_field_trigger_Date.PROPERTIES() ),
+            events.concat( Ext_field_trigger_Date.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -58,4 +121,5 @@ export default class Ext_field_trigger_Date extends Ext_field_trigger_Expand {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

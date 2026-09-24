@@ -3,7 +3,7 @@ import Ext_Indicator from "./Ext/Indicator.js";
 
 export default class EWCIndicator extends Ext_Indicator {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "indicator";
     }
 }

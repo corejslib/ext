@@ -3,7 +3,7 @@ import Ext_DataView from "./Ext/DataView.js";
 
 export default class EWCDataview extends Ext_DataView {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "dataview";
     }
 }

@@ -3,7 +3,7 @@ import Ext_pivot_Grid from "./Ext/pivot/Grid.js";
 
 export default class EWCPivotgrid extends Ext_pivot_Grid {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pivotgrid";
     }
 }

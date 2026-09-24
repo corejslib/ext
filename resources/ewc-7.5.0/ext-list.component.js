@@ -3,7 +3,7 @@ import Ext_List from "./Ext/List.js";
 
 export default class EWCList extends Ext_List {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "list";
     }
 }

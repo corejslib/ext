@@ -3,7 +3,7 @@ import Ext_slider_Toggle from "./Ext/slider/Toggle.js";
 
 export default class EWCToggleslider extends Ext_slider_Toggle {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "toggleslider";
     }
 }

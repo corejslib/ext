@@ -3,7 +3,7 @@ import Ext_d3_hierarchy_partition_Partition from "./Ext/d3/hierarchy/partition/P
 
 export default class EWCD3_partition extends Ext_d3_hierarchy_partition_Partition {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "d3-partition";
     }
 }

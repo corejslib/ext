@@ -3,7 +3,7 @@ import Ext_Carousel from "./Ext/Carousel.js";
 
 export default class EWCCarousel extends Ext_Carousel {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "carousel";
     }
 }

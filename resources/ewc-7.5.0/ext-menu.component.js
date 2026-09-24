@@ -3,7 +3,7 @@ import Ext_menu_Menu from "./Ext/menu/Menu.js";
 
 export default class EWCMenu extends Ext_menu_Menu {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "menu";
     }
 }

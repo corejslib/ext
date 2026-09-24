@@ -2,7 +2,118 @@ import Ext_menu_RadioItem from "../../../Ext/menu/RadioItem.js";
 
 export default class Ext_grid_menu_SortAsc extends Ext_menu_RadioItem {
     static PROPERTIES () {
-        return [ "alignSelf", "allowUncheck", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "checkChangeDisabled", "checked", "checkHandler", "clickHideDelay", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "destroyMenu", "disabled", "displayed", "docked", "draggable", "flex", "floated", "focusCls", "fullscreen", "group", "handler", "height", "hidden", "hideAnimation", "hideMode", "hideOnClick", "hideOnMaskTap", "href", "html", "icon", "iconAlign", "iconCls", "id", "indented", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxWidth", "menu", "menuAlign", "menuExpandDelay", "menuHideDelay", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "padding", "plugins", "publishes", "record", "reference", "relative", "renderTo", "right", "ripple", "scope", "scrollable", "separator", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "style", "submenuText", "tabIndex", "target", "text", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "value", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "allowUncheck",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "checkChangeDisabled",
+            "checked",
+            "checkHandler",
+            "clickHideDelay",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "destroyMenu",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "group",
+            "handler",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnClick",
+            "hideOnMaskTap",
+            "href",
+            "html",
+            "icon",
+            "iconAlign",
+            "iconCls",
+            "id",
+            "indented",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "menu",
+            "menuAlign",
+            "menuExpandDelay",
+            "menuHideDelay",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "scope",
+            "scrollable",
+            "separator",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "style",
+            "submenuText",
+            "tabIndex",
+            "target",
+            "text",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "value",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -90,7 +201,10 @@ export default class Ext_grid_menu_SortAsc extends Ext_menu_RadioItem {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_grid_menu_SortAsc.PROPERTIES() ), events.concat( Ext_grid_menu_SortAsc.EVENTS() ) );
+        super (
+            properties.concat( Ext_grid_menu_SortAsc.PROPERTIES() ),
+            events.concat( Ext_grid_menu_SortAsc.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -100,4 +214,5 @@ export default class Ext_grid_menu_SortAsc extends Ext_menu_RadioItem {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

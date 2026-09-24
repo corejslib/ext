@@ -3,7 +3,7 @@ import Ext_grid_column_Groups from "./Ext/grid/column/Groups.js";
 
 export default class EWCGroupscolumn extends Ext_grid_column_Groups {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "groupscolumn";
     }
 }

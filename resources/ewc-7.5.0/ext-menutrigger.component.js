@@ -3,7 +3,7 @@ import Ext_field_trigger_Menu from "./Ext/field/trigger/Menu.js";
 
 export default class EWCMenutrigger extends Ext_field_trigger_Menu {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "menutrigger";
     }
 }

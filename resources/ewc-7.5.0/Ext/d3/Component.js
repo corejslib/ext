@@ -2,7 +2,98 @@ import Ext_d3_ComponentBase from "../../Ext/d3/ComponentBase.js";
 
 export default class Ext_d3_Component extends Ext_d3_ComponentBase {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "cls", "componentCls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "disabled", "displayed", "docked", "draggable", "flex", "floated", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "id", "instanceCls", "interactions", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxWidth", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "padding", "plugins", "publishes", "record", "reference", "relative", "renderTo", "right", "ripple", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "store", "style", "tabIndex", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "transitions", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "cls",
+            "componentCls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "html",
+            "id",
+            "instanceCls",
+            "interactions",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "scrollable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "store",
+            "style",
+            "tabIndex",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "transitions",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -88,7 +179,10 @@ export default class Ext_d3_Component extends Ext_d3_ComponentBase {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_d3_Component.PROPERTIES() ), events.concat( Ext_d3_Component.EVENTS() ) );
+        super (
+            properties.concat( Ext_d3_Component.PROPERTIES() ),
+            events.concat( Ext_d3_Component.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -98,4 +192,5 @@ export default class Ext_d3_Component extends Ext_d3_ComponentBase {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

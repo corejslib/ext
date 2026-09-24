@@ -3,7 +3,7 @@ import Ext_dataview_EmptyText from "./Ext/dataview/EmptyText.js";
 
 export default class EWCEmptytext extends Ext_dataview_EmptyText {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "emptytext";
     }
 }

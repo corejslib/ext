@@ -3,7 +3,7 @@ import Ext_picker_Tablet from "./Ext/picker/Tablet.js";
 
 export default class EWCTabletpicker extends Ext_picker_Tablet {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "tabletpicker";
     }
 }

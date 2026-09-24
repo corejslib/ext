@@ -3,7 +3,7 @@ import Ext_d3_hierarchy_TreeMap from "./Ext/d3/hierarchy/TreeMap.js";
 
 export default class EWCD3_treemap extends Ext_d3_hierarchy_TreeMap {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "d3-treemap";
     }
 }

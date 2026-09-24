@@ -3,7 +3,7 @@ import Ext_grid_column_Check from "./Ext/grid/column/Check.js";
 
 export default class EWCCheckcolumn extends Ext_grid_column_Check {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "checkcolumn";
     }
 }

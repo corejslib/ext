@@ -3,7 +3,7 @@ import Ext_grid_row_Summary from "./Ext/grid/row/Summary.js";
 
 export default class EWCGroupedgridsummaryrow extends Ext_grid_row_Summary {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "groupedgridsummaryrow";
     }
 }

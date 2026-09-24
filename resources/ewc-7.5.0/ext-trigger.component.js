@@ -3,7 +3,7 @@ import Ext_field_trigger_Trigger from "./Ext/field/trigger/Trigger.js";
 
 export default class EWCTrigger extends Ext_field_trigger_Trigger {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "trigger";
     }
 }

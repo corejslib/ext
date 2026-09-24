@@ -2,7 +2,85 @@ import Ext_grid_cell_Cell from "../../../Ext/grid/cell/Cell.js";
 
 export default class Ext_grid_cell_Tree extends Ext_grid_cell_Cell {
     static PROPERTIES () {
-        return [ "align", "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "autoCheckChildren", "bind", "bodyCls", "bodyStyle", "border", "cellCls", "checkable", "checkableField", "checkedField", "checkOnTriTap", "cls", "column", "constrainAlign", "controller", "defaultListenerScope", "defaultToolWeights", "disabled", "enableTri", "encodeHtml", "flex", "floated", "focusCls", "formatter", "height", "hidden", "hideMode", "iconCls", "iconClsProperty", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "listeners", "margin", "name", "nameable", "plugins", "publishes", "rawValue", "record", "reference", "relative", "renderer", "renderTo", "ripple", "scope", "selectable", "session", "shadow", "shareableName", "shim", "style", "text", "toFrontOnShow", "toolDefaults", "tools", "touchAction", "tpl", "translatable", "twoWayBindable", "ui", "userCls", "value", "viewModel", "width", "x", "y", "zeroValue" ];
+        return [
+            "align",
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "autoCheckChildren",
+            "bind",
+            "bodyCls",
+            "bodyStyle",
+            "border",
+            "cellCls",
+            "checkable",
+            "checkableField",
+            "checkedField",
+            "checkOnTriTap",
+            "cls",
+            "column",
+            "constrainAlign",
+            "controller",
+            "defaultListenerScope",
+            "defaultToolWeights",
+            "disabled",
+            "enableTri",
+            "encodeHtml",
+            "flex",
+            "floated",
+            "focusCls",
+            "formatter",
+            "height",
+            "hidden",
+            "hideMode",
+            "iconCls",
+            "iconClsProperty",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "listeners",
+            "margin",
+            "name",
+            "nameable",
+            "plugins",
+            "publishes",
+            "rawValue",
+            "record",
+            "reference",
+            "relative",
+            "renderer",
+            "renderTo",
+            "ripple",
+            "scope",
+            "selectable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "style",
+            "text",
+            "toFrontOnShow",
+            "toolDefaults",
+            "tools",
+            "touchAction",
+            "tpl",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "value",
+            "viewModel",
+            "width",
+            "x",
+            "y",
+            "zeroValue",
+        ];
     }
 
     static EVENTS () {
@@ -50,7 +128,10 @@ export default class Ext_grid_cell_Tree extends Ext_grid_cell_Cell {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_grid_cell_Tree.PROPERTIES() ), events.concat( Ext_grid_cell_Tree.EVENTS() ) );
+        super (
+            properties.concat( Ext_grid_cell_Tree.PROPERTIES() ),
+            events.concat( Ext_grid_cell_Tree.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -60,4 +141,5 @@ export default class Ext_grid_cell_Tree extends Ext_grid_cell_Cell {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

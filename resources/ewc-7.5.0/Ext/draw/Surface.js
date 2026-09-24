@@ -2,7 +2,63 @@ import Ext_draw_SurfaceBase from "../../Ext/draw/SurfaceBase.js";
 
 export default class Ext_draw_Surface extends Ext_draw_SurfaceBase {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "background", "bind", "border", "cls", "constrainAlign", "controller", "defaultListenerScope", "dirty", "disabled", "flex", "flipRtlText", "floated", "focusCls", "height", "hidden", "hideMode", "id", "instanceCls", "itemId", "items", "keyMap", "keyMapEnabled", "keyMapTarget", "listeners", "margin", "name", "nameable", "plugins", "publishes", "rect", "reference", "relative", "renderTo", "ripple", "session", "shadow", "shareableName", "shim", "style", "toFrontOnShow", "touchAction", "translatable", "twoWayBindable", "ui", "userCls", "viewModel", "width", "x", "y" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "background",
+            "bind",
+            "border",
+            "cls",
+            "constrainAlign",
+            "controller",
+            "defaultListenerScope",
+            "dirty",
+            "disabled",
+            "flex",
+            "flipRtlText",
+            "floated",
+            "focusCls",
+            "height",
+            "hidden",
+            "hideMode",
+            "id",
+            "instanceCls",
+            "itemId",
+            "items",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "listeners",
+            "margin",
+            "name",
+            "nameable",
+            "plugins",
+            "publishes",
+            "rect",
+            "reference",
+            "relative",
+            "renderTo",
+            "ripple",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "style",
+            "toFrontOnShow",
+            "touchAction",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "viewModel",
+            "width",
+            "x",
+            "y",
+        ];
     }
 
     static EVENTS () {
@@ -48,7 +104,10 @@ export default class Ext_draw_Surface extends Ext_draw_SurfaceBase {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_draw_Surface.PROPERTIES() ), events.concat( Ext_draw_Surface.EVENTS() ) );
+        super (
+            properties.concat( Ext_draw_Surface.PROPERTIES() ),
+            events.concat( Ext_draw_Surface.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -58,4 +117,5 @@ export default class Ext_draw_Surface extends Ext_draw_SurfaceBase {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

@@ -2,7 +2,116 @@ import Ext_Component from "../Ext/Component.js";
 
 export default class Ext_Button extends Ext_Component {
     static PROPERTIES () {
-        return [ "alignSelf", "allowDepress", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "arrow", "arrowAlign", "autoEvent", "axisLock", "badgeText", "bind", "border", "bottom", "buttonType", "centered", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "destroyMenu", "disabled", "displayed", "docked", "draggable", "enableToggle", "flex", "floated", "focusCls", "fullscreen", "handler", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "icon", "iconAlign", "iconCls", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxWidth", "menu", "menuAlign", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "padding", "plugins", "pressed", "pressedDelay", "publishes", "record", "reference", "relative", "renderTo", "right", "ripple", "scope", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "stretchMenu", "style", "tabIndex", "text", "textAlign", "toFrontOnShow", "toggleHandler", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "value", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "allowDepress",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "arrow",
+            "arrowAlign",
+            "autoEvent",
+            "axisLock",
+            "badgeText",
+            "bind",
+            "border",
+            "bottom",
+            "buttonType",
+            "centered",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "destroyMenu",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "enableToggle",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "handler",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "html",
+            "icon",
+            "iconAlign",
+            "iconCls",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "menu",
+            "menuAlign",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "padding",
+            "plugins",
+            "pressed",
+            "pressedDelay",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "scope",
+            "scrollable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "stretchMenu",
+            "style",
+            "tabIndex",
+            "text",
+            "textAlign",
+            "toFrontOnShow",
+            "toggleHandler",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "value",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -92,7 +201,10 @@ export default class Ext_Button extends Ext_Component {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_Button.PROPERTIES() ), events.concat( Ext_Button.EVENTS() ) );
+        super (
+            properties.concat( Ext_Button.PROPERTIES() ),
+            events.concat( Ext_Button.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -102,4 +214,5 @@ export default class Ext_Button extends Ext_Component {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

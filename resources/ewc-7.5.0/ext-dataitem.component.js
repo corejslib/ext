@@ -3,7 +3,7 @@ import Ext_dataview_component_DataItem from "./Ext/dataview/component/DataItem.j
 
 export default class EWCDataitem extends Ext_dataview_component_DataItem {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "dataitem";
     }
 }

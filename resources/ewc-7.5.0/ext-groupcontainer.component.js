@@ -3,7 +3,7 @@ import Ext_field_FieldGroupContainer from "./Ext/field/FieldGroupContainer.js";
 
 export default class EWCGroupcontainer extends Ext_field_FieldGroupContainer {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "groupcontainer";
     }
 }

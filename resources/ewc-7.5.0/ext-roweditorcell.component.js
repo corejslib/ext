@@ -3,7 +3,7 @@ import Ext_grid_rowedit_Cell from "./Ext/grid/rowedit/Cell.js";
 
 export default class EWCRoweditorcell extends Ext_grid_rowedit_Cell {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "roweditorcell";
     }
 }

@@ -3,7 +3,7 @@ import Ext_dataview_Component from "./Ext/dataview/Component.js";
 
 export default class EWCComponentdataview extends Ext_dataview_Component {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "componentdataview";
     }
 }

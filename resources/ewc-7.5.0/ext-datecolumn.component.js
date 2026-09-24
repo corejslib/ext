@@ -3,7 +3,7 @@ import Ext_grid_column_Date from "./Ext/grid/column/Date.js";
 
 export default class EWCDatecolumn extends Ext_grid_column_Date {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "datecolumn";
     }
 }

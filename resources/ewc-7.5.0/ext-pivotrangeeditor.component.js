@@ -3,7 +3,7 @@ import Ext_pivot_plugin_rangeeditor_Panel from "./Ext/pivot/plugin/rangeeditor/P
 
 export default class EWCPivotrangeeditor extends Ext_pivot_plugin_rangeeditor_Panel {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pivotrangeeditor";
     }
 }

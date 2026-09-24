@@ -3,7 +3,7 @@ import Ext_calendar_form_CalendarPicker from "./Ext/calendar/form/CalendarPicker
 
 export default class EWCCalendar_calendar_picker extends Ext_calendar_form_CalendarPicker {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-calendar-picker";
     }
 }

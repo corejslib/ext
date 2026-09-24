@@ -3,7 +3,7 @@ import Ext_calendar_view_Days from "./Ext/calendar/view/Days.js";
 
 export default class EWCCalendar_daysview extends Ext_calendar_view_Days {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-daysview";
     }
 }

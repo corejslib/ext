@@ -3,7 +3,7 @@ import Ext_form_Search from "./Ext/form/Search.js";
 
 export default class EWCSearchfield extends Ext_form_Search {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "searchfield";
     }
 }

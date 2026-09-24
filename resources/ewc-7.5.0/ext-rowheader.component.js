@@ -3,7 +3,7 @@ import Ext_grid_RowHeader from "./Ext/grid/RowHeader.js";
 
 export default class EWCRowheader extends Ext_grid_RowHeader {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "rowheader";
     }
 }

@@ -3,7 +3,7 @@ import Ext_Title from "./Ext/Title.js";
 
 export default class EWCTitle extends Ext_Title {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "title";
     }
 }

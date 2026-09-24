@@ -3,7 +3,7 @@ import Ext_grid_plugin_grouping_Panel from "./Ext/grid/plugin/grouping/Panel.js"
 
 export default class EWCGroupingpanel extends Ext_grid_plugin_grouping_Panel {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "groupingpanel";
     }
 }

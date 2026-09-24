@@ -3,7 +3,7 @@ import Ext_pivot_d3_Container from "./Ext/pivot/d3/Container.js";
 
 export default class EWCPivotd3container extends Ext_pivot_d3_Container {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pivotd3container";
     }
 }

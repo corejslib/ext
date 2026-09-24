@@ -1,8 +1,32 @@
 import WebComponentsBaseComponent from "../common/webcomponentsbase.js";
 
 export default class Ext_Base extends WebComponentsBaseComponent {
+
     static PROPERTIES () {
-        return [ "badgeText", "group", "value", "createExtComponentDefer", "createExtComponent", "closable", "title", "header", "renderer", "label", "fitToParent", "tab", "config", "platformConfig", "summaryRenderer", "extname", "viewport", "align", "plugins", "responsiveConfig", "responsiveFormulas" ];
+        return [
+            "badgeText",
+            "group",
+            "value",
+            "createExtComponentDefer",
+            "createExtComponent",
+            "closable",
+            "title",
+            "header",
+            "renderer",
+            "label",
+            "fitToParent",
+            "tab",
+            "config",
+            "platformConfig",
+            "summaryRenderer",
+            "extname",
+            "viewport",
+            "align",
+            "plugins",
+            "responsiveConfig",
+            "responsiveFormulas",
+
+        ];
     }
 
     static EVENTS () {
@@ -40,6 +64,9 @@ export default class Ext_Base extends WebComponentsBaseComponent {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_Base.PROPERTIES() ), events.concat( Ext_Base.EVENTS() ) );
+        super (
+            properties.concat( Ext_Base.PROPERTIES() ),
+            events.concat( Ext_Base.EVENTS() )
+        );
     }
 }

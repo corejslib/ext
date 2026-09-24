@@ -3,7 +3,7 @@ import Ext_field_trigger_Expand from "./Ext/field/trigger/Expand.js";
 
 export default class EWCExpandtrigger extends Ext_field_trigger_Expand {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "expandtrigger";
     }
 }

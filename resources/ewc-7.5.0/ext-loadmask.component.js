@@ -3,7 +3,7 @@ import Ext_LoadMask from "./Ext/LoadMask.js";
 
 export default class EWCLoadmask extends Ext_LoadMask {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "loadmask";
     }
 }

@@ -3,7 +3,7 @@ import Ext_calendar_view_Multi from "./Ext/calendar/view/Multi.js";
 
 export default class EWCCalendar_multiview extends Ext_calendar_view_Multi {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-multiview";
     }
 }

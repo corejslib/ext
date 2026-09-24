@@ -3,7 +3,7 @@ import Ext_Gadget from "./Ext/Gadget.js";
 
 export default class EWCComponent extends Ext_Gadget {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "component";
     }
 }

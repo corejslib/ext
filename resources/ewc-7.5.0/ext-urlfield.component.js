@@ -3,7 +3,7 @@ import Ext_form_Url from "./Ext/form/Url.js";
 
 export default class EWCUrlfield extends Ext_form_Url {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "urlfield";
     }
 }

@@ -3,7 +3,7 @@ import Ext_slider_Thumb from "./Ext/slider/Thumb.js";
 
 export default class EWCThumb extends Ext_slider_Thumb {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "thumb";
     }
 }

@@ -3,7 +3,7 @@ import Ext_panel_Date from "./Ext/panel/Date.js";
 
 export default class EWCDatepanel extends Ext_panel_Date {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "datepanel";
     }
 }

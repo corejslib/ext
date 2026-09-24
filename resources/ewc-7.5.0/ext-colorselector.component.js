@@ -3,7 +3,7 @@ import Ext_ux_colorpick_Selector from "./Ext/ux/colorpick/Selector.js";
 
 export default class EWCColorselector extends Ext_ux_colorpick_Selector {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "colorselector";
     }
 }

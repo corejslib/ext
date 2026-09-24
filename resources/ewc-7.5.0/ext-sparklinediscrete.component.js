@@ -3,7 +3,7 @@ import Ext_sparkline_Discrete from "./Ext/sparkline/Discrete.js";
 
 export default class EWCSparklinediscrete extends Ext_sparkline_Discrete {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "sparklinediscrete";
     }
 }

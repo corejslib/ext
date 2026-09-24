@@ -2,7 +2,116 @@ import Ext_menu_Item from "../../Ext/menu/Item.js";
 
 export default class Ext_menu_CheckItem extends Ext_menu_Item {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "checkChangeDisabled", "checked", "checkHandler", "clickHideDelay", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "destroyMenu", "disabled", "displayed", "docked", "draggable", "flex", "floated", "focusCls", "fullscreen", "handler", "height", "hidden", "hideAnimation", "hideMode", "hideOnClick", "hideOnMaskTap", "href", "html", "icon", "iconAlign", "iconCls", "id", "indented", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxWidth", "menu", "menuAlign", "menuExpandDelay", "menuHideDelay", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "padding", "plugins", "publishes", "record", "reference", "relative", "renderTo", "right", "ripple", "scope", "scrollable", "separator", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "style", "submenuText", "tabIndex", "target", "text", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "value", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "checkChangeDisabled",
+            "checked",
+            "checkHandler",
+            "clickHideDelay",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "destroyMenu",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "handler",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnClick",
+            "hideOnMaskTap",
+            "href",
+            "html",
+            "icon",
+            "iconAlign",
+            "iconCls",
+            "id",
+            "indented",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "menu",
+            "menuAlign",
+            "menuExpandDelay",
+            "menuHideDelay",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "scope",
+            "scrollable",
+            "separator",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "style",
+            "submenuText",
+            "tabIndex",
+            "target",
+            "text",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "value",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -90,7 +199,10 @@ export default class Ext_menu_CheckItem extends Ext_menu_Item {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_menu_CheckItem.PROPERTIES() ), events.concat( Ext_menu_CheckItem.EVENTS() ) );
+        super (
+            properties.concat( Ext_menu_CheckItem.PROPERTIES() ),
+            events.concat( Ext_menu_CheckItem.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -100,4 +212,5 @@ export default class Ext_menu_CheckItem extends Ext_menu_Item {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

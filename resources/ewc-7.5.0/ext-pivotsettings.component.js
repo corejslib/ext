@@ -3,7 +3,7 @@ import Ext_pivot_plugin_configurator_Settings from "./Ext/pivot/plugin/configura
 
 export default class EWCPivotsettings extends Ext_pivot_plugin_configurator_Settings {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pivotsettings";
     }
 }

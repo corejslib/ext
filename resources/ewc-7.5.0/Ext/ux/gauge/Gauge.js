@@ -2,7 +2,108 @@ import Ext_Gadget from "../../../Ext/Gadget.js";
 
 export default class Ext_ux_gauge_Gauge extends Ext_Gadget {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "angleOffset", "animation", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "clockwise", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "disabled", "displayed", "docked", "draggable", "flex", "floated", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxValue", "maxWidth", "minHeight", "minValue", "minWidth", "modal", "modelValidation", "name", "nameable", "needle", "padding", "plugins", "publishes", "record", "reference", "relative", "renderTo", "right", "ripple", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "style", "tabIndex", "textAlign", "textOffset", "textTpl", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "trackLength", "trackStart", "trackStyle", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "value", "valueStyle", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "angleOffset",
+            "animation",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "clockwise",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "html",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxValue",
+            "maxWidth",
+            "minHeight",
+            "minValue",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "needle",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "scrollable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "style",
+            "tabIndex",
+            "textAlign",
+            "textOffset",
+            "textTpl",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "trackLength",
+            "trackStart",
+            "trackStyle",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "value",
+            "valueStyle",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -88,7 +189,10 @@ export default class Ext_ux_gauge_Gauge extends Ext_Gadget {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_ux_gauge_Gauge.PROPERTIES() ), events.concat( Ext_ux_gauge_Gauge.EVENTS() ) );
+        super (
+            properties.concat( Ext_ux_gauge_Gauge.PROPERTIES() ),
+            events.concat( Ext_ux_gauge_Gauge.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -98,4 +202,5 @@ export default class Ext_ux_gauge_Gauge extends Ext_Gadget {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

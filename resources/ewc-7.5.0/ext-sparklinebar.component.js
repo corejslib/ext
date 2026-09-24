@@ -3,7 +3,7 @@ import Ext_sparkline_Bar from "./Ext/sparkline/Bar.js";
 
 export default class EWCSparklinebar extends Ext_sparkline_Bar {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "sparklinebar";
     }
 }

@@ -3,7 +3,7 @@ import Ext_grid_PagingToolbar from "./Ext/grid/PagingToolbar.js";
 
 export default class EWCPagingtoolbar extends Ext_grid_PagingToolbar {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pagingtoolbar";
     }
 }

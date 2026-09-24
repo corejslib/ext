@@ -3,7 +3,7 @@ import Ext_Media from "./Ext/Media.js";
 
 export default class EWCMedia extends Ext_Media {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "media";
     }
 }

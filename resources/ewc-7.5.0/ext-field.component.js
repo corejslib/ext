@@ -3,7 +3,7 @@ import Ext_form_Field from "./Ext/form/Field.js";
 
 export default class EWCField extends Ext_form_Field {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "field";
     }
 }

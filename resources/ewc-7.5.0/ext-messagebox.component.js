@@ -3,7 +3,7 @@ import Ext_MessageBox from "./Ext/MessageBox.js";
 
 export default class EWCMessagebox extends Ext_MessageBox {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "messagebox";
     }
 }

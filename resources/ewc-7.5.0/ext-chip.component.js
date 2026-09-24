@@ -3,7 +3,7 @@ import Ext_Chip from "./Ext/Chip.js";
 
 export default class EWCChip extends Ext_Chip {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "chip";
     }
 }

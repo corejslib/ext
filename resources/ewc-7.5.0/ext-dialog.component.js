@@ -3,7 +3,7 @@ import Ext_window_Window from "./Ext/window/Window.js";
 
 export default class EWCDialog extends Ext_window_Window {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "dialog";
     }
 }

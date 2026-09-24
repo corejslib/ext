@@ -3,7 +3,7 @@ import Ext_calendar_panel_Week from "./Ext/calendar/panel/Week.js";
 
 export default class EWCCalendar_week extends Ext_calendar_panel_Week {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-week";
     }
 }

@@ -2,7 +2,11 @@ import Ext_pivot_d3_AbstractContainer from "../../../Ext/pivot/d3/AbstractContai
 
 export default class Ext_pivot_d3_Container extends Ext_pivot_d3_AbstractContainer {
     static PROPERTIES () {
-        return [ "configurator", "drawing", "matrix" ];
+        return [
+            "configurator",
+            "drawing",
+            "matrix",
+        ];
     }
 
     static EVENTS () {
@@ -34,7 +38,10 @@ export default class Ext_pivot_d3_Container extends Ext_pivot_d3_AbstractContain
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_pivot_d3_Container.PROPERTIES() ), events.concat( Ext_pivot_d3_Container.EVENTS() ) );
+        super (
+            properties.concat( Ext_pivot_d3_Container.PROPERTIES() ),
+            events.concat( Ext_pivot_d3_Container.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -44,4 +51,5 @@ export default class Ext_pivot_d3_Container extends Ext_pivot_d3_AbstractContain
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

@@ -3,7 +3,7 @@ import Ext_grid_plugin_grouping_Column from "./Ext/grid/plugin/grouping/Column.j
 
 export default class EWCGroupingpanelcolumn extends Ext_grid_plugin_grouping_Column {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "groupingpanelcolumn";
     }
 }

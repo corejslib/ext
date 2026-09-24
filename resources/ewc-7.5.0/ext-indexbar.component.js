@@ -3,7 +3,7 @@ import Ext_IndexBar from "./Ext/IndexBar.js";
 
 export default class EWCIndexbar extends Ext_IndexBar {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "indexbar";
     }
 }

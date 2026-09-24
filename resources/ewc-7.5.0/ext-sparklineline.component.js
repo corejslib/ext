@@ -3,7 +3,7 @@ import Ext_sparkline_Line from "./Ext/sparkline/Line.js";
 
 export default class EWCSparklineline extends Ext_sparkline_Line {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "sparklineline";
     }
 }

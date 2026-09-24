@@ -3,7 +3,7 @@ import Ext_Editor from "./Ext/Editor.js";
 
 export default class EWCEditor extends Ext_Editor {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "editor";
     }
 }

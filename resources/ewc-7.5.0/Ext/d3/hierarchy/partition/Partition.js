@@ -2,7 +2,118 @@ import Ext_d3_hierarchy_Hierarchy from "../../../../Ext/d3/hierarchy/Hierarchy.j
 
 export default class Ext_d3_hierarchy_partition_Partition extends Ext_d3_hierarchy_Hierarchy {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "clipScene", "cls", "colorAxis", "componentCls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "disabled", "displayed", "docked", "draggable", "expandEventName", "flex", "floated", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "hierarchyCls", "html", "id", "instanceCls", "interactions", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "layout", "left", "linkKey", "listeners", "margin", "maxHeight", "maxWidth", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "nodeChildren", "nodeClass", "nodeKey", "nodeText", "nodeTransform", "nodeValue", "noParentValue", "noSizeLayout", "padding", "plugins", "publishes", "record", "reference", "relative", "renderLinks", "renderTo", "right", "ripple", "rootVisible", "scrollable", "selectEventName", "selection", "session", "shadow", "shareableName", "shim", "showAnimation", "size", "sorter", "stateful", "statefulDefaults", "stateId", "store", "style", "tabIndex", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "transitions", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "clipScene",
+            "cls",
+            "colorAxis",
+            "componentCls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "expandEventName",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "hierarchyCls",
+            "html",
+            "id",
+            "instanceCls",
+            "interactions",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "layout",
+            "left",
+            "linkKey",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "nodeChildren",
+            "nodeClass",
+            "nodeKey",
+            "nodeText",
+            "nodeTransform",
+            "nodeValue",
+            "noParentValue",
+            "noSizeLayout",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderLinks",
+            "renderTo",
+            "right",
+            "ripple",
+            "rootVisible",
+            "scrollable",
+            "selectEventName",
+            "selection",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "size",
+            "sorter",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "store",
+            "style",
+            "tabIndex",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "transitions",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -91,7 +202,10 @@ export default class Ext_d3_hierarchy_partition_Partition extends Ext_d3_hierarc
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_d3_hierarchy_partition_Partition.PROPERTIES() ), events.concat( Ext_d3_hierarchy_partition_Partition.EVENTS() ) );
+        super (
+            properties.concat( Ext_d3_hierarchy_partition_Partition.PROPERTIES() ),
+            events.concat( Ext_d3_hierarchy_partition_Partition.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -101,4 +215,5 @@ export default class Ext_d3_hierarchy_partition_Partition extends Ext_d3_hierarc
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

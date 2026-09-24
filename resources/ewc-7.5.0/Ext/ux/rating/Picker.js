@@ -2,7 +2,108 @@ import Ext_Gadget from "../../../Ext/Gadget.js";
 
 export default class Ext_ux_rating_Picker extends Ext_Gadget {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "animate", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "disabled", "displayed", "docked", "draggable", "family", "flex", "floated", "focusCls", "fullscreen", "glyphs", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "limit", "listeners", "margin", "maxHeight", "maxWidth", "minHeight", "minimum", "minWidth", "modal", "modelValidation", "name", "nameable", "overStyle", "padding", "plugins", "publishes", "record", "reference", "relative", "renderTo", "right", "ripple", "rounding", "scale", "scrollable", "selectedStyle", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "style", "tabIndex", "tip", "toFrontOnShow", "tooltip", "tooltipText", "top", "touchAction", "tpl", "tplWriteMode", "trackingValue", "trackOver", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "value", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "animate",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "family",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "glyphs",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "html",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "limit",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "minHeight",
+            "minimum",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "overStyle",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "rounding",
+            "scale",
+            "scrollable",
+            "selectedStyle",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "style",
+            "tabIndex",
+            "tip",
+            "toFrontOnShow",
+            "tooltip",
+            "tooltipText",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "trackingValue",
+            "trackOver",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "value",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -88,7 +189,10 @@ export default class Ext_ux_rating_Picker extends Ext_Gadget {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_ux_rating_Picker.PROPERTIES() ), events.concat( Ext_ux_rating_Picker.EVENTS() ) );
+        super (
+            properties.concat( Ext_ux_rating_Picker.PROPERTIES() ),
+            events.concat( Ext_ux_rating_Picker.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -98,4 +202,5 @@ export default class Ext_ux_rating_Picker extends Ext_Gadget {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

@@ -3,7 +3,7 @@ import Ext_Map from "./Ext/Map.js";
 
 export default class EWCMap extends Ext_Map {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "map";
     }
 }

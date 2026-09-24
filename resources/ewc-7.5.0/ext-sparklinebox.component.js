@@ -3,7 +3,7 @@ import Ext_sparkline_Box from "./Ext/sparkline/Box.js";
 
 export default class EWCSparklinebox extends Ext_sparkline_Box {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "sparklinebox";
     }
 }

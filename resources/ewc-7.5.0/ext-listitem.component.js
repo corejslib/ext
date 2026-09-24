@@ -3,7 +3,7 @@ import Ext_dataview_component_ListItem from "./Ext/dataview/component/ListItem.j
 
 export default class EWCListitem extends Ext_dataview_component_ListItem {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "listitem";
     }
 }

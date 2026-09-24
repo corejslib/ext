@@ -3,7 +3,7 @@ import Ext_chart_Chart from "./Ext/chart/Chart.js";
 
 export default class EWCChart extends Ext_chart_Chart {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "chart";
     }
 }

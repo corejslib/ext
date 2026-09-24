@@ -3,7 +3,7 @@ import Ext_grid_LockedGrid from "./Ext/grid/LockedGrid.js";
 
 export default class EWCLockedgrid extends Ext_grid_LockedGrid {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "lockedgrid";
     }
 }

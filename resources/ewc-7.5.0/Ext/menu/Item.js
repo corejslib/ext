@@ -2,7 +2,111 @@ import Ext_Component from "../../Ext/Component.js";
 
 export default class Ext_menu_Item extends Ext_Component {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "clickHideDelay", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "destroyMenu", "disabled", "displayed", "docked", "draggable", "flex", "floated", "focusCls", "fullscreen", "handler", "height", "hidden", "hideAnimation", "hideMode", "hideOnClick", "hideOnMaskTap", "href", "html", "icon", "iconAlign", "iconCls", "id", "indented", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxWidth", "menu", "menuAlign", "menuExpandDelay", "menuHideDelay", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "padding", "plugins", "publishes", "record", "reference", "relative", "renderTo", "right", "ripple", "scope", "scrollable", "separator", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "style", "tabIndex", "target", "text", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "clickHideDelay",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "destroyMenu",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "handler",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnClick",
+            "hideOnMaskTap",
+            "href",
+            "html",
+            "icon",
+            "iconAlign",
+            "iconCls",
+            "id",
+            "indented",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "menu",
+            "menuAlign",
+            "menuExpandDelay",
+            "menuHideDelay",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "scope",
+            "scrollable",
+            "separator",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "style",
+            "tabIndex",
+            "target",
+            "text",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -88,7 +192,10 @@ export default class Ext_menu_Item extends Ext_Component {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_menu_Item.PROPERTIES() ), events.concat( Ext_menu_Item.EVENTS() ) );
+        super (
+            properties.concat( Ext_menu_Item.PROPERTIES() ),
+            events.concat( Ext_menu_Item.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -98,4 +205,5 @@ export default class Ext_menu_Item extends Ext_Component {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

@@ -2,7 +2,115 @@ import Ext_sparkline_BarBase from "../../Ext/sparkline/BarBase.js";
 
 export default class Ext_sparkline_Bar extends Ext_sparkline_BarBase {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "barColor", "barSpacing", "barWidth", "bind", "border", "bottom", "centered", "chartRangeClip", "chartRangeMax", "chartRangeMin", "cls", "colorMap", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "disabled", "disableTooltips", "displayed", "docked", "draggable", "flex", "floated", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "highlightColor", "highlightLighten", "html", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "lineColor", "listeners", "margin", "maxHeight", "maxWidth", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "negBarColor", "nullColor", "padding", "plugins", "publishes", "record", "reference", "relative", "renderTo", "right", "ripple", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "stackedBarColor", "stateful", "statefulDefaults", "stateId", "style", "tabIndex", "tipTpl", "toFrontOnShow", "tooltip", "tooltipPrefix", "tooltipSkipNull", "tooltipSuffix", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "values", "viewModel", "weight", "width", "x", "xtype", "y", "zeroAxis", "zeroColor", "zIndex" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "barColor",
+            "barSpacing",
+            "barWidth",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "chartRangeClip",
+            "chartRangeMax",
+            "chartRangeMin",
+            "cls",
+            "colorMap",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "disabled",
+            "disableTooltips",
+            "displayed",
+            "docked",
+            "draggable",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "highlightColor",
+            "highlightLighten",
+            "html",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "lineColor",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "negBarColor",
+            "nullColor",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "scrollable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stackedBarColor",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "style",
+            "tabIndex",
+            "tipTpl",
+            "toFrontOnShow",
+            "tooltip",
+            "tooltipPrefix",
+            "tooltipSkipNull",
+            "tooltipSuffix",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "values",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zeroAxis",
+            "zeroColor",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -88,7 +196,10 @@ export default class Ext_sparkline_Bar extends Ext_sparkline_BarBase {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_sparkline_Bar.PROPERTIES() ), events.concat( Ext_sparkline_Bar.EVENTS() ) );
+        super (
+            properties.concat( Ext_sparkline_Bar.PROPERTIES() ),
+            events.concat( Ext_sparkline_Bar.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -98,4 +209,5 @@ export default class Ext_sparkline_Bar extends Ext_sparkline_BarBase {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

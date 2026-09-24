@@ -3,7 +3,7 @@ import Ext_form_Number from "./Ext/form/Number.js";
 
 export default class EWCNumberfield extends Ext_form_Number {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "numberfield";
     }
 }

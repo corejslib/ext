@@ -3,7 +3,7 @@ import Ext_ux_colorpick_ColorPreview from "./Ext/ux/colorpick/ColorPreview.js";
 
 export default class EWCColorpickercolorpreview extends Ext_ux_colorpick_ColorPreview {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "colorpickercolorpreview";
     }
 }

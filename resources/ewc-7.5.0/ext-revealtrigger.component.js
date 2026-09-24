@@ -3,7 +3,7 @@ import Ext_field_trigger_Reveal from "./Ext/field/trigger/Reveal.js";
 
 export default class EWCRevealtrigger extends Ext_field_trigger_Reveal {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "revealtrigger";
     }
 }

@@ -3,7 +3,7 @@ import Ext_field_RadioGroup from "./Ext/field/RadioGroup.js";
 
 export default class EWCRadiogroup extends Ext_field_RadioGroup {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "radiogroup";
     }
 }

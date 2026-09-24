@@ -3,7 +3,7 @@ import Ext_grid_cell_Base from "./Ext/grid/cell/Base.js";
 
 export default class EWCGridcellbase extends Ext_grid_cell_Base {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "gridcellbase";
     }
 }

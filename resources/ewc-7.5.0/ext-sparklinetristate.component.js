@@ -3,7 +3,7 @@ import Ext_sparkline_TriState from "./Ext/sparkline/TriState.js";
 
 export default class EWCSparklinetristate extends Ext_sparkline_TriState {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "sparklinetristate";
     }
 }

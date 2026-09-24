@@ -3,7 +3,7 @@ import Ext_calendar_header_Weeks from "./Ext/calendar/header/Weeks.js";
 
 export default class EWCCalendar_weeksheader extends Ext_calendar_header_Weeks {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-weeksheader";
     }
 }

@@ -3,7 +3,7 @@ import Ext_grid_menu_GroupByThis from "./Ext/grid/menu/GroupByThis.js";
 
 export default class EWCGridgroupbythismenuitem extends Ext_grid_menu_GroupByThis {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "gridgroupbythismenuitem";
     }
 }

@@ -3,7 +3,7 @@ import Ext_panel_Title from "./Ext/panel/Title.js";
 
 export default class EWCPaneltitle extends Ext_panel_Title {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "paneltitle";
     }
 }

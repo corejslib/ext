@@ -3,7 +3,7 @@ import Ext_ActionSheet from "./Ext/ActionSheet.js";
 
 export default class EWCActionsheet extends Ext_ActionSheet {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "actionsheet";
     }
 }

@@ -3,7 +3,7 @@ import Ext_SplitButton from "./Ext/SplitButton.js";
 
 export default class EWCSplitbutton extends Ext_SplitButton {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "splitbutton";
     }
 }

@@ -3,7 +3,7 @@ import Ext_form_DatePickerNative from "./Ext/form/DatePickerNative.js";
 
 export default class EWCDatepickernativefield extends Ext_form_DatePickerNative {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "datepickernativefield";
     }
 }

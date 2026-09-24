@@ -3,7 +3,7 @@ import Ext_ux_Gauge from "./Ext/ux/Gauge.js";
 
 export default class EWCGauge extends Ext_ux_Gauge {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "gauge";
     }
 }

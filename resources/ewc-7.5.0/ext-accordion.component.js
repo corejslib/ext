@@ -3,7 +3,7 @@ import Ext_panel_Accordion from "./Ext/panel/Accordion.js";
 
 export default class EWCAccordion extends Ext_panel_Accordion {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "accordion";
     }
 }

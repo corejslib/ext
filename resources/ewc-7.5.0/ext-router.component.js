@@ -1,14 +1,12 @@
 import ElementParser from "./common/ElementParser.js";
 import {
-
     // doProp,
     // filterProp,
     isMenu,
     isParentGridAndChildColumn,
     isPlugin,
     isRenderercell,
-    isTooltip,
-} from "./common/util.js";
+    isTooltip } from "./common/util.js";
 import WebComponentsBaseComponent from "./common/webcomponentsbase";
 
 export class ExtRouter extends WebComponentsBaseComponent {
@@ -30,7 +28,10 @@ export class ExtRouter extends WebComponentsBaseComponent {
     }
 
     constructor () {
-        super( [], [] );
+        super (
+            [],
+            []
+        );
         this.router = new Router( window.routes );
     }
 
@@ -63,7 +64,9 @@ export class ExtRouter extends WebComponentsBaseComponent {
         // div.style.overflow='scroll';
         div.style.borderWidth = "0px";
         div.style.backgroundColor = "#e8e8e8";
-        div.style.backgroundImage = "linear-gradient( 0deg, #f5f5f5 1.1px, transparent 0)," + "linear-gradient(90deg, #f5f5f5 1.1px, transparent 0)";
+        div.style.backgroundImage =
+            "linear-gradient( 0deg, #f5f5f5 1.1px, transparent 0)," +
+            "linear-gradient(90deg, #f5f5f5 1.1px, transparent 0)";
         var el = Ext.get( div );
         this.props[ "hidden" ] = this[ "hidden" ];
         this.props.listeners = {};
@@ -198,7 +201,12 @@ function _getRoutes ( items ) {
         item.hash = item.text.replace( / /gv, "" );
         item.hashlower = item.hash.toLowerCase();
         if ( item.children == undefined ) {
-            window._routes.push( new Route( item.hash, item.hashlower, item.component, item.default ) );
+            window._routes.push( new Route(
+                item.hash,
+                item.hashlower,
+                item.component,
+                item.default
+            ) );
         }
         else {
             _getRoutes( item.children );
@@ -272,6 +280,7 @@ export class Router {
         var route;
 
         if ( window.location.hash.length > 0 ) {
+
             for ( i = 0; i < routes.length; i++ ) {
                 route = routes[ i ];
                 if ( route.isActiveRoute( window.location.hash.substr( 1 ) ) ) {

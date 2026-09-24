@@ -3,7 +3,7 @@ import Ext_calendar_view_Week from "./Ext/calendar/view/Week.js";
 
 export default class EWCCalendar_weekview extends Ext_calendar_view_Week {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-weekview";
     }
 }

@@ -3,7 +3,7 @@ import Ext_grid_cell_Check from "./Ext/grid/cell/Check.js";
 
 export default class EWCCheckcell extends Ext_grid_cell_Check {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "checkcell";
     }
 }

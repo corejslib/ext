@@ -3,7 +3,7 @@ import Ext_dataview_ListItemPlaceholder from "./Ext/dataview/ListItemPlaceholder
 
 export default class EWCListitemplaceholder extends Ext_dataview_ListItemPlaceholder {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "listitemplaceholder";
     }
 }

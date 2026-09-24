@@ -3130,14 +3130,13 @@ html {
     border-bottom-left-radius: 2px;
     border-top-left-radius: 2px;
 }
-.x-legend-horizontal .x-legend-item:last-child {
+.x-legend-horizontal .x-legend-item:last-child,
+.x-legend-horizontal.x-rtl .x-legend-item:first-child {
     border-bottom-right-radius: 2px;
     border-top-right-radius: 2px;
 }
 .x-legend-horizontal.x-rtl .x-legend-item:first-child {
     border-right: 1px solid #ccc;
-    border-bottom-right-radius: 2px;
-    border-top-right-radius: 2px;
 }
 .x-legend-horizontal.x-rtl .x-legend-item:last-child {
     border-right: none;

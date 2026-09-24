@@ -2,7 +2,119 @@ import Ext_Button from "../../Ext/Button.js";
 
 export default class Ext_field_FileButton extends Ext_Button {
     static PROPERTIES () {
-        return [ "accept", "alignSelf", "allowDepress", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "arrow", "arrowAlign", "autoEvent", "axisLock", "badgeText", "bind", "border", "bottom", "buttonType", "capture", "centered", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "destroyMenu", "disabled", "displayed", "docked", "draggable", "enableToggle", "flex", "floated", "focusCls", "fullscreen", "handler", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "icon", "iconAlign", "iconCls", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxWidth", "menu", "menuAlign", "minHeight", "minWidth", "modal", "modelValidation", "multiple", "name", "nameable", "padding", "plugins", "pressed", "pressedDelay", "publishes", "record", "reference", "relative", "renderTo", "right", "ripple", "scope", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "stretchMenu", "style", "tabIndex", "text", "textAlign", "toFrontOnShow", "toggleHandler", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "value", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "accept",
+            "alignSelf",
+            "allowDepress",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "arrow",
+            "arrowAlign",
+            "autoEvent",
+            "axisLock",
+            "badgeText",
+            "bind",
+            "border",
+            "bottom",
+            "buttonType",
+            "capture",
+            "centered",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "destroyMenu",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "enableToggle",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "handler",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "html",
+            "icon",
+            "iconAlign",
+            "iconCls",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "menu",
+            "menuAlign",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "multiple",
+            "name",
+            "nameable",
+            "padding",
+            "plugins",
+            "pressed",
+            "pressedDelay",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "scope",
+            "scrollable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "stretchMenu",
+            "style",
+            "tabIndex",
+            "text",
+            "textAlign",
+            "toFrontOnShow",
+            "toggleHandler",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "value",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -93,7 +205,10 @@ export default class Ext_field_FileButton extends Ext_Button {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_field_FileButton.PROPERTIES() ), events.concat( Ext_field_FileButton.EVENTS() ) );
+        super (
+            properties.concat( Ext_field_FileButton.PROPERTIES() ),
+            events.concat( Ext_field_FileButton.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -103,4 +218,5 @@ export default class Ext_field_FileButton extends Ext_Button {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

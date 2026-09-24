@@ -3,7 +3,7 @@ import Ext_Spacer from "./Ext/Spacer.js";
 
 export default class EWCSpacer extends Ext_Spacer {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "spacer";
     }
 }

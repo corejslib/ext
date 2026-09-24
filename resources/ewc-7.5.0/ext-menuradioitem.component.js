@@ -3,7 +3,7 @@ import Ext_menu_RadioItem from "./Ext/menu/RadioItem.js";
 
 export default class EWCMenuradioitem extends Ext_menu_RadioItem {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "menuradioitem";
     }
 }

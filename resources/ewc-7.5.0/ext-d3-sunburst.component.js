@@ -3,7 +3,7 @@ import Ext_d3_hierarchy_partition_Sunburst from "./Ext/d3/hierarchy/partition/Su
 
 export default class EWCD3_sunburst extends Ext_d3_hierarchy_partition_Sunburst {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "d3-sunburst";
     }
 }

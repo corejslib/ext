@@ -3,7 +3,7 @@ import Ext_grid_row_Group from "./Ext/grid/row/Group.js";
 
 export default class EWCGridgrouprow extends Ext_grid_row_Group {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "gridgrouprow";
     }
 }

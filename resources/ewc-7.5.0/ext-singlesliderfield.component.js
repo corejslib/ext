@@ -3,7 +3,7 @@ import Ext_field_SingleSlider from "./Ext/field/SingleSlider.js";
 
 export default class EWCSinglesliderfield extends Ext_field_SingleSlider {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "singlesliderfield";
     }
 }

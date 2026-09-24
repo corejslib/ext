@@ -2,7 +2,104 @@ import Ext_Component from "../../Ext/Component.js";
 
 export default class Ext_slider_Slider extends Ext_Component {
     static PROPERTIES () {
-        return [ "alignSelf", "allowThumbsOverlapping", "alwaysOnTop", "animation", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "disabled", "displayed", "docked", "draggable", "flex", "floated", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "id", "increment", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxValue", "maxWidth", "minHeight", "minValue", "minWidth", "modal", "modelValidation", "name", "nameable", "padding", "plugins", "publishes", "readOnly", "record", "reference", "relative", "renderTo", "right", "ripple", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "style", "tabIndex", "thumbDefaults", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "value", "valueIsArray", "values", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "allowThumbsOverlapping",
+            "alwaysOnTop",
+            "animation",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "html",
+            "id",
+            "increment",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxValue",
+            "maxWidth",
+            "minHeight",
+            "minValue",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "padding",
+            "plugins",
+            "publishes",
+            "readOnly",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "scrollable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "style",
+            "tabIndex",
+            "thumbDefaults",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "value",
+            "valueIsArray",
+            "values",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -92,7 +189,10 @@ export default class Ext_slider_Slider extends Ext_Component {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_slider_Slider.PROPERTIES() ), events.concat( Ext_slider_Slider.EVENTS() ) );
+        super (
+            properties.concat( Ext_slider_Slider.PROPERTIES() ),
+            events.concat( Ext_slider_Slider.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -102,4 +202,5 @@ export default class Ext_slider_Slider extends Ext_Component {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

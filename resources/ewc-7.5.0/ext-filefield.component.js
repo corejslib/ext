@@ -3,7 +3,7 @@ import Ext_field_File from "./Ext/field/File.js";
 
 export default class EWCFilefield extends Ext_field_File {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "filefield";
     }
 }

@@ -3,7 +3,7 @@ import Ext_grid_Row from "./Ext/grid/Row.js";
 
 export default class EWCGridrow extends Ext_grid_Row {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "gridrow";
     }
 }

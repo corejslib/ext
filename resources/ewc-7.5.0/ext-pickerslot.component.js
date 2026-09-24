@@ -3,7 +3,7 @@ import Ext_picker_Slot from "./Ext/picker/Slot.js";
 
 export default class EWCPickerslot extends Ext_picker_Slot {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pickerslot";
     }
 }

@@ -3,7 +3,7 @@ import Ext_panel_Time from "./Ext/panel/Time.js";
 
 export default class EWCTimepanel extends Ext_panel_Time {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "timepanel";
     }
 }

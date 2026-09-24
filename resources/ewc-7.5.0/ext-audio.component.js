@@ -3,7 +3,7 @@ import Ext_Audio from "./Ext/Audio.js";
 
 export default class EWCAudio extends Ext_Audio {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "audio";
     }
 }

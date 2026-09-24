@@ -3,7 +3,7 @@ import Ext_chart_navigator_Container from "./Ext/chart/navigator/Container.js";
 
 export default class EWCChartnavigator extends Ext_chart_navigator_Container {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "chartnavigator";
     }
 }

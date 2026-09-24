@@ -3,7 +3,7 @@ import Ext_grid_cell_Group from "./Ext/grid/cell/Group.js";
 
 export default class EWCGroupcell extends Ext_grid_cell_Group {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "groupcell";
     }
 }

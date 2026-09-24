@@ -3,7 +3,7 @@ import Ext_grid_rowedit_Gap from "./Ext/grid/rowedit/Gap.js";
 
 export default class EWCRoweditorgap extends Ext_grid_rowedit_Gap {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "roweditorgap";
     }
 }

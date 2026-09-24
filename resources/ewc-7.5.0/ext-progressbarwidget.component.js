@@ -3,7 +3,7 @@ import Ext_ProgressBarWidget from "./Ext/ProgressBarWidget.js";
 
 export default class EWCProgressbarwidget extends Ext_ProgressBarWidget {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "progressbarwidget";
     }
 }

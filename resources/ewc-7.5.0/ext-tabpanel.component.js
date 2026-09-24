@@ -3,7 +3,7 @@ import Ext_TabPanel from "./Ext/TabPanel.js";
 
 export default class EWCTabpanel extends Ext_TabPanel {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "tabpanel";
     }
 }

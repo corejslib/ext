@@ -22,16 +22,14 @@ export function addRuntime ( toolkit, theme ) {
             xhrObj.open( "GET", `${ nodeLocation }${ runtimeLocation }${ toolkit }.engine.pro.js`, false );
             xhrObj.send( "" );
             if ( xhrObj.status == 404 ) {
-                showError();
-                return -100;
+                showError(); return -100;
             }
         }
         else {
             nodeLocation = nodeLocationBlank;
         }
         if ( xhrObj.responseText.substring( 0, 3 ) != "var" ) {
-            showError();
-            return -100;
+            showError(); return -100;
         }
         var se;
         se = document.createElement( "script" );
@@ -55,7 +53,9 @@ export function addRuntime ( toolkit, theme ) {
     `;
         window.stop();
     };
-    if ( scriptIt() != 0 ) console.warn( "[Deprecation] error below is expected" );
+    if ( scriptIt() != 0 ) {
+        console.warn( "[Deprecation] error below is expected" );
+    }
 
     switch ( window[ "ExtFramework" ] ) {
         case "react":
@@ -114,7 +114,8 @@ export function doProp ( me, prop ) {
             },
         } );
     }
-    catch ( e ) {}
+    catch ( e ) {
+    }
 }
 
 // NOTE patch
@@ -139,7 +140,7 @@ function doSet ( me, prop, val ) {
     }
     catch ( e ) {
 
-        // console.log(e)
+    // console.log(e)
     }
 
     if ( val ) {
@@ -159,7 +160,8 @@ function doSet ( me, prop, val ) {
         try {
             me.A.ext[ method ]( valExt );
         }
-        catch ( e ) {}
+        catch ( e ) {
+        }
         me.setAttribute( prop, val2 );
     }
     else {
@@ -193,7 +195,13 @@ export function filterProp ( propertyValue, property, me ) {
         }
         const parsedProp = JSON.parse( propertyValue );
 
-        if ( parsedProp === null || parsedProp === undefined || parsedProp === true || parsedProp === false || parsedProp === Object( parsedProp ) || ( !isNaN( parsedProp ) && parsedProp !== 0 ) ) {
+        if ( parsedProp === null ||
+        parsedProp === undefined ||
+        parsedProp === true ||
+        parsedProp === false ||
+        parsedProp === Object( parsedProp ) ||
+        ( !isNaN( parsedProp ) && parsedProp !== 0 )
+        ) {
             return parsedProp;
         }
         else {

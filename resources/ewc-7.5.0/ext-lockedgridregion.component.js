@@ -3,7 +3,7 @@ import Ext_grid_LockedGridRegion from "./Ext/grid/LockedGridRegion.js";
 
 export default class EWCLockedgridregion extends Ext_grid_LockedGridRegion {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "lockedgridregion";
     }
 }

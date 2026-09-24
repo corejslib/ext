@@ -43,8 +43,10 @@ const ElementParser = ( () => {
     const queue = [];
     const isParsed = el => {
         do {
-            if ( el.nextSibling ) return true;
-        } while ( ( el = el.parentNode ) );
+            if ( el.nextSibling ) {
+                return true;
+            }
+        } while ( el = el.parentNode );
         return false;
     };
     const upgrade = () => {
@@ -67,51 +69,59 @@ const ElementParser = ( () => {
                 parsedCallback( el );
             };
             const parsedCallback = el => {
-                if ( !queue.length ) requestAnimationFrame( upgrade );
+                if ( !queue.length ) {
+                    requestAnimationFrame( upgrade );
+                }
                 queue.push( [ el, method ] );
             };
-            Object.defineProperties( prototype, {
-                "connectedCallback": {
-                    "configurable": true,
-                    value () {
-                        if ( connectedCallback ) {
-                            connectedCallback.apply( this, arguments );
-                        }
-                        const self = this;
-                        if ( method in this && !init.has( this ) ) {
-                            const { ownerDocument } = self;
-                            init.set( self, false );
-                            if ( ownerDocument.readyState === "interactive" || ownerDocument.readyState === "complete" || isParsed( self ) ) {
-                                parsedCallback( self );
+            Object.defineProperties(
+                prototype,
+                {
+                    "connectedCallback": {
+                        "configurable": true,
+                        value () {
+                            if ( connectedCallback ) {
+                                connectedCallback.apply( this, arguments );
+                            }
+                            const self = this;
+                            if ( method in this && !init.has( this ) ) {
+
+                                const { ownerDocument } = self;
+                                init.set( self, false );
+                                if ( ownerDocument.readyState === "interactive" || ownerDocument.readyState === "complete" || isParsed( self ) ) {
+                                    parsedCallback( self );
+                                }
+                                else {
+                                    const onDCL = () => cleanUp( self, observer, ownerDocument, onDCL );
+                                    ownerDocument.addEventListener( DCL, onDCL );
+                                    const observer = new MutationObserver( () => {
+                                        /* istanbul ignore else */
+                                        if ( isParsed( self ) ) {
+                                            cleanUp( self, observer, ownerDocument, onDCL );
+                                        }
+                                    } );
+                                    observer.observe( self.parentNode, { "childList": true, "subtree": true } );
+                                }
                             }
                             else {
-                                const onDCL = () => cleanUp( self, observer, ownerDocument, onDCL );
-                                ownerDocument.addEventListener( DCL, onDCL );
-                                const observer = new MutationObserver( () => {
-                                    /* istanbul ignore else */
-                                    if ( isParsed( self ) ) cleanUp( self, observer, ownerDocument, onDCL );
+                                requestAnimationFrame( function () {
+                                    self[ "parsedCallback" ]();
                                 } );
-                                observer.observe( self.parentNode, { "childList": true, "subtree": true } );
-                            }
-                        }
-                        else {
-                            requestAnimationFrame( function () {
-                                self[ "parsedCallback" ]();
-                            } );
 
-                            // setTimeout(function(){
-                            //  self['parsedCallback']();
-                            // }, 0);
-                        }
+                                // setTimeout(function(){
+                                //  self['parsedCallback']();
+                                // }, 0);
+                            }
+                        },
                     },
-                },
-                [ name ]: {
-                    "configurable": true,
-                    get () {
-                        return init.get( this ) === true;
+                    [ name ]: {
+                        "configurable": true,
+                        get () {
+                            return init.get( this ) === true;
+                        },
                     },
-                },
-            } );
+                }
+            );
             return Class;
         }
     }

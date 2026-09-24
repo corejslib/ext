@@ -1,10 +1,20 @@
 // Thu Sep 30 2021 01:33:39 GMT+0530 (India Standard Time)
 
-import { doProp, filterProp, isClassicDock, isMenu, isParentGridAndChildColumn, isParentGridAndChildToolbar, isPlugin, isRenderercell, isTooltip } from "./util.js";
+import {
+    doProp,
+    filterProp,
+    isClassicDock,
+    isMenu,
+    isParentGridAndChildColumn,
+    isParentGridAndChildToolbar,
+    isPlugin,
+    isRenderercell,
+    isTooltip } from "./util.js";
 
 export default class WebComponentsBaseComponent extends HTMLElement {
+
     constructor ( properties, events ) {
-        super();
+        super ();
 
         const distinct = ( value, index, self ) => self.indexOf( value ) === index;
         this.properties = properties.filter( distinct );
@@ -66,11 +76,13 @@ export default class WebComponentsBaseComponent extends HTMLElement {
                     WebComponentsBaseComponent.attributeEarly = false;
                 }
             }
+
         }
 
         if ( WebComponentsBaseComponent.attributeEarly == true ) {
             this.connectedCallback2();
         }
+
     }
 
     connectedCallback2 () {
@@ -113,7 +125,9 @@ export default class WebComponentsBaseComponent extends HTMLElement {
             this.A.o[ "viewport" ] = false;
         }
 
-        if ( this.parentNode != null && this.parentNode.nodeName.substring( 0, 4 ) !== "EXT-" && this.A.o[ "viewport" ] == false ) {
+        if ( this.parentNode != null &&
+        this.parentNode.nodeName.substring( 0, 4 ) !== "EXT-" &&
+        this.A.o[ "viewport" ] == false ) {
             if ( this.A.o.xtype != "dialog" ) {
                 this.A.o.renderTo = this.parentNode;
             }
@@ -122,6 +136,7 @@ export default class WebComponentsBaseComponent extends HTMLElement {
         if ( me.A.o.createExtComponentDefer != true ) {
             me.newDoExtCreate( me, me.A.o[ "viewport" ] );
         }
+
     }
 
     newCreateProps ( properties ) {
@@ -160,8 +175,7 @@ export default class WebComponentsBaseComponent extends HTMLElement {
             }
 
             if ( this.getAttribute( property ) !== null ) {
-                if ( property == "config" ) {
-                }
+                if ( property == "config" ) {}
                 else if ( property == "renderer" ) {
 
                     // console.log(this.attributeObjects['renderer'])
@@ -182,6 +196,7 @@ export default class WebComponentsBaseComponent extends HTMLElement {
                         o.renderer = eval( this[ "renderer" ] );
                     }
                 }
+
                 else if ( property == "summaryRenderer" ) {
                     if ( this.attributeObjects[ property ] != undefined ) {
                         o[ property ] = this.attributeObjects[ property ];
@@ -191,9 +206,11 @@ export default class WebComponentsBaseComponent extends HTMLElement {
                         // o[property] = eval(this[property]);
                     }
                 }
+
                 else if ( this.getAttribute( property ) == "object" ) {
                     o[ property ] = this.attributeObjects[ property ];
                 }
+
                 else if ( property == "handler" ) {
                     var functionString = this.getAttribute( property );
                     if ( functionString !== "undefined" ) {
@@ -205,11 +222,17 @@ export default class WebComponentsBaseComponent extends HTMLElement {
                         }
                     }
                 }
+
                 else if ( property == "listeners" && this[ property ] != undefined ) {
                     o[ property ] = this[ property ];
                     listenersProvided = true;
                 }
-                else if ( this[ property ] != undefined && property != "listeners" && property != "config" && property != "handler" && property != "fitToParent" ) {
+
+                else if ( this[ property ] != undefined &&
+            property != "listeners" &&
+            property != "config" &&
+            property != "handler" &&
+            property != "fitToParent" ) {
                     o[ property ] = filterProp( this.getAttribute( property ), property, this );
                 }
             }
@@ -235,6 +258,7 @@ export default class WebComponentsBaseComponent extends HTMLElement {
     }
 
     newDoExtCreate ( me, isApplication ) {
+
         if ( isApplication ) {
             if ( Ext.isClassic ) {
                 me.A.o.plugins = { "viewport": true };
@@ -385,6 +409,7 @@ export default class WebComponentsBaseComponent extends HTMLElement {
                     me.parentNode.A.CHILDREN.push( me.A.ext );
                 }
             }
+
         }
 
         WebComponentsBaseComponent.elementcount--;
@@ -623,7 +648,10 @@ export default class WebComponentsBaseComponent extends HTMLElement {
                             catch ( e ) {}
                         }
 
-                        if ( ( this.A.ext.xtype == "calendar-day" || this.A.ext.xtype == "calendar-week" || this.A.ext.xtype == "calendar-month" ) && method == "setValue" ) {
+                        if ( ( this.A.ext.xtype == "calendar-day" ||
+                  this.A.ext.xtype == "calendar-week" ||
+                  this.A.ext.xtype == "calendar-month" ) &&
+                method == "setValue" ) {
 
                             // console.log('here')
                             // console.log(propertyVal)
@@ -634,6 +662,7 @@ export default class WebComponentsBaseComponent extends HTMLElement {
                         else {
                             this.A.ext[ method ]( propertyVal );
                         }
+
                     }
                 }
                 else {

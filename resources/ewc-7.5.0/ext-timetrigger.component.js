@@ -3,7 +3,7 @@ import Ext_field_trigger_Time from "./Ext/field/trigger/Time.js";
 
 export default class EWCTimetrigger extends Ext_field_trigger_Time {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "timetrigger";
     }
 }

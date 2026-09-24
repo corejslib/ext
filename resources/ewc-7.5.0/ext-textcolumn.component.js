@@ -3,7 +3,7 @@ import Ext_grid_column_Text from "./Ext/grid/column/Text.js";
 
 export default class EWCTextcolumn extends Ext_grid_column_Text {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "textcolumn";
     }
 }

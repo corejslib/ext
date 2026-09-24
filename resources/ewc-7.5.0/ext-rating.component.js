@@ -3,7 +3,7 @@ import Ext_ux_rating_Picker from "./Ext/ux/rating/Picker.js";
 
 export default class EWCRating extends Ext_ux_rating_Picker {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "rating";
     }
 }

@@ -3,7 +3,7 @@ import Ext_TabBar from "./Ext/TabBar.js";
 
 export default class EWCTabbar extends Ext_TabBar {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "tabbar";
     }
 }

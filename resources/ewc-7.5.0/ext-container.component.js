@@ -3,7 +3,7 @@ import Ext_container_Container from "./Ext/container/Container.js";
 
 export default class EWCContainer extends Ext_container_Container {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "container";
     }
 }

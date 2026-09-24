@@ -3,7 +3,7 @@ import Ext_panel_Panel from "./Ext/panel/Panel.js";
 
 export default class EWCPanel extends Ext_panel_Panel {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "panel";
     }
 }

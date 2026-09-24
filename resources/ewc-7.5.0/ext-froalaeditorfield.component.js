@@ -3,7 +3,7 @@ import Ext_froala_EditorField from "./Ext/froala/EditorField.js";
 
 export default class EWCFroalaeditorfield extends Ext_froala_EditorField {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "froalaeditorfield";
     }
 }

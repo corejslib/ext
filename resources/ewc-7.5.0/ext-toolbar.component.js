@@ -3,7 +3,7 @@ import Ext_Toolbar from "./Ext/Toolbar.js";
 
 export default class EWCToolbar extends Ext_Toolbar {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "toolbar";
     }
 }

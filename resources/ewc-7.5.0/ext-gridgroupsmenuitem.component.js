@@ -3,7 +3,7 @@ import Ext_grid_menu_Groups from "./Ext/grid/menu/Groups.js";
 
 export default class EWCGridgroupsmenuitem extends Ext_grid_menu_Groups {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "gridgroupsmenuitem";
     }
 }

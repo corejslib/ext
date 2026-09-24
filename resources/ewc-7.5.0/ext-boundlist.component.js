@@ -3,7 +3,7 @@ import Ext_dataview_BoundList from "./Ext/dataview/BoundList.js";
 
 export default class EWCBoundlist extends Ext_dataview_BoundList {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "boundlist";
     }
 }

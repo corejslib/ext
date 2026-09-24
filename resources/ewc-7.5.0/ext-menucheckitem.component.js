@@ -3,7 +3,7 @@ import Ext_menu_CheckItem from "./Ext/menu/CheckItem.js";
 
 export default class EWCMenucheckitem extends Ext_menu_CheckItem {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "menucheckitem";
     }
 }

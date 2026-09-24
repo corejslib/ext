@@ -3,7 +3,7 @@ import Ext_pivot_plugin_configurator_Form from "./Ext/pivot/plugin/configurator/
 
 export default class EWCPivotconfigform extends Ext_pivot_plugin_configurator_Form {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pivotconfigform";
     }
 }

@@ -2,7 +2,58 @@ import Ext_Widget from "../Ext/Widget.js";
 
 export default class Ext_AbstractComponent extends Ext_Widget {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "bind", "border", "cls", "constrainAlign", "controller", "defaultListenerScope", "disabled", "flex", "floated", "focusCls", "height", "hidden", "hideMode", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "listeners", "margin", "name", "nameable", "plugins", "publishes", "reference", "relative", "renderTo", "ripple", "session", "shadow", "shareableName", "shim", "style", "toFrontOnShow", "touchAction", "translatable", "twoWayBindable", "ui", "userCls", "viewModel", "width", "x", "y" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "bind",
+            "border",
+            "cls",
+            "constrainAlign",
+            "controller",
+            "defaultListenerScope",
+            "disabled",
+            "flex",
+            "floated",
+            "focusCls",
+            "height",
+            "hidden",
+            "hideMode",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "listeners",
+            "margin",
+            "name",
+            "nameable",
+            "plugins",
+            "publishes",
+            "reference",
+            "relative",
+            "renderTo",
+            "ripple",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "style",
+            "toFrontOnShow",
+            "touchAction",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "viewModel",
+            "width",
+            "x",
+            "y",
+        ];
     }
 
     static EVENTS () {
@@ -48,7 +99,10 @@ export default class Ext_AbstractComponent extends Ext_Widget {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_AbstractComponent.PROPERTIES() ), events.concat( Ext_AbstractComponent.EVENTS() ) );
+        super (
+            properties.concat( Ext_AbstractComponent.PROPERTIES() ),
+            events.concat( Ext_AbstractComponent.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -58,4 +112,5 @@ export default class Ext_AbstractComponent extends Ext_Widget {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

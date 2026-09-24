@@ -3,7 +3,7 @@ import Ext_form_field_ComboBox from "./Ext/form/field/ComboBox.js";
 
 export default class EWCComboboxfield extends Ext_form_field_ComboBox {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "comboboxfield";
     }
 }

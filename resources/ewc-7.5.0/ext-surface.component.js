@@ -3,7 +3,7 @@ import Ext_draw_Surface from "./Ext/draw/Surface.js";
 
 export default class EWCSurface extends Ext_draw_Surface {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "surface";
     }
 }

@@ -3,7 +3,7 @@ import Ext_form_Select from "./Ext/form/Select.js";
 
 export default class EWCSelectfield extends Ext_form_Select {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "selectfield";
     }
 }

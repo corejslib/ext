@@ -3,7 +3,7 @@ import Ext_chart_PolarChart from "./Ext/chart/PolarChart.js";
 
 export default class EWCPolar extends Ext_chart_PolarChart {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "polar";
     }
 }

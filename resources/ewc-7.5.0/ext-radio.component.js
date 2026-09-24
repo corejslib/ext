@@ -3,7 +3,7 @@ import Ext_form_Radio from "./Ext/form/Radio.js";
 
 export default class EWCRadio extends Ext_form_Radio {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "radio";
     }
 }

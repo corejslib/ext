@@ -2,7 +2,104 @@ import Ext_calendar_EventBase from "../../Ext/calendar/EventBase.js";
 
 export default class Ext_calendar_Event extends Ext_calendar_EventBase {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "defaultTitle", "disabled", "displayed", "docked", "draggable", "endDate", "flex", "floated", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxWidth", "minHeight", "minWidth", "modal", "mode", "model", "modelValidation", "name", "nameable", "padding", "palette", "plugins", "publishes", "record", "reference", "relative", "renderTo", "resize", "right", "ripple", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "startDate", "stateful", "statefulDefaults", "stateId", "style", "tabIndex", "timeFormat", "title", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "view", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "defaultTitle",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "endDate",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "html",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "mode",
+            "model",
+            "modelValidation",
+            "name",
+            "nameable",
+            "padding",
+            "palette",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "resize",
+            "right",
+            "ripple",
+            "scrollable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "startDate",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "style",
+            "tabIndex",
+            "timeFormat",
+            "title",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "view",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -88,7 +185,10 @@ export default class Ext_calendar_Event extends Ext_calendar_EventBase {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_calendar_Event.PROPERTIES() ), events.concat( Ext_calendar_Event.EVENTS() ) );
+        super (
+            properties.concat( Ext_calendar_Event.PROPERTIES() ),
+            events.concat( Ext_calendar_Event.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -98,4 +198,5 @@ export default class Ext_calendar_Event extends Ext_calendar_EventBase {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

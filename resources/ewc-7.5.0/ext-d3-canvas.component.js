@@ -3,7 +3,7 @@ import Ext_d3_canvas_Canvas from "./Ext/d3/canvas/Canvas.js";
 
 export default class EWCD3_canvas extends Ext_d3_canvas_Canvas {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "d3-canvas";
     }
 }

@@ -3,7 +3,7 @@ import Ext_menu_Separator from "./Ext/menu/Separator.js";
 
 export default class EWCMenuseparator extends Ext_menu_Separator {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "menuseparator";
     }
 }

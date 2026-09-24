@@ -3,7 +3,7 @@ import Ext_pivot_Row from "./Ext/pivot/Row.js";
 
 export default class EWCPivotgridrow extends Ext_pivot_Row {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pivotgridrow";
     }
 }

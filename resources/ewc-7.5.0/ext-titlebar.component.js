@@ -3,7 +3,7 @@ import Ext_TitleBar from "./Ext/TitleBar.js";
 
 export default class EWCTitlebar extends Ext_TitleBar {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "titlebar";
     }
 }

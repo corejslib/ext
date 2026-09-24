@@ -3,7 +3,7 @@ import Ext_d3_HeatMap from "./Ext/d3/HeatMap.js";
 
 export default class EWCD3_heatmap extends Ext_d3_HeatMap {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "d3-heatmap";
     }
 }

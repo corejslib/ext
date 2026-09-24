@@ -3,7 +3,7 @@ import Ext_DatePicker from "./Ext/DatePicker.js";
 
 export default class EWCDatepicker extends Ext_DatePicker {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "datepicker";
     }
 }

@@ -3,7 +3,7 @@ import Ext_grid_menu_Columns from "./Ext/grid/menu/Columns.js";
 
 export default class EWCGridcolumnsmenu extends Ext_grid_menu_Columns {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "gridcolumnsmenu";
     }
 }

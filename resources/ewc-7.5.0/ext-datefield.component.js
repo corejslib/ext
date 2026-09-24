@@ -3,7 +3,7 @@ import Ext_field_DatePicker from "./Ext/field/DatePicker.js";
 
 export default class EWCDatefield extends Ext_field_DatePicker {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "datefield";
     }
 }

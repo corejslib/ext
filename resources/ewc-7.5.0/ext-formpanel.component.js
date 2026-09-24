@@ -3,7 +3,7 @@ import Ext_form_FormPanel from "./Ext/form/FormPanel.js";
 
 export default class EWCFormpanel extends Ext_form_FormPanel {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "formpanel";
     }
 }

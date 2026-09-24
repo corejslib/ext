@@ -3,7 +3,7 @@ import Ext_picker_SelectPicker from "./Ext/picker/SelectPicker.js";
 
 export default class EWCSelectpicker extends Ext_picker_SelectPicker {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "selectpicker";
     }
 }

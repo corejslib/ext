@@ -3,7 +3,7 @@ import Ext_d3_svg_Svg from "./Ext/d3/svg/Svg.js";
 
 export default class EWCD3_svg extends Ext_d3_svg_Svg {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "d3-svg";
     }
 }

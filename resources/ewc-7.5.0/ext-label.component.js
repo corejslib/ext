@@ -3,7 +3,7 @@ import Ext_Label from "./Ext/Label.js";
 
 export default class EWCLabel extends Ext_Label {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "label";
     }
 }

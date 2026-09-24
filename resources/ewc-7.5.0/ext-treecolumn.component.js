@@ -3,7 +3,7 @@ import Ext_grid_column_Tree from "./Ext/grid/column/Tree.js";
 
 export default class EWCTreecolumn extends Ext_grid_column_Tree {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "treecolumn";
     }
 }

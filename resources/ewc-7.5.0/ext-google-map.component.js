@@ -3,7 +3,7 @@ import Ext_Map from "./Ext/Map.js";
 
 export default class EWCGoogle_map extends Ext_Map {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "google-map";
     }
 }

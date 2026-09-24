@@ -3,7 +3,7 @@ import Ext_pivot_plugin_configurator_Column from "./Ext/pivot/plugin/configurato
 
 export default class EWCPivotconfigfield extends Ext_pivot_plugin_configurator_Column {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pivotconfigfield";
     }
 }

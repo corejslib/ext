@@ -3,7 +3,7 @@ import Ext_calendar_view_Month from "./Ext/calendar/view/Month.js";
 
 export default class EWCCalendar_monthview extends Ext_calendar_view_Month {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-monthview";
     }
 }

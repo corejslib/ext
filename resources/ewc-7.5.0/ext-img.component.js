@@ -3,7 +3,7 @@ import Ext_Image from "./Ext/Image.js";
 
 export default class EWCImg extends Ext_Image {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "img";
     }
 }

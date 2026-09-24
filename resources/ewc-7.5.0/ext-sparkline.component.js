@@ -3,7 +3,7 @@ import Ext_sparkline_Base from "./Ext/sparkline/Base.js";
 
 export default class EWCSparkline extends Ext_sparkline_Base {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "sparkline";
     }
 }

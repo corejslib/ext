@@ -2,7 +2,119 @@ import Ext_Container from "../../Ext/Container.js";
 
 export default class Ext_dataview_DataItem extends Ext_Container {
     static PROPERTIES () {
-        return [ "activeChildTabIndex", "activeItem", "alignSelf", "allowFocusingDisabledChildren", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "autoDestroy", "autoSize", "axisLock", "bind", "bodyCls", "border", "bottom", "cardSwitchAnimation", "centered", "cls", "constrainAlign", "contentEl", "control", "controller", "data", "dataMap", "defaultFocus", "defaultListenerScope", "defaults", "defaultType", "disabled", "displayed", "docked", "draggable", "flex", "floated", "focusableContainer", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "id", "inactiveChildTabIndex", "innerCls", "instanceCls", "itemCls", "itemId", "items", "keyMap", "keyMapEnabled", "keyMapTarget", "layout", "left", "listeners", "manageBorders", "margin", "masked", "maxHeight", "maxWidth", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "nameHolder", "padding", "plugins", "publishes", "record", "recordIndex", "reference", "referenceHolder", "relative", "renderTo", "resetFocusPosition", "right", "ripple", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "style", "tabIndex", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "viewModel", "weight", "weighted", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "activeChildTabIndex",
+            "activeItem",
+            "alignSelf",
+            "allowFocusingDisabledChildren",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "autoDestroy",
+            "autoSize",
+            "axisLock",
+            "bind",
+            "bodyCls",
+            "border",
+            "bottom",
+            "cardSwitchAnimation",
+            "centered",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "control",
+            "controller",
+            "data",
+            "dataMap",
+            "defaultFocus",
+            "defaultListenerScope",
+            "defaults",
+            "defaultType",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "flex",
+            "floated",
+            "focusableContainer",
+            "focusCls",
+            "fullscreen",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "html",
+            "id",
+            "inactiveChildTabIndex",
+            "innerCls",
+            "instanceCls",
+            "itemCls",
+            "itemId",
+            "items",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "layout",
+            "left",
+            "listeners",
+            "manageBorders",
+            "margin",
+            "masked",
+            "maxHeight",
+            "maxWidth",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "nameHolder",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "recordIndex",
+            "reference",
+            "referenceHolder",
+            "relative",
+            "renderTo",
+            "resetFocusPosition",
+            "right",
+            "ripple",
+            "scrollable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "style",
+            "tabIndex",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "viewModel",
+            "weight",
+            "weighted",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -96,7 +208,10 @@ export default class Ext_dataview_DataItem extends Ext_Container {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_dataview_DataItem.PROPERTIES() ), events.concat( Ext_dataview_DataItem.EVENTS() ) );
+        super (
+            properties.concat( Ext_dataview_DataItem.PROPERTIES() ),
+            events.concat( Ext_dataview_DataItem.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -106,4 +221,5 @@ export default class Ext_dataview_DataItem extends Ext_Container {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

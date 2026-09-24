@@ -3,7 +3,7 @@ import Ext_field_CheckboxGroup from "./Ext/field/CheckboxGroup.js";
 
 export default class EWCCheckboxgroup extends Ext_field_CheckboxGroup {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "checkboxgroup";
     }
 }

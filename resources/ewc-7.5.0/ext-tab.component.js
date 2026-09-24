@@ -3,7 +3,7 @@ import Ext_Tab from "./Ext/Tab.js";
 
 export default class EWCTab extends Ext_Tab {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "tab";
     }
 }

@@ -3,7 +3,7 @@ import Ext_dataview_pullrefresh_Spinner from "./Ext/dataview/pullrefresh/Spinner
 
 export default class EWCPullrefreshspinner extends Ext_dataview_pullrefresh_Spinner {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pullrefreshspinner";
     }
 }

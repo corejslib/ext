@@ -3,7 +3,7 @@ import Ext_field_Container from "./Ext/field/Container.js";
 
 export default class EWCFieldcontainer extends Ext_field_Container {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "fieldcontainer";
     }
 }

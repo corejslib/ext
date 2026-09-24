@@ -3,7 +3,7 @@ import Ext_calendar_panel_Month from "./Ext/calendar/panel/Month.js";
 
 export default class EWCCalendar_month extends Ext_calendar_panel_Month {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-month";
     }
 }

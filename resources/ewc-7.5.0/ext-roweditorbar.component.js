@@ -3,7 +3,7 @@ import Ext_grid_rowedit_Bar from "./Ext/grid/rowedit/Bar.js";
 
 export default class EWCRoweditorbar extends Ext_grid_rowedit_Bar {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "roweditorbar";
     }
 }

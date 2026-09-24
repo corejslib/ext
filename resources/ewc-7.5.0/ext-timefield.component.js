@@ -3,7 +3,7 @@ import Ext_field_Time from "./Ext/field/Time.js";
 
 export default class EWCTimefield extends Ext_field_Time {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "timefield";
     }
 }

@@ -3,7 +3,7 @@ import Ext_BreadcrumbBar from "./Ext/BreadcrumbBar.js";
 
 export default class EWCBreadcrumbbar extends Ext_BreadcrumbBar {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "breadcrumbbar";
     }
 }

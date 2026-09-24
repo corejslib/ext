@@ -3,7 +3,7 @@ import Ext_grid_column_Number from "./Ext/grid/column/Number.js";
 
 export default class EWCNumbercolumn extends Ext_grid_column_Number {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "numbercolumn";
     }
 }

@@ -3,7 +3,7 @@ import Ext_grid_column_RowNumberer from "./Ext/grid/column/RowNumberer.js";
 
 export default class EWCRownumberer extends Ext_grid_column_RowNumberer {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "rownumberer";
     }
 }

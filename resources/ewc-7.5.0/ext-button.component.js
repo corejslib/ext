@@ -3,7 +3,7 @@ import Ext_Button from "./Ext/Button.js";
 
 export default class EWCButton extends Ext_Button {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "button";
     }
 }

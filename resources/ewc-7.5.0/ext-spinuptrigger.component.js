@@ -3,7 +3,7 @@ import Ext_field_trigger_SpinUp from "./Ext/field/trigger/SpinUp.js";
 
 export default class EWCSpinuptrigger extends Ext_field_trigger_SpinUp {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "spinuptrigger";
     }
 }

@@ -3,7 +3,7 @@ import Ext_form_Display from "./Ext/form/Display.js";
 
 export default class EWCDisplayfield extends Ext_form_Display {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "displayfield";
     }
 }

@@ -3,7 +3,7 @@ import Ext_chart_SpaceFillingChart from "./Ext/chart/SpaceFillingChart.js";
 
 export default class EWCSpacefilling extends Ext_chart_SpaceFillingChart {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "spacefilling";
     }
 }

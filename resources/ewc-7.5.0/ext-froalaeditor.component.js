@@ -3,7 +3,7 @@ import Ext_froala_Editor from "./Ext/froala/Editor.js";
 
 export default class EWCFroalaeditor extends Ext_froala_Editor {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "froalaeditor";
     }
 }

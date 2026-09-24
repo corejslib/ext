@@ -3,7 +3,7 @@ import Ext_menu_TextItem from "./Ext/menu/TextItem.js";
 
 export default class EWCMenuitem extends Ext_menu_TextItem {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "menuitem";
     }
 }

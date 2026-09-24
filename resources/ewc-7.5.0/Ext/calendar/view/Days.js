@@ -2,7 +2,115 @@ import Ext_calendar_view_Base from "../../../Ext/calendar/view/Base.js";
 
 export default class Ext_calendar_view_Days extends Ext_calendar_view_Base {
     static PROPERTIES () {
-        return [ "addForm", "alignSelf", "allowSelection", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "cls", "compact", "compactOptions", "constrainAlign", "contentEl", "controller", "controlStoreRange", "data", "defaultListenerScope", "disabled", "displayed", "displayOverlap", "docked", "draggable", "droppable", "editForm", "endTime", "eventDefaults", "flex", "floated", "focusCls", "fullscreen", "gestureNavigation", "header", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxWidth", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "padding", "plugins", "publishes", "record", "reference", "relative", "renderTo", "resizeEvents", "right", "ripple", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "showNowMarker", "startTime", "stateful", "statefulDefaults", "stateId", "store", "style", "tabIndex", "timeFormat", "timeRenderer", "timezoneOffset", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "value", "viewModel", "visibleDays", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "addForm",
+            "alignSelf",
+            "allowSelection",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "cls",
+            "compact",
+            "compactOptions",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "controlStoreRange",
+            "data",
+            "defaultListenerScope",
+            "disabled",
+            "displayed",
+            "displayOverlap",
+            "docked",
+            "draggable",
+            "droppable",
+            "editForm",
+            "endTime",
+            "eventDefaults",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "gestureNavigation",
+            "header",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "html",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "resizeEvents",
+            "right",
+            "ripple",
+            "scrollable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "showNowMarker",
+            "startTime",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "store",
+            "style",
+            "tabIndex",
+            "timeFormat",
+            "timeRenderer",
+            "timezoneOffset",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "value",
+            "viewModel",
+            "visibleDays",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -102,7 +210,10 @@ export default class Ext_calendar_view_Days extends Ext_calendar_view_Base {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_calendar_view_Days.PROPERTIES() ), events.concat( Ext_calendar_view_Days.EVENTS() ) );
+        super (
+            properties.concat( Ext_calendar_view_Days.PROPERTIES() ),
+            events.concat( Ext_calendar_view_Days.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -112,4 +223,5 @@ export default class Ext_calendar_view_Days extends Ext_calendar_view_Base {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

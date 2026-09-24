@@ -3,7 +3,7 @@ import Ext_panel_YearPicker from "./Ext/panel/YearPicker.js";
 
 export default class EWCYearpicker extends Ext_panel_YearPicker {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "yearpicker";
     }
 }

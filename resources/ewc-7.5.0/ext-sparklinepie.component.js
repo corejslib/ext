@@ -3,7 +3,7 @@ import Ext_sparkline_Pie from "./Ext/sparkline/Pie.js";
 
 export default class EWCSparklinepie extends Ext_sparkline_Pie {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "sparklinepie";
     }
 }

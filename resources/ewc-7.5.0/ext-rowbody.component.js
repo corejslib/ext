@@ -3,7 +3,7 @@ import Ext_grid_RowBody from "./Ext/grid/RowBody.js";
 
 export default class EWCRowbody extends Ext_grid_RowBody {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "rowbody";
     }
 }

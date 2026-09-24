@@ -3,7 +3,7 @@ import Ext_form_Checkbox from "./Ext/form/Checkbox.js";
 
 export default class EWCCheckboxfield extends Ext_form_Checkbox {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "checkboxfield";
     }
 }

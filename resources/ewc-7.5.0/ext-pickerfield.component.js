@@ -3,7 +3,7 @@ import Ext_field_Picker from "./Ext/field/Picker.js";
 
 export default class EWCPickerfield extends Ext_field_Picker {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pickerfield";
     }
 }

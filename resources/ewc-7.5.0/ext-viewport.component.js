@@ -3,7 +3,7 @@ import Ext_viewport_Default from "./Ext/viewport/Default.js";
 
 export default class EWCViewport extends Ext_viewport_Default {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "viewport";
     }
 }

@@ -3,7 +3,7 @@ import Ext_Picker from "./Ext/Picker.js";
 
 export default class EWCPicker extends Ext_Picker {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "picker";
     }
 }

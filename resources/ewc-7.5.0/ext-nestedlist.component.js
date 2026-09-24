@@ -3,7 +3,7 @@ import Ext_NestedList from "./Ext/NestedList.js";
 
 export default class EWCNestedlist extends Ext_NestedList {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "nestedlist";
     }
 }

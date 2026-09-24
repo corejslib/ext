@@ -3,7 +3,7 @@ import Ext_Sheet from "./Ext/Sheet.js";
 
 export default class EWCSheet extends Ext_Sheet {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "sheet";
     }
 }

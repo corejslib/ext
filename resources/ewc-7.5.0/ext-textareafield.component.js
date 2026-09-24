@@ -3,7 +3,7 @@ import Ext_form_TextArea from "./Ext/form/TextArea.js";
 
 export default class EWCTextareafield extends Ext_form_TextArea {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "textareafield";
     }
 }

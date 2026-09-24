@@ -3,7 +3,7 @@ import Ext_grid_cell_Tree from "./Ext/grid/cell/Tree.js";
 
 export default class EWCTreecell extends Ext_grid_cell_Tree {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "treecell";
     }
 }

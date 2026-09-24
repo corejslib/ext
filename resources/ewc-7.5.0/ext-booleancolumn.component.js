@@ -3,7 +3,7 @@ import Ext_grid_column_Boolean from "./Ext/grid/column/Boolean.js";
 
 export default class EWCBooleancolumn extends Ext_grid_column_Boolean {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "booleancolumn";
     }
 }

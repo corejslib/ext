@@ -3,7 +3,7 @@ import Ext_Video from "./Ext/Video.js";
 
 export default class EWCVideo extends Ext_Video {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "video";
     }
 }

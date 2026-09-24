@@ -3,7 +3,7 @@ import Ext_dataview_ItemHeader from "./Ext/dataview/ItemHeader.js";
 
 export default class EWCItemheader extends Ext_dataview_ItemHeader {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "itemheader";
     }
 }

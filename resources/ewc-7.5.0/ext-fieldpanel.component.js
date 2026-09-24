@@ -3,7 +3,7 @@ import Ext_field_Panel from "./Ext/field/Panel.js";
 
 export default class EWCFieldpanel extends Ext_field_Panel {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "fieldpanel";
     }
 }

@@ -2,7 +2,106 @@ import Ext_Gadget from "../../Ext/Gadget.js";
 
 export default class Ext_list_Tree extends Ext_Gadget {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "defaults", "disabled", "displayed", "docked", "draggable", "expanderFirst", "expanderOnly", "flex", "floated", "floatLeafItems", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "highlightPath", "html", "id", "indent", "instanceCls", "itemId", "itemRipple", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxWidth", "micro", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "padding", "plugins", "publishes", "record", "reference", "relative", "renderTo", "right", "ripple", "scrollable", "selection", "selectOnExpander", "session", "shadow", "shareableName", "shim", "showAnimation", "singleExpand", "stateful", "statefulDefaults", "stateId", "store", "style", "tabIndex", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "centered",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "defaults",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "expanderFirst",
+            "expanderOnly",
+            "flex",
+            "floated",
+            "floatLeafItems",
+            "focusCls",
+            "fullscreen",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "highlightPath",
+            "html",
+            "id",
+            "indent",
+            "instanceCls",
+            "itemId",
+            "itemRipple",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "micro",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "scrollable",
+            "selection",
+            "selectOnExpander",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "singleExpand",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "store",
+            "style",
+            "tabIndex",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "viewModel",
+            "weight",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -90,7 +189,10 @@ export default class Ext_list_Tree extends Ext_Gadget {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_list_Tree.PROPERTIES() ), events.concat( Ext_list_Tree.EVENTS() ) );
+        super (
+            properties.concat( Ext_list_Tree.PROPERTIES() ),
+            events.concat( Ext_list_Tree.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -100,4 +202,5 @@ export default class Ext_list_Tree extends Ext_Gadget {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

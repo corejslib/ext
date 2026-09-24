@@ -3,7 +3,7 @@ import Ext_form_Email from "./Ext/form/Email.js";
 
 export default class EWCEmailfield extends Ext_form_Email {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "emailfield";
     }
 }

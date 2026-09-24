@@ -3,7 +3,7 @@ import Ext_d3_hierarchy_tree_HorizontalTree from "./Ext/d3/hierarchy/tree/Horizo
 
 export default class EWCD3_horizontal_tree extends Ext_d3_hierarchy_tree_HorizontalTree {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "d3-horizontal-tree";
     }
 }

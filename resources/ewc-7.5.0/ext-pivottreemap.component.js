@@ -3,7 +3,7 @@ import Ext_pivot_d3_TreeMap from "./Ext/pivot/d3/TreeMap.js";
 
 export default class EWCPivottreemap extends Ext_pivot_d3_TreeMap {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pivottreemap";
     }
 }

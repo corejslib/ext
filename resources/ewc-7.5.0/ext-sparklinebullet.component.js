@@ -3,7 +3,7 @@ import Ext_sparkline_Bullet from "./Ext/sparkline/Bullet.js";
 
 export default class EWCSparklinebullet extends Ext_sparkline_Bullet {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "sparklinebullet";
     }
 }

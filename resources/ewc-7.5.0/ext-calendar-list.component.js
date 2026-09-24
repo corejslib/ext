@@ -3,7 +3,7 @@ import Ext_calendar_List from "./Ext/calendar/List.js";
 
 export default class EWCCalendar_list extends Ext_calendar_List {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-list";
     }
 }

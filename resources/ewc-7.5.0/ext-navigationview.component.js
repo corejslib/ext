@@ -3,7 +3,7 @@ import Ext_NavigationView from "./Ext/NavigationView.js";
 
 export default class EWCNavigationview extends Ext_NavigationView {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "navigationview";
     }
 }

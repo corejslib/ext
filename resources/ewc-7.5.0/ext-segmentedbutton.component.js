@@ -3,7 +3,7 @@ import Ext_button_Segmented from "./Ext/button/Segmented.js";
 
 export default class EWCSegmentedbutton extends Ext_button_Segmented {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "segmentedbutton";
     }
 }

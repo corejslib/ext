@@ -3,7 +3,7 @@ import Ext_tree_Tree from "./Ext/tree/Tree.js";
 
 export default class EWCTree extends Ext_tree_Tree {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "tree";
     }
 }

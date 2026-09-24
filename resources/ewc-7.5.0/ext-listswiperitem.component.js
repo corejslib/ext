@@ -3,7 +3,7 @@ import Ext_dataview_listswiper_Item from "./Ext/dataview/listswiper/Item.js";
 
 export default class EWCListswiperitem extends Ext_dataview_listswiper_Item {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "listswiperitem";
     }
 }

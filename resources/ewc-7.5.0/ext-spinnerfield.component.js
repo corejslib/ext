@@ -3,7 +3,7 @@ import Ext_form_Spinner from "./Ext/form/Spinner.js";
 
 export default class EWCSpinnerfield extends Ext_form_Spinner {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "spinnerfield";
     }
 }

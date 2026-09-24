@@ -3,7 +3,7 @@ import Ext_tip_ToolTip from "./Ext/tip/ToolTip.js";
 
 export default class EWCTooltip extends Ext_tip_ToolTip {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "tooltip";
     }
 }

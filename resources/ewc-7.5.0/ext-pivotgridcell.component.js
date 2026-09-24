@@ -3,7 +3,7 @@ import Ext_pivot_cell_Cell from "./Ext/pivot/cell/Cell.js";
 
 export default class EWCPivotgridcell extends Ext_pivot_cell_Cell {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pivotgridcell";
     }
 }

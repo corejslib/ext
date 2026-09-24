@@ -2,7 +2,119 @@ import Ext_Container from "../../Ext/Container.js";
 
 export default class Ext_navigation_View extends Ext_Container {
     static PROPERTIES () {
-        return [ "activeChildTabIndex", "activeItem", "alignSelf", "allowFocusingDisabledChildren", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "autoDestroy", "autoSize", "axisLock", "bind", "bodyCls", "border", "bottom", "cardSwitchAnimation", "centered", "cls", "constrainAlign", "contentEl", "control", "controller", "data", "defaultBackButtonText", "defaultFocus", "defaultListenerScope", "defaults", "defaultType", "disabled", "displayed", "docked", "draggable", "flex", "floated", "focusableContainer", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "id", "inactiveChildTabIndex", "innerCls", "instanceCls", "itemId", "items", "keyMap", "keyMapEnabled", "keyMapTarget", "layout", "left", "listeners", "manageBorders", "margin", "masked", "maxHeight", "maxWidth", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "nameHolder", "navigationBar", "padding", "plugins", "publishes", "record", "reference", "referenceHolder", "relative", "renderTo", "resetFocusPosition", "right", "ripple", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "style", "tabIndex", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "useTitleForBackButtonText", "viewModel", "weight", "weighted", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "activeChildTabIndex",
+            "activeItem",
+            "alignSelf",
+            "allowFocusingDisabledChildren",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "autoDestroy",
+            "autoSize",
+            "axisLock",
+            "bind",
+            "bodyCls",
+            "border",
+            "bottom",
+            "cardSwitchAnimation",
+            "centered",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "control",
+            "controller",
+            "data",
+            "defaultBackButtonText",
+            "defaultFocus",
+            "defaultListenerScope",
+            "defaults",
+            "defaultType",
+            "disabled",
+            "displayed",
+            "docked",
+            "draggable",
+            "flex",
+            "floated",
+            "focusableContainer",
+            "focusCls",
+            "fullscreen",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "html",
+            "id",
+            "inactiveChildTabIndex",
+            "innerCls",
+            "instanceCls",
+            "itemId",
+            "items",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "layout",
+            "left",
+            "listeners",
+            "manageBorders",
+            "margin",
+            "masked",
+            "maxHeight",
+            "maxWidth",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "nameHolder",
+            "navigationBar",
+            "padding",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "referenceHolder",
+            "relative",
+            "renderTo",
+            "resetFocusPosition",
+            "right",
+            "ripple",
+            "scrollable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "style",
+            "tabIndex",
+            "toFrontOnShow",
+            "tooltip",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "useTitleForBackButtonText",
+            "viewModel",
+            "weight",
+            "weighted",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -99,7 +211,10 @@ export default class Ext_navigation_View extends Ext_Container {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_navigation_View.PROPERTIES() ), events.concat( Ext_navigation_View.EVENTS() ) );
+        super (
+            properties.concat( Ext_navigation_View.PROPERTIES() ),
+            events.concat( Ext_navigation_View.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -109,4 +224,5 @@ export default class Ext_navigation_View extends Ext_Container {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

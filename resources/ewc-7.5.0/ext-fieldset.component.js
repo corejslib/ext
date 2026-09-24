@@ -3,7 +3,7 @@ import Ext_form_FieldSet from "./Ext/form/FieldSet.js";
 
 export default class EWCFieldset extends Ext_form_FieldSet {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "fieldset";
     }
 }

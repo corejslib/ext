@@ -2,7 +2,117 @@ import Ext_sparkline_Base from "../../Ext/sparkline/Base.js";
 
 export default class Ext_sparkline_Box extends Ext_sparkline_Base {
     static PROPERTIES () {
-        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "boxFillColor", "boxLineColor", "centered", "chartRangeMax", "chartRangeMin", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "disabled", "disableTooltips", "displayed", "docked", "draggable", "flex", "floated", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "highlightColor", "highlightLighten", "html", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "lineColor", "listeners", "margin", "maxHeight", "maxWidth", "medianColor", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "outlierFillColor", "outlierIQR", "outlierLineColor", "padding", "plugins", "publishes", "raw", "record", "reference", "relative", "renderTo", "right", "ripple", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "showOutliers", "spotRadius", "stateful", "statefulDefaults", "stateId", "style", "tabIndex", "target", "targetColor", "tipTpl", "toFrontOnShow", "tooltip", "tooltipPrefix", "tooltipSkipNull", "tooltipSuffix", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "values", "viewModel", "weight", "whiskerColor", "width", "x", "xtype", "y", "zIndex" ];
+        return [
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "axisLock",
+            "bind",
+            "border",
+            "bottom",
+            "boxFillColor",
+            "boxLineColor",
+            "centered",
+            "chartRangeMax",
+            "chartRangeMin",
+            "cls",
+            "constrainAlign",
+            "contentEl",
+            "controller",
+            "data",
+            "defaultListenerScope",
+            "disabled",
+            "disableTooltips",
+            "displayed",
+            "docked",
+            "draggable",
+            "flex",
+            "floated",
+            "focusCls",
+            "fullscreen",
+            "height",
+            "hidden",
+            "hideAnimation",
+            "hideMode",
+            "hideOnMaskTap",
+            "highlightColor",
+            "highlightLighten",
+            "html",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "left",
+            "lineColor",
+            "listeners",
+            "margin",
+            "maxHeight",
+            "maxWidth",
+            "medianColor",
+            "minHeight",
+            "minWidth",
+            "modal",
+            "modelValidation",
+            "name",
+            "nameable",
+            "outlierFillColor",
+            "outlierIQR",
+            "outlierLineColor",
+            "padding",
+            "plugins",
+            "publishes",
+            "raw",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "right",
+            "ripple",
+            "scrollable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "showAnimation",
+            "showOutliers",
+            "spotRadius",
+            "stateful",
+            "statefulDefaults",
+            "stateId",
+            "style",
+            "tabIndex",
+            "target",
+            "targetColor",
+            "tipTpl",
+            "toFrontOnShow",
+            "tooltip",
+            "tooltipPrefix",
+            "tooltipSkipNull",
+            "tooltipSuffix",
+            "top",
+            "touchAction",
+            "tpl",
+            "tplWriteMode",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "userSelectable",
+            "values",
+            "viewModel",
+            "weight",
+            "whiskerColor",
+            "width",
+            "x",
+            "xtype",
+            "y",
+            "zIndex",
+        ];
     }
 
     static EVENTS () {
@@ -88,7 +198,10 @@ export default class Ext_sparkline_Box extends Ext_sparkline_Base {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_sparkline_Box.PROPERTIES() ), events.concat( Ext_sparkline_Box.EVENTS() ) );
+        super (
+            properties.concat( Ext_sparkline_Box.PROPERTIES() ),
+            events.concat( Ext_sparkline_Box.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -98,4 +211,5 @@ export default class Ext_sparkline_Box extends Ext_sparkline_Base {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

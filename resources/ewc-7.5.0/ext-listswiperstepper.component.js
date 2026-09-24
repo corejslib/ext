@@ -3,7 +3,7 @@ import Ext_dataview_listswiper_Stepper from "./Ext/dataview/listswiper/Stepper.j
 
 export default class EWCListswiperstepper extends Ext_dataview_listswiper_Stepper {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "listswiperstepper";
     }
 }

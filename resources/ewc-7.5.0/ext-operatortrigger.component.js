@@ -3,7 +3,7 @@ import Ext_field_trigger_Operator from "./Ext/field/trigger/Operator.js";
 
 export default class EWCOperatortrigger extends Ext_field_trigger_Operator {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "operatortrigger";
     }
 }

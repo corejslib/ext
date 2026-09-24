@@ -3,7 +3,7 @@ import Ext_calendar_form_TimeField from "./Ext/calendar/form/TimeField.js";
 
 export default class EWCCalendar_timefield extends Ext_calendar_form_TimeField {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar-timefield";
     }
 }

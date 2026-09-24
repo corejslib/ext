@@ -3,7 +3,7 @@ import Ext_calendar_panel_Panel from "./Ext/calendar/panel/Panel.js";
 
 export default class EWCCalendar extends Ext_calendar_panel_Panel {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "calendar";
     }
 }

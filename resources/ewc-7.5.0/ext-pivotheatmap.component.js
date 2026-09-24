@@ -3,7 +3,7 @@ import Ext_pivot_d3_HeatMap from "./Ext/pivot/d3/HeatMap.js";
 
 export default class EWCPivotheatmap extends Ext_pivot_d3_HeatMap {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "pivotheatmap";
     }
 }

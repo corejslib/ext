@@ -3,7 +3,7 @@ import Ext_form_Hidden from "./Ext/form/Hidden.js";
 
 export default class EWCHiddenfield extends Ext_form_Hidden {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "hiddenfield";
     }
 }

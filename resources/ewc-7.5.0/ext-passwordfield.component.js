@@ -3,7 +3,7 @@ import Ext_form_Password from "./Ext/form/Password.js";
 
 export default class EWCPasswordfield extends Ext_form_Password {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "passwordfield";
     }
 }

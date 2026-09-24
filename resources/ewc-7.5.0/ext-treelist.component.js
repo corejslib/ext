@@ -3,7 +3,7 @@ import Ext_list_Tree from "./Ext/list/Tree.js";
 
 export default class EWCTreelist extends Ext_list_Tree {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "treelist";
     }
 }

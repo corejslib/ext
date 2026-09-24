@@ -3,7 +3,7 @@ import Ext_grid_cell_Widget from "./Ext/grid/cell/Widget.js";
 
 export default class EWCWidgetcell extends Ext_grid_cell_Widget {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "widgetcell";
     }
 }

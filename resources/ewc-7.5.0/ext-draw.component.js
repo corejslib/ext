@@ -3,7 +3,7 @@ import Ext_draw_Component from "./Ext/draw/Component.js";
 
 export default class EWCDraw extends Ext_draw_Component {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "draw";
     }
 }

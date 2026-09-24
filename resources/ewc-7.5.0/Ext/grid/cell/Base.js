@@ -2,7 +2,69 @@ import Ext_Widget from "../../../Ext/Widget.js";
 
 export default class Ext_grid_cell_Base extends Ext_Widget {
     static PROPERTIES () {
-        return [ "align", "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "bind", "bodyCls", "bodyStyle", "border", "cellCls", "cls", "column", "constrainAlign", "controller", "defaultListenerScope", "defaultToolWeights", "disabled", "flex", "floated", "focusCls", "height", "hidden", "hideMode", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "listeners", "margin", "name", "nameable", "plugins", "publishes", "record", "reference", "relative", "renderTo", "ripple", "selectable", "session", "shadow", "shareableName", "shim", "style", "toFrontOnShow", "toolDefaults", "tools", "touchAction", "translatable", "twoWayBindable", "ui", "userCls", "value", "viewModel", "width", "x", "y" ];
+        return [
+            "align",
+            "alignSelf",
+            "alwaysOnTop",
+            "ariaAttributes",
+            "ariaDescribedBy",
+            "ariaLabel",
+            "ariaLabelledBy",
+            "bind",
+            "bodyCls",
+            "bodyStyle",
+            "border",
+            "cellCls",
+            "cls",
+            "column",
+            "constrainAlign",
+            "controller",
+            "defaultListenerScope",
+            "defaultToolWeights",
+            "disabled",
+            "flex",
+            "floated",
+            "focusCls",
+            "height",
+            "hidden",
+            "hideMode",
+            "id",
+            "instanceCls",
+            "itemId",
+            "keyMap",
+            "keyMapEnabled",
+            "keyMapTarget",
+            "listeners",
+            "margin",
+            "name",
+            "nameable",
+            "plugins",
+            "publishes",
+            "record",
+            "reference",
+            "relative",
+            "renderTo",
+            "ripple",
+            "selectable",
+            "session",
+            "shadow",
+            "shareableName",
+            "shim",
+            "style",
+            "toFrontOnShow",
+            "toolDefaults",
+            "tools",
+            "touchAction",
+            "translatable",
+            "twoWayBindable",
+            "ui",
+            "userCls",
+            "value",
+            "viewModel",
+            "width",
+            "x",
+            "y",
+        ];
     }
 
     static EVENTS () {
@@ -48,7 +110,10 @@ export default class Ext_grid_cell_Base extends Ext_Widget {
     }
 
     constructor ( properties, events ) {
-        super( properties.concat( Ext_grid_cell_Base.PROPERTIES() ), events.concat( Ext_grid_cell_Base.EVENTS() ) );
+        super (
+            properties.concat( Ext_grid_cell_Base.PROPERTIES() ),
+            events.concat( Ext_grid_cell_Base.EVENTS() )
+        );
     }
 
     connectedCallback () {
@@ -58,4 +123,5 @@ export default class Ext_grid_cell_Base extends Ext_Widget {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
+
 }

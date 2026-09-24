@@ -3,7 +3,7 @@ import Ext_grid_Grid from "./Ext/grid/Grid.js";
 
 export default class EWCGrid extends Ext_grid_Grid {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "grid";
     }
 }

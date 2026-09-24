@@ -3,7 +3,7 @@ import Ext_panel_Tool from "./Ext/panel/Tool.js";
 
 export default class EWCTool extends Ext_panel_Tool {
     constructor () {
-        super( [], [] );
+        super ( [], [] );
         this.xtype = "tool";
     }
 }
