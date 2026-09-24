@@ -116,15 +116,15 @@ msgstr "Довжина не повинна перевищувати {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/grid/locked/Grid.js:61:26
 msgid "Locked"
-msgstr "Закріплена"
+msgstr "Заблоковано"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/grid/locked/Grid.js:164:26
 msgid "Locked (Left)"
-msgstr "Закріплена (ліворуч)"
+msgstr "Заблоковано (ліворуч)"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/grid/locked/Grid.js:178:26
 msgid "Locked (Right)"
-msgstr "Закріплена (праворуч)"
+msgstr "Заблоковано (праворуч)"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/picker/Date.js:163:19
 msgid "Month"
@@ -139,7 +139,7 @@ msgid "Must be between {0} and {1}"
 msgstr "Має бути від {0} до {1}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/validator/Range.js:32:20
-msgid "Must be no more than than {0}"
+msgid "Must be no more than {0}"
 msgstr "Має бути не більше ніж {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/validator/Bound.js:29:22
@@ -149,7 +149,7 @@ msgstr "Повинен бути присутнім"
 
 #: ../Ext.data.validator.PasswordStrength.js:8:19
 msgid "Password is weak"
-msgstr "Пароль слабкий"
+msgstr "Пароль занадто слабкий"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/grid/menu/RemoveGroup.js:16:10
 msgid "Remove from grouping"
@@ -169,11 +169,11 @@ msgstr "Сортувати за спаданням"
 
 #: ../Ext.override.field.Date.js:10:22
 msgid "The date in this field must be equal to or after {0}"
-msgstr "Дата в цьому полі має бути рівною або пізніше {0}"
+msgstr "Дата в цьому полі має бути не раніше {0}"
 
 #: ../Ext.override.field.Date.js:11:22
 msgid "The date in this field must be equal to or before {0}"
-msgstr "Дата в цьому полі має бути рівною або перед {0}"
+msgstr "Дата в цьому полі має бути не пізніше {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Number.js:211:18
 msgid "The maximum decimal places is {0}"
@@ -197,7 +197,7 @@ msgstr "Це поле є обов'язковим"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/grid/locked/Grid.js:171:26
 msgid "Unlocked"
-msgstr "Не закріплена"
+msgstr "Розблоковано"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Number.js:213:22
 msgid "Value is not a valid number"
