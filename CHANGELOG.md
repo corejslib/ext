@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.33 (2026-09-25)
+
+**Other changes:**
+
+- build(deps): remove zcli dependency from build package (● [38b0c17](https://github.com/corejslib/ext/commit/38b0c17); 👬 zdm)
+
+Compare with the previous release: [v5.21.32...v5.21.33](https://github.com/corejslib/ext/compare/v5.21.32...v5.21.33)
+
 ### v5.21.32 (2026-09-24)
 
 **Bug fixes:**
