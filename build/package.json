@@ -31,8 +31,7 @@
         "@sencha/ext-modern": "8.0.0",
         "@sencha/ext-modern-theme-material": "8.0.0",
         "@sencha/ext-ux": "8.0.0",
-        "@sencha/ext-web-components-modern": "7.5.0",
-        "@softvisio/zcli": "^4.0.0"
+        "@sencha/ext-web-components-modern": "7.5.0"
     },
     "allowScripts": {
         "@corejslib/core": true,
@@ -50,7 +49,6 @@
         "@sencha/ext-modern-theme-neptune": false,
         "@sencha/ext-modern-treegrid": false,
         "@sencha/ext-ux": false,
-        "@softvisio/zcli": true,
         "unrs-resolver": true
     }
 }
