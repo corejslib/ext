@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.34 (2026-09-25)
+
+**Other changes:**
+
+- build(deps): add zcli to build dependencies (● [8c5bc10](https://github.com/corejslib/ext/commit/8c5bc10); 👬 zdm)
+
+Compare with the previous release: [v5.21.33...v5.21.34](https://github.com/corejslib/ext/compare/v5.21.33...v5.21.34)
+
 ### v5.21.33 (2026-09-25)
 
 **Other changes:**
