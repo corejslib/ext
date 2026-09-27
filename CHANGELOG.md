@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.35 (2026-09-27)
+
+**Other changes:**
+
+- chore: remove .pot (● [eb4cdad](https://github.com/corejslib/ext/commit/eb4cdad); 👬 zdm)
+
+Compare with the previous release: [v5.21.34...v5.21.35](https://github.com/corejslib/ext/compare/v5.21.34...v5.21.35)
+
 ### v5.21.34 (2026-09-25)
 
 **Other changes:**
