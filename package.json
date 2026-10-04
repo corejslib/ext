@@ -1,6 +1,6 @@
 {
     "name": "@corejslib/ext",
-    "version": "5.21.36",
+    "version": "5.21.37",
     "description": "ExtJS patches",
     "keywords": [
         "extjs",

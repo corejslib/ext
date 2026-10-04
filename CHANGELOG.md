@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.37 (2026-10-04)
+
+**Other changes:**
+
+- docs: correct escaped snake_case in md (● [db19f14](https://github.com/corejslib/ext/commit/db19f14); 👬 zdm)
+
+Compare with the previous release: [v5.21.36...v5.21.37](https://github.com/corejslib/ext/compare/v5.21.36...v5.21.37)
+
 ### v5.21.36 (2026-09-27)
 
 **Other changes:**
