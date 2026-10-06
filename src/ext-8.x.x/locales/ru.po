@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "Language: ru\n"
+"PO-Revision-Date: 2026-10-06T22:56:49.074Z\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Search-Path: /build/patch/**:../**\n"
 
@@ -176,16 +177,16 @@ msgid "The date in this field must be equal to or before {0}"
 msgstr "Дата в этом поле должна быть не позже {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Number.js:211:18
-msgid "The maximum decimal places is {0}"
-msgstr "Максимальное количество знаков после запятой — {0}"
+msgid "The maximum number of decimal places is {0}"
+msgstr "Предельное количество знаков после запятой составляет {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Number.js:202:18
 msgid "The maximum value for this field is {0}"
-msgstr "Максимальное значение этого поля — {0}"
+msgstr "Для этого поля максимальное значение составляет {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Number.js:194:18
 msgid "The minimum value for this field is {0}"
-msgstr "Минимальное значение этого поля — {0}"
+msgstr "Для этого поля минимальное значение составляет {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/field/Field.js:387:27
 msgid "This field is invalid"

@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "Language: uk\n"
+"PO-Revision-Date: 2026-10-06T22:56:49.080Z\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Search-Path: /build/patch/**:../**\n"
 
@@ -50,7 +51,7 @@ msgstr "Групувати за цим полем"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/validator/Exclusion.js:16:13
 msgid "Is a value that has been excluded"
-msgstr "Це значення, яке було виключено"
+msgstr "Значення виключено"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/validator/Format.js:17:17
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Field.js:228:27
@@ -64,7 +65,7 @@ msgstr "Не є дійсним блоком CIDR"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/validator/Currency.js:39:13
 msgid "Is not a valid currency amount"
-msgstr "Недійсна сума в валюті"
+msgstr "Недійсна сума у валюті"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/validator/Date.js:17:13
 msgid "Is not a valid date"
@@ -145,7 +146,7 @@ msgstr "Має бути не більше ніж {0}"
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/validator/Bound.js:29:22
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/validator/Presence.js:19:17
 msgid "Must be present"
-msgstr "Повинен бути присутнім"
+msgstr "Обов’язкове для заповнення"
 
 #: ../Ext.data.validator.PasswordStrength.js:8:19
 msgid "Password is weak"
@@ -176,8 +177,8 @@ msgid "The date in this field must be equal to or before {0}"
 msgstr "Дата в цьому полі має бути не пізніше {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Number.js:211:18
-msgid "The maximum decimal places is {0}"
-msgstr "Максимальна кількість десяткових знаків – {0}"
+msgid "The maximum number of decimal places is {0}"
+msgstr "Максимальна кількість десяткових знаків становить {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Number.js:202:18
 msgid "The maximum value for this field is {0}"
@@ -185,7 +186,7 @@ msgstr "Максимальне значення для цього поля ст�
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Number.js:194:18
 msgid "The minimum value for this field is {0}"
-msgstr "Мінімальне значення для цього поля – {0}"
+msgstr "Мінімальне значення для цього поля {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/field/Field.js:387:27
 msgid "This field is invalid"
