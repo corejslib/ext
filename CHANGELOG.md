@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.39 (2026-10-06)
+
+**Other changes:**
+
+- chore: update translations (● [6348182](https://github.com/corejslib/ext/commit/6348182); 👬 zdm)
+
+Compare with the previous release: [v5.21.38...v5.21.39](https://github.com/corejslib/ext/compare/v5.21.38...v5.21.39)
+
 ### v5.21.38 (2026-10-06)
 
 **Other changes:**
