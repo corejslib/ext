@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Language: ru\n"
-"PO-Revision-Date: 2026-10-06T22:56:49.074Z\n"
+"PO-Revision-Date: 2026-10-06T23:02:57.484Z\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Search-Path: /build/patch/**:../**\n"
 
@@ -219,7 +219,3 @@ msgstr "Значение должно быть меньше {0}"
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/picker/Date.js:177:18
 msgid "Year"
 msgstr "Год"
-
-#: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/validator/Range.js:47
-#~ msgid "Must be numeric"
-#~ msgstr "Должно быть числом"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Language: uk\n"
-"PO-Revision-Date: 2026-10-06T22:56:49.080Z\n"
+"PO-Revision-Date: 2026-10-06T23:04:05.831Z\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Search-Path: /build/patch/**:../**\n"
 
@@ -117,15 +117,15 @@ msgstr "Довжина не повинна перевищувати {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/grid/locked/Grid.js:61:26
 msgid "Locked"
-msgstr "Заблоковано"
+msgstr "Закріплено"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/grid/locked/Grid.js:164:26
 msgid "Locked (Left)"
-msgstr "Заблоковано (ліворуч)"
+msgstr "Закріплено (ліворуч)"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/grid/locked/Grid.js:178:26
 msgid "Locked (Right)"
-msgstr "Заблоковано (праворуч)"
+msgstr "Закріплено (праворуч)"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/picker/Date.js:163:19
 msgid "Month"
@@ -186,7 +186,7 @@ msgstr "Максимальне значення для цього поля ст�
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Number.js:194:18
 msgid "The minimum value for this field is {0}"
-msgstr "Мінімальне значення для цього поля {0}"
+msgstr "Мінімальне значення для цього поля становить {0}"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/field/Field.js:387:27
 msgid "This field is invalid"
@@ -198,7 +198,7 @@ msgstr "Це поле є обов'язковим"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/grid/locked/Grid.js:171:26
 msgid "Unlocked"
-msgstr "Розблоковано"
+msgstr "Не закріплено"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Number.js:213:22
 msgid "Value is not a valid number"
