@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Language: uk\n"
-"PO-Revision-Date: 2026-10-06T23:04:05.831Z\n"
+"PO-Revision-Date: 2026-10-07T20:59:46.939Z\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Search-Path: /build/patch/**:../**\n"
 
@@ -190,11 +190,11 @@ msgstr "Мінімальне значення для цього поля ста�
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/field/Field.js:387:27
 msgid "This field is invalid"
-msgstr "Це поле недійсне"
+msgstr "Це поле містить неприпустиме значення"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Field.js:166:25
 msgid "This field is required"
-msgstr "Це поле є обов'язковим"
+msgstr "Це поле є обов’язковим"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/grid/locked/Grid.js:171:26
 msgid "Unlocked"
@@ -202,7 +202,7 @@ msgstr "Не закріплено"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/field/Number.js:213:22
 msgid "Value is not a valid number"
-msgstr "Значення не є дійсним числом"
+msgstr "Значення не є допустимим числом"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-core/src/data/validator/Bound.js:53:21
 msgid "Value must be between {0} and {1}"
