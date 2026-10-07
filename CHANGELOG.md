@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.41 (2026-10-07)
+
+**Other changes:**
+
+- docs: update Ukrainian field validation translations (● [cfd99a3](https://github.com/corejslib/ext/commit/cfd99a3); 👬 zdm)
+
+Compare with the previous release: [v5.21.40...v5.21.41](https://github.com/corejslib/ext/compare/v5.21.40...v5.21.41)
+
 ### v5.21.40 (2026-10-07)
 
 **Other changes:**
