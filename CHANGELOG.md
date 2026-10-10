@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.42 (2026-10-10)
+
+**Bug fixes:**
+
+- \[PATCH] fix: fix plural forms (● [a8edb8f](https://github.com/corejslib/ext/commit/a8edb8f); 👬 zdm)
+
+Compare with the previous release: [v5.21.41...v5.21.42](https://github.com/corejslib/ext/compare/v5.21.41...v5.21.42)
+
 ### v5.21.41 (2026-10-07)
 
 **Other changes:**
