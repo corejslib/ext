@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Language: uk\n"
 "PO-Revision-Date: 2026-10-07T20:59:46.939Z\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Search-Path: /build/patch/**:../**\n"
 
 #: ../../../build/patch/node_modules_patch/@sencha/ext-modern/src/grid/menu/AddGroup.js:16:10
