@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.43 (2026-10-12)
+
+**Other changes:**
+
+- chore: disallow @corejslib/uws install scripts (● [54467e7](https://github.com/corejslib/ext/commit/54467e7); 👬 zdm)
+
+Compare with the previous release: [v5.21.42...v5.21.43](https://github.com/corejslib/ext/compare/v5.21.42...v5.21.43)
+
 ### v5.21.42 (2026-10-10)
 
 **Bug fixes:**
