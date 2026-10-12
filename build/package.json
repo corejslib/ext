@@ -36,7 +36,6 @@
     },
     "allowScripts": {
         "@corejslib/core": true,
-        "@corejslib/uws": true,
         "@sencha/cmd": true,
         "@sencha/ext": false,
         "@sencha/ext-charts": false,
