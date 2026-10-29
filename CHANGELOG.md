@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.44 (2026-10-29)
+
+**Other changes:**
+
+- style: reorder package manifest sections (● [d221f40](https://github.com/corejslib/ext/commit/d221f40); 👬 zdm)
+
+Compare with the previous release: [v5.21.43...v5.21.44](https://github.com/corejslib/ext/compare/v5.21.43...v5.21.44)
+
 ### v5.21.43 (2026-10-12)
 
 **Other changes:**
