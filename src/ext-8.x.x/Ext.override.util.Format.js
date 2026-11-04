@@ -31,6 +31,7 @@ Ext.define( null, {
         if ( !value ) return "";
 
         if ( !Ext.isDate( value ) ) {
+            // eslint-disable-next-line unicorn/prefer-temporal
             value = new Date( Temporal.Instant.from( value ).epochMilliseconds );
         }
 
