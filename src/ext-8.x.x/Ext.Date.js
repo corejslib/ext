@@ -1,33 +1,31 @@
 import locale from "#vue/locale";
 
-var date = new Date( "2020-01-04" );
-
-const weekDayLong = new Intl.DateTimeFormat( locale, { "weekday": "long" } );
-const weekDayShort = new Intl.DateTimeFormat( locale, { "weekday": "short" } );
+const weekDayLong = new Intl.DateTimeFormat( locale, { "weekday": "long" } ),
+    weekDayShort = new Intl.DateTimeFormat( locale, { "weekday": "short" } ),
+    monthLong = new Intl.DateTimeFormat( locale, { "month": "long" } ),
+    monthShort = new Intl.DateTimeFormat( locale, { "month": "short" } );
 
 Ext.Date.dayNames = [];
 Ext.Date.dayNamesShort = [];
 
+// 2020-01-05 - воскресенье
+const firstDay = Temporal.PlainDate.from( "2020-01-05" );
+
 for ( let n = 0; n < 7; n++ ) {
-    date.setDate( date.getDate() + 1 );
+    const day = firstDay.add( { "days": n } );
 
-    Ext.Date.dayNames.push( weekDayLong.format( date ) );
-    Ext.Date.dayNamesShort.push( weekDayShort.format( date ) );
+    Ext.Date.dayNames.push( weekDayLong.format( day ) );
+    Ext.Date.dayNamesShort.push( weekDayShort.format( day ) );
 }
-
-date = new Date( "2020-01-01" );
-
-const monthLong = new Intl.DateTimeFormat( locale, { "month": "long" } );
-const monthShort = new Intl.DateTimeFormat( locale, { "month": "short" } );
 
 Ext.Date.monthNames = [];
 Ext.Date.monthNamesShort = [];
 
 for ( let n = 0; n < 12; n++ ) {
-    date.setMonth( n );
+    const month = Temporal.PlainDate.from( { "year": 2020, "month": n + 1, "day": 1 } );
 
-    Ext.Date.monthNames.push( monthLong.format( date ) );
-    Ext.Date.monthNamesShort.push( monthShort.format( date ) );
+    Ext.Date.monthNames.push( monthLong.format( month ) );
+    Ext.Date.monthNamesShort.push( monthShort.format( month ) );
 }
 
 for ( let n = 0; n < Ext.Date.monthNames.length; n++ ) {

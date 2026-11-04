@@ -31,7 +31,7 @@ Ext.define( null, {
         if ( !value ) return "";
 
         if ( !Ext.isDate( value ) ) {
-            value = new Date( Date.parse( value ) );
+            value = new Date( Temporal.Instant.from( value ).epochMilliseconds );
         }
 
         if ( format && format.startsWith( "ext:" ) ) return Ext.Date.formatExt( value, format.slice( 4 ) );
