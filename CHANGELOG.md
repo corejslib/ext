@@ -1,5 +1,17 @@
 # Changelog
 
+### v5.21.45 (2026-11-05)
+
+**Bug fixes:**
+
+- \[PATCH] fix: use Temporal for locale date formatting and parsing (● [d76fe2d](https://github.com/corejslib/ext/commit/d76fe2d); 👬 zdm)
+
+**Other changes:**
+
+- chore: suppress Temporal lint warning for date conversion (● [60d1d62](https://github.com/corejslib/ext/commit/60d1d62); 👬 zdm)
+
+Compare with the previous release: [v5.21.44...v5.21.45](https://github.com/corejslib/ext/compare/v5.21.44...v5.21.45)
+
 ### v5.21.44 (2026-10-29)
 
 **Other changes:**
