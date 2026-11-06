@@ -2,11 +2,7 @@ import Ext_panel_Panel from "../../../Ext/panel/Panel.js";
 
 export default class Ext_pivot_d3_AbstractContainer extends Ext_panel_Panel {
     static PROPERTIES () {
-        return [
-            "configurator",
-            "drawing",
-            "matrix",
-        ];
+        return [ "configurator", "drawing", "matrix" ];
     }
 
     static EVENTS () {
@@ -38,10 +34,7 @@ export default class Ext_pivot_d3_AbstractContainer extends Ext_panel_Panel {
     }
 
     constructor ( properties, events ) {
-        super (
-            properties.concat( Ext_pivot_d3_AbstractContainer.PROPERTIES() ),
-            events.concat( Ext_pivot_d3_AbstractContainer.EVENTS() )
-        );
+        super( properties.concat( Ext_pivot_d3_AbstractContainer.PROPERTIES() ), events.concat( Ext_pivot_d3_AbstractContainer.EVENTS() ) );
     }
 
     connectedCallback () {
@@ -51,5 +44,4 @@ export default class Ext_pivot_d3_AbstractContainer extends Ext_panel_Panel {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
-
 }

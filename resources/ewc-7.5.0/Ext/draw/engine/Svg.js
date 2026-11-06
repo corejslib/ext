@@ -2,64 +2,7 @@ import Ext_draw_Surface from "../../../Ext/draw/Surface.js";
 
 export default class Ext_draw_engine_Svg extends Ext_draw_Surface {
     static PROPERTIES () {
-        return [
-            "alignSelf",
-            "alwaysOnTop",
-            "ariaAttributes",
-            "ariaDescribedBy",
-            "ariaLabel",
-            "ariaLabelledBy",
-            "background",
-            "bind",
-            "border",
-            "cls",
-            "constrainAlign",
-            "controller",
-            "defaultListenerScope",
-            "dirty",
-            "disabled",
-            "flex",
-            "flipRtlText",
-            "floated",
-            "focusCls",
-            "height",
-            "hidden",
-            "hideMode",
-            "highPrecision",
-            "id",
-            "instanceCls",
-            "itemId",
-            "items",
-            "keyMap",
-            "keyMapEnabled",
-            "keyMapTarget",
-            "listeners",
-            "margin",
-            "name",
-            "nameable",
-            "plugins",
-            "publishes",
-            "rect",
-            "reference",
-            "relative",
-            "renderTo",
-            "ripple",
-            "session",
-            "shadow",
-            "shareableName",
-            "shim",
-            "style",
-            "toFrontOnShow",
-            "touchAction",
-            "translatable",
-            "twoWayBindable",
-            "ui",
-            "userCls",
-            "viewModel",
-            "width",
-            "x",
-            "y",
-        ];
+        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "background", "bind", "border", "cls", "constrainAlign", "controller", "defaultListenerScope", "dirty", "disabled", "flex", "flipRtlText", "floated", "focusCls", "height", "hidden", "hideMode", "highPrecision", "id", "instanceCls", "itemId", "items", "keyMap", "keyMapEnabled", "keyMapTarget", "listeners", "margin", "name", "nameable", "plugins", "publishes", "rect", "reference", "relative", "renderTo", "ripple", "session", "shadow", "shareableName", "shim", "style", "toFrontOnShow", "touchAction", "translatable", "twoWayBindable", "ui", "userCls", "viewModel", "width", "x", "y" ];
     }
 
     static EVENTS () {
@@ -105,10 +48,7 @@ export default class Ext_draw_engine_Svg extends Ext_draw_Surface {
     }
 
     constructor ( properties, events ) {
-        super (
-            properties.concat( Ext_draw_engine_Svg.PROPERTIES() ),
-            events.concat( Ext_draw_engine_Svg.EVENTS() )
-        );
+        super( properties.concat( Ext_draw_engine_Svg.PROPERTIES() ), events.concat( Ext_draw_engine_Svg.EVENTS() ) );
     }
 
     connectedCallback () {
@@ -118,5 +58,4 @@ export default class Ext_draw_engine_Svg extends Ext_draw_Surface {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
-
 }

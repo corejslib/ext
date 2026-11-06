@@ -2,63 +2,7 @@ import Ext_field_trigger_Base from "../../../Ext/field/trigger/Base.js";
 
 export default class Ext_field_trigger_Component extends Ext_field_trigger_Base {
     static PROPERTIES () {
-        return [
-            "alignSelf",
-            "alwaysOnTop",
-            "ariaAttributes",
-            "ariaDescribedBy",
-            "ariaLabel",
-            "ariaLabelledBy",
-            "bind",
-            "border",
-            "cls",
-            "component",
-            "constrainAlign",
-            "controller",
-            "defaultListenerScope",
-            "disabled",
-            "field",
-            "flex",
-            "floated",
-            "focusCls",
-            "group",
-            "height",
-            "hidden",
-            "hideMode",
-            "id",
-            "instanceCls",
-            "itemId",
-            "keyMap",
-            "keyMapEnabled",
-            "keyMapTarget",
-            "listeners",
-            "margin",
-            "name",
-            "nameable",
-            "plugins",
-            "publishes",
-            "reference",
-            "relative",
-            "renderTo",
-            "ripple",
-            "session",
-            "shadow",
-            "shareableName",
-            "shim",
-            "side",
-            "style",
-            "toFrontOnShow",
-            "touchAction",
-            "translatable",
-            "triggers",
-            "twoWayBindable",
-            "ui",
-            "userCls",
-            "viewModel",
-            "width",
-            "x",
-            "y",
-        ];
+        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "bind", "border", "cls", "component", "constrainAlign", "controller", "defaultListenerScope", "disabled", "field", "flex", "floated", "focusCls", "group", "height", "hidden", "hideMode", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "listeners", "margin", "name", "nameable", "plugins", "publishes", "reference", "relative", "renderTo", "ripple", "session", "shadow", "shareableName", "shim", "side", "style", "toFrontOnShow", "touchAction", "translatable", "triggers", "twoWayBindable", "ui", "userCls", "viewModel", "width", "x", "y" ];
     }
 
     static EVENTS () {
@@ -104,10 +48,7 @@ export default class Ext_field_trigger_Component extends Ext_field_trigger_Base 
     }
 
     constructor ( properties, events ) {
-        super (
-            properties.concat( Ext_field_trigger_Component.PROPERTIES() ),
-            events.concat( Ext_field_trigger_Component.EVENTS() )
-        );
+        super( properties.concat( Ext_field_trigger_Component.PROPERTIES() ), events.concat( Ext_field_trigger_Component.EVENTS() ) );
     }
 
     connectedCallback () {
@@ -117,5 +58,4 @@ export default class Ext_field_trigger_Component extends Ext_field_trigger_Base 
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
-
 }

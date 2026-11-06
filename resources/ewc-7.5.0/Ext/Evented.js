@@ -2,9 +2,7 @@ import Ext_Base from "../Ext/Base.js";
 
 export default class Ext_Evented extends Ext_Base {
     static PROPERTIES () {
-        return [
-            "listeners",
-        ];
+        return [ "listeners" ];
     }
 
     static EVENTS () {
@@ -36,10 +34,7 @@ export default class Ext_Evented extends Ext_Base {
     }
 
     constructor ( properties, events ) {
-        super (
-            properties.concat( Ext_Evented.PROPERTIES() ),
-            events.concat( Ext_Evented.EVENTS() )
-        );
+        super( properties.concat( Ext_Evented.PROPERTIES() ), events.concat( Ext_Evented.EVENTS() ) );
     }
 
     connectedCallback () {
@@ -49,5 +44,4 @@ export default class Ext_Evented extends Ext_Base {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
-
 }

@@ -2,108 +2,7 @@ import Ext_d3_HeatMap from "../../../Ext/d3/HeatMap.js";
 
 export default class Ext_pivot_d3_HeatMap extends Ext_d3_HeatMap {
     static PROPERTIES () {
-        return [
-            "alignSelf",
-            "alwaysOnTop",
-            "ariaAttributes",
-            "ariaDescribedBy",
-            "ariaLabel",
-            "ariaLabelledBy",
-            "axisLock",
-            "bind",
-            "border",
-            "bottom",
-            "centered",
-            "clipScene",
-            "cls",
-            "colorAxis",
-            "componentCls",
-            "constrainAlign",
-            "contentEl",
-            "controller",
-            "data",
-            "defaultFormatter",
-            "defaultListenerScope",
-            "disabled",
-            "displayed",
-            "docked",
-            "draggable",
-            "flex",
-            "floated",
-            "focusCls",
-            "fullscreen",
-            "height",
-            "hidden",
-            "hideAnimation",
-            "hideMode",
-            "hideOnMaskTap",
-            "html",
-            "id",
-            "instanceCls",
-            "interactions",
-            "itemId",
-            "keyMap",
-            "keyMapEnabled",
-            "keyMapTarget",
-            "labels",
-            "left",
-            "legend",
-            "listeners",
-            "margin",
-            "matrix",
-            "maxHeight",
-            "maxWidth",
-            "minHeight",
-            "minWidth",
-            "modal",
-            "modelValidation",
-            "name",
-            "nameable",
-            "padding",
-            "plugins",
-            "publishes",
-            "record",
-            "reference",
-            "relative",
-            "renderTo",
-            "right",
-            "ripple",
-            "scrollable",
-            "session",
-            "shadow",
-            "shareableName",
-            "shim",
-            "showAnimation",
-            "size",
-            "stateful",
-            "statefulDefaults",
-            "stateId",
-            "store",
-            "style",
-            "tabIndex",
-            "tiles",
-            "toFrontOnShow",
-            "tooltip",
-            "top",
-            "touchAction",
-            "tpl",
-            "tplWriteMode",
-            "transitions",
-            "translatable",
-            "twoWayBindable",
-            "ui",
-            "userCls",
-            "userSelectable",
-            "viewModel",
-            "weight",
-            "width",
-            "x",
-            "xAxis",
-            "xtype",
-            "y",
-            "yAxis",
-            "zIndex",
-        ];
+        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "clipScene", "cls", "colorAxis", "componentCls", "constrainAlign", "contentEl", "controller", "data", "defaultFormatter", "defaultListenerScope", "disabled", "displayed", "docked", "draggable", "flex", "floated", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "id", "instanceCls", "interactions", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "labels", "left", "legend", "listeners", "margin", "matrix", "maxHeight", "maxWidth", "minHeight", "minWidth", "modal", "modelValidation", "name", "nameable", "padding", "plugins", "publishes", "record", "reference", "relative", "renderTo", "right", "ripple", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "size", "stateful", "statefulDefaults", "stateId", "store", "style", "tabIndex", "tiles", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "transitions", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "viewModel", "weight", "width", "x", "xAxis", "xtype", "y", "yAxis", "zIndex" ];
     }
 
     static EVENTS () {
@@ -191,10 +90,7 @@ export default class Ext_pivot_d3_HeatMap extends Ext_d3_HeatMap {
     }
 
     constructor ( properties, events ) {
-        super (
-            properties.concat( Ext_pivot_d3_HeatMap.PROPERTIES() ),
-            events.concat( Ext_pivot_d3_HeatMap.EVENTS() )
-        );
+        super( properties.concat( Ext_pivot_d3_HeatMap.PROPERTIES() ), events.concat( Ext_pivot_d3_HeatMap.EVENTS() ) );
     }
 
     connectedCallback () {
@@ -204,5 +100,4 @@ export default class Ext_pivot_d3_HeatMap extends Ext_d3_HeatMap {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
-
 }

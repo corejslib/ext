@@ -2,104 +2,7 @@ import Ext_slider_Slider from "../../Ext/slider/Slider.js";
 
 export default class Ext_slider_Toggle extends Ext_slider_Slider {
     static PROPERTIES () {
-        return [
-            "alignSelf",
-            "allowThumbsOverlapping",
-            "alwaysOnTop",
-            "animation",
-            "ariaAttributes",
-            "ariaDescribedBy",
-            "ariaLabel",
-            "ariaLabelledBy",
-            "axisLock",
-            "bind",
-            "border",
-            "bottom",
-            "centered",
-            "cls",
-            "constrainAlign",
-            "contentEl",
-            "controller",
-            "data",
-            "defaultListenerScope",
-            "disabled",
-            "displayed",
-            "docked",
-            "draggable",
-            "flex",
-            "floated",
-            "focusCls",
-            "fullscreen",
-            "height",
-            "hidden",
-            "hideAnimation",
-            "hideMode",
-            "hideOnMaskTap",
-            "html",
-            "id",
-            "increment",
-            "instanceCls",
-            "itemId",
-            "keyMap",
-            "keyMapEnabled",
-            "keyMapTarget",
-            "left",
-            "listeners",
-            "margin",
-            "maxHeight",
-            "maxValue",
-            "maxWidth",
-            "minHeight",
-            "minValue",
-            "minWidth",
-            "modal",
-            "modelValidation",
-            "name",
-            "nameable",
-            "padding",
-            "plugins",
-            "publishes",
-            "readOnly",
-            "record",
-            "reference",
-            "relative",
-            "renderTo",
-            "right",
-            "ripple",
-            "scrollable",
-            "session",
-            "shadow",
-            "shareableName",
-            "shim",
-            "showAnimation",
-            "stateful",
-            "statefulDefaults",
-            "stateId",
-            "style",
-            "tabIndex",
-            "thumbDefaults",
-            "toFrontOnShow",
-            "tooltip",
-            "top",
-            "touchAction",
-            "tpl",
-            "tplWriteMode",
-            "translatable",
-            "twoWayBindable",
-            "ui",
-            "userCls",
-            "userSelectable",
-            "value",
-            "valueIsArray",
-            "values",
-            "viewModel",
-            "weight",
-            "width",
-            "x",
-            "xtype",
-            "y",
-            "zIndex",
-        ];
+        return [ "alignSelf", "allowThumbsOverlapping", "alwaysOnTop", "animation", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axisLock", "bind", "border", "bottom", "centered", "cls", "constrainAlign", "contentEl", "controller", "data", "defaultListenerScope", "disabled", "displayed", "docked", "draggable", "flex", "floated", "focusCls", "fullscreen", "height", "hidden", "hideAnimation", "hideMode", "hideOnMaskTap", "html", "id", "increment", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "left", "listeners", "margin", "maxHeight", "maxValue", "maxWidth", "minHeight", "minValue", "minWidth", "modal", "modelValidation", "name", "nameable", "padding", "plugins", "publishes", "readOnly", "record", "reference", "relative", "renderTo", "right", "ripple", "scrollable", "session", "shadow", "shareableName", "shim", "showAnimation", "stateful", "statefulDefaults", "stateId", "style", "tabIndex", "thumbDefaults", "toFrontOnShow", "tooltip", "top", "touchAction", "tpl", "tplWriteMode", "translatable", "twoWayBindable", "ui", "userCls", "userSelectable", "value", "valueIsArray", "values", "viewModel", "weight", "width", "x", "xtype", "y", "zIndex" ];
     }
 
     static EVENTS () {
@@ -189,10 +92,7 @@ export default class Ext_slider_Toggle extends Ext_slider_Slider {
     }
 
     constructor ( properties, events ) {
-        super (
-            properties.concat( Ext_slider_Toggle.PROPERTIES() ),
-            events.concat( Ext_slider_Toggle.EVENTS() )
-        );
+        super( properties.concat( Ext_slider_Toggle.PROPERTIES() ), events.concat( Ext_slider_Toggle.EVENTS() ) );
     }
 
     connectedCallback () {
@@ -202,5 +102,4 @@ export default class Ext_slider_Toggle extends Ext_slider_Slider {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
-
 }

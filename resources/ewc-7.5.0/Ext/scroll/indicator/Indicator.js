@@ -2,62 +2,7 @@ import Ext_Widget from "../../../Ext/Widget.js";
 
 export default class Ext_scroll_indicator_Indicator extends Ext_Widget {
     static PROPERTIES () {
-        return [
-            "alignSelf",
-            "alwaysOnTop",
-            "ariaAttributes",
-            "ariaDescribedBy",
-            "ariaLabel",
-            "ariaLabelledBy",
-            "axis",
-            "bind",
-            "border",
-            "cls",
-            "constrainAlign",
-            "controller",
-            "defaultListenerScope",
-            "disabled",
-            "enabled",
-            "flex",
-            "floated",
-            "focusCls",
-            "height",
-            "hidden",
-            "hideMode",
-            "id",
-            "instanceCls",
-            "itemId",
-            "keyMap",
-            "keyMapEnabled",
-            "keyMapTarget",
-            "listeners",
-            "margin",
-            "name",
-            "nameable",
-            "plugins",
-            "publishes",
-            "reference",
-            "relative",
-            "renderTo",
-            "ripple",
-            "scroller",
-            "session",
-            "shadow",
-            "shareableName",
-            "shim",
-            "style",
-            "toFrontOnShow",
-            "touchAction",
-            "translatable",
-            "twoWayBindable",
-            "ui",
-            "userCls",
-            "value",
-            "viewModel",
-            "width",
-            "x",
-            "y",
-        ];
+        return [ "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "axis", "bind", "border", "cls", "constrainAlign", "controller", "defaultListenerScope", "disabled", "enabled", "flex", "floated", "focusCls", "height", "hidden", "hideMode", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "listeners", "margin", "name", "nameable", "plugins", "publishes", "reference", "relative", "renderTo", "ripple", "scroller", "session", "shadow", "shareableName", "shim", "style", "toFrontOnShow", "touchAction", "translatable", "twoWayBindable", "ui", "userCls", "value", "viewModel", "width", "x", "y" ];
     }
 
     static EVENTS () {
@@ -103,10 +48,7 @@ export default class Ext_scroll_indicator_Indicator extends Ext_Widget {
     }
 
     constructor ( properties, events ) {
-        super (
-            properties.concat( Ext_scroll_indicator_Indicator.PROPERTIES() ),
-            events.concat( Ext_scroll_indicator_Indicator.EVENTS() )
-        );
+        super( properties.concat( Ext_scroll_indicator_Indicator.PROPERTIES() ), events.concat( Ext_scroll_indicator_Indicator.EVENTS() ) );
     }
 
     connectedCallback () {
@@ -116,5 +58,4 @@ export default class Ext_scroll_indicator_Indicator extends Ext_Widget {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
-
 }

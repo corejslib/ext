@@ -2,75 +2,7 @@ import Ext_grid_cell_Number from "../../../Ext/grid/cell/Number.js";
 
 export default class Ext_grid_cell_RowNumberer extends Ext_grid_cell_Number {
     static PROPERTIES () {
-        return [
-            "align",
-            "alignSelf",
-            "alwaysOnTop",
-            "ariaAttributes",
-            "ariaDescribedBy",
-            "ariaLabel",
-            "ariaLabelledBy",
-            "bind",
-            "bodyCls",
-            "bodyStyle",
-            "border",
-            "cellCls",
-            "cls",
-            "column",
-            "constrainAlign",
-            "controller",
-            "defaultListenerScope",
-            "defaultToolWeights",
-            "disabled",
-            "encodeHtml",
-            "flex",
-            "floated",
-            "focusCls",
-            "format",
-            "height",
-            "hidden",
-            "hideMode",
-            "id",
-            "instanceCls",
-            "itemId",
-            "keyMap",
-            "keyMapEnabled",
-            "keyMapTarget",
-            "listeners",
-            "margin",
-            "name",
-            "nameable",
-            "plugins",
-            "publishes",
-            "rawValue",
-            "record",
-            "reference",
-            "relative",
-            "renderer",
-            "renderTo",
-            "ripple",
-            "scope",
-            "selectable",
-            "session",
-            "shadow",
-            "shareableName",
-            "shim",
-            "style",
-            "toFrontOnShow",
-            "toolDefaults",
-            "tools",
-            "touchAction",
-            "translatable",
-            "twoWayBindable",
-            "ui",
-            "userCls",
-            "value",
-            "viewModel",
-            "width",
-            "x",
-            "y",
-            "zeroValue",
-        ];
+        return [ "align", "alignSelf", "alwaysOnTop", "ariaAttributes", "ariaDescribedBy", "ariaLabel", "ariaLabelledBy", "bind", "bodyCls", "bodyStyle", "border", "cellCls", "cls", "column", "constrainAlign", "controller", "defaultListenerScope", "defaultToolWeights", "disabled", "encodeHtml", "flex", "floated", "focusCls", "format", "height", "hidden", "hideMode", "id", "instanceCls", "itemId", "keyMap", "keyMapEnabled", "keyMapTarget", "listeners", "margin", "name", "nameable", "plugins", "publishes", "rawValue", "record", "reference", "relative", "renderer", "renderTo", "ripple", "scope", "selectable", "session", "shadow", "shareableName", "shim", "style", "toFrontOnShow", "toolDefaults", "tools", "touchAction", "translatable", "twoWayBindable", "ui", "userCls", "value", "viewModel", "width", "x", "y", "zeroValue" ];
     }
 
     static EVENTS () {
@@ -116,10 +48,7 @@ export default class Ext_grid_cell_RowNumberer extends Ext_grid_cell_Number {
     }
 
     constructor ( properties, events ) {
-        super (
-            properties.concat( Ext_grid_cell_RowNumberer.PROPERTIES() ),
-            events.concat( Ext_grid_cell_RowNumberer.EVENTS() )
-        );
+        super( properties.concat( Ext_grid_cell_RowNumberer.PROPERTIES() ), events.concat( Ext_grid_cell_RowNumberer.EVENTS() ) );
     }
 
     connectedCallback () {
@@ -129,5 +58,4 @@ export default class Ext_grid_cell_RowNumberer extends Ext_grid_cell_Number {
     attributeChangedCallback ( attrName, oldVal, newVal ) {
         super.attributeChangedCallback( attrName, oldVal, newVal );
     }
-
 }
