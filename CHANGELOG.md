@@ -1,5 +1,13 @@
 # Changelog
 
+### v5.21.46 (2026-11-06)
+
+**Code refactoring:**
+
+- \[PATCH] refactor: simplify abstract component property definitions (● [0f316a9](https://github.com/corejslib/ext/commit/0f316a9); 👬 zdm)
+
+Compare with the previous release: [v5.21.45...v5.21.46](https://github.com/corejslib/ext/compare/v5.21.45...v5.21.46)
+
 ### v5.21.45 (2026-11-05)
 
 **Bug fixes:**
