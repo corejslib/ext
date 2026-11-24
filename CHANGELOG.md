@@ -1,5 +1,25 @@
 # Changelog
 
+### v5.22.0 (2026-11-24)
+
+**New features**:
+
+- \[MINOR] feat: add ext 8.1 entry modules (● [8f116eb](https://github.com/corejslib/ext/commit/8f116eb); 👬 zdm)
+
+- \[MINOR] feat: add Ext JS 8.1.0 chart resources (● [82c0b0a](https://github.com/corejslib/ext/commit/82c0b0a); 👬 zdm)
+
+- \[MINOR] feat: update extjs to 8.1.0 (● [a9f4a88](https://github.com/corejslib/ext/commit/a9f4a88); 👬 zdm)
+
+**Bug fixes**:
+
+- \[PATCH] fix: disable strict error handling in patch generation (● [6e820e0](https://github.com/corejslib/ext/commit/6e820e0); 👬 zdm)
+
+**Other changes**:
+
+- build(release): bump ExtJS version to 8.1.0 (● [d12cbf1](https://github.com/corejslib/ext/commit/d12cbf1); 👬 zdm)
+
+Compare with the previous release: [v5.21.46...v5.22.0](https://github.com/corejslib/ext/compare/v5.21.46...v5.22.0)
+
 ### v5.21.46 (2026-11-06)
 
 **Code refactoring:**
