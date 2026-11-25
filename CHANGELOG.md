@@ -1,5 +1,21 @@
 # Changelog
 
+### v5.23.0 (2026-11-25)
+
+**New features**:
+
+- \[MINOR] feat: remove extjs 8.0.0 (● [d6193ac](https://github.com/corejslib/ext/commit/d6193ac); 👬 zdm)
+
+**Bug fixes**:
+
+- \[PATCH] fix: handle expected diff exit codes in patch generation (● [9418583](https://github.com/corejslib/ext/commit/9418583); 👬 zdm)
+
+**Code refactoring**:
+
+- \[PATCH] refactor: update lint command options (● [1df9279](https://github.com/corejslib/ext/commit/1df9279); 👬 zdm)
+
+Compare with the previous release: [v5.22.0...v5.23.0](https://github.com/corejslib/ext/compare/v5.22.0...v5.23.0)
+
 ### v5.22.0 (2026-11-24)
 
 **New features**:
