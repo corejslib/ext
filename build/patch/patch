@@ -1086,7 +1086,7 @@ diff --recursive --no-ignore-file-name-case -u ../node_modules/@sencha/ext-moder
  });
 diff --recursive --no-ignore-file-name-case -u ../node_modules/@sencha/ext-modern-theme-base/sass/etc/all.scss node_modules_patch/@sencha/ext-modern-theme-base/sass/etc/all.scss
 --- ../node_modules/@sencha/ext-modern-theme-base/sass/etc/all.scss	2026-11-24 22:31:09 +0200
-+++ node_modules_patch/@sencha/ext-modern-theme-base/sass/etc/all.scss	2026-11-24 23:00:35 +0200
++++ node_modules_patch/@sencha/ext-modern-theme-base/sass/etc/all.scss	2026-11-24 23:17:33 +0200
 @@ -1,5 +1,5 @@
  $ext-version: '8.1.0'!default;  // Updated automatically by the build script.
 -$ext-trial: true!default; // Updated automatically by the build script.
