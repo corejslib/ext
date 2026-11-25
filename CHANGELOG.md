@@ -1,5 +1,17 @@
 # Changelog
 
+### v5.23.1 (2026-11-25)
+
+**Bug fixes**:
+
+- \[PATCH] fix: update lint command flags (● [5f9c739](https://github.com/corejslib/ext/commit/5f9c739); 👬 zdm)
+
+**Other changes**:
+
+- chore: update modern theme base patch (● [0732227](https://github.com/corejslib/ext/commit/0732227); 👬 zdm)
+
+Compare with the previous release: [v5.23.0...v5.23.1](https://github.com/corejslib/ext/compare/v5.23.0...v5.23.1)
+
 ### v5.23.0 (2026-11-25)
 
 **New features**:
