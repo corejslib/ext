@@ -183,7 +183,7 @@ await fs.promises.cp( `${ tmpDir.path }/node_modules/@sencha/ext-web-components-
     console.log();
     console.log( "Lint files" );
 
-    childProcess.spawnSync( "npx zcli lint --skip-lintignore --skip-error-report --skip-eslint-refactoring", {
+    childProcess.spawnSync( "npx zcli lint --no-lintignore --no-report-errors --no-eslint-refactoring", {
         "cwd": dataDir,
         "shell": true,
         "stdio": "inherit",
